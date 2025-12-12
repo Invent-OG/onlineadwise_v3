@@ -18,6 +18,7 @@ const Navbar = () => {
   const navLinks = [
     { href: "#about", label: "About" },
     { href: "#method", label: "NAREN Method™" },
+    { href: "#services", label: "Services" },
     { href: "#videos", label: "Video Packs" },
     { href: "#packages", label: "Packages" },
     { href: "#contact", label: "Contact" },
