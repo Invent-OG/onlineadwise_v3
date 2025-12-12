@@ -1,4 +1,4 @@
-import { Zap, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
+import { Zap, Mail, Phone, MapPin, ArrowUp, Globe } from "lucide-react";
 import Logo from "./Logo";
 
 const Footer = () => {
@@ -6,17 +6,45 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const quickLinks = [
+    "Home",
+    "About",
+    "Services",
+    "Work",
+    "Testimonials",
+    "Packages",
+    "Contact",
+    "Store",
+  ];
+
+  const niches = [
+    "🦷 Dentist",
+    "💆 Chiropractor",
+    "🎨 Painter",
+    "🐜 Pest Control",
+    "🧼 Carpet Cleaner",
+    "💪 Physical Therapist",
+    "🏠 Roofer",
+    "⚖ Lawyer",
+    "🔧 Plumber",
+    "⚡ Electrician",
+    "❄ HVAC",
+    "🧾 Bookkeeper",
+  ];
+
+  const tools = ["Meta", "Google", "GHL", "Zapier", "Make", "N8n", "GA4", "GTM", "Calendars"];
+
   return (
-    <footer id="contact" className="py-16 border-t border-border/50 relative overflow-hidden">
+    <footer id="contact" className="py-16 border-t border-border/50 relative overflow-hidden bg-background">
       <div className="absolute inset-0 bg-noise opacity-20" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
             <Logo />
             <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
-              Performance-driven digital marketing consultation designed for business owners who want results, not random campaigns.
+              Growth & Paid Ads Consultation powered by The NAREN Method™
             </p>
             <div className="flex items-center gap-2 mt-4">
               <Zap className="w-4 h-4 text-primary" />
@@ -29,8 +57,8 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="font-display font-bold text-foreground mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              {["About", "NAREN Method™", "Video Packs", "Packages", "Contact"].map((link) => (
+            <ul className="grid grid-cols-2 gap-2">
+              {quickLinks.map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase().replace(/[™\s]/g, "")}`}
@@ -43,20 +71,49 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Niches We Serve */}
+          <div>
+            <h4 className="font-display font-bold text-foreground mb-4">Niches We Serve</h4>
+            <div className="flex flex-wrap gap-1">
+              {niches.map((niche) => (
+                <span key={niche} className="text-xs text-muted-foreground">
+                  {niche}
+                </span>
+              ))}
+            </div>
+            <div className="mt-4">
+              <h5 className="text-sm font-medium text-foreground mb-2">Tools We Use</h5>
+              <div className="flex flex-wrap gap-1">
+                {tools.map((tool) => (
+                  <span key={tool} className="px-2 py-0.5 rounded bg-primary/10 text-xs text-primary">
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Contact */}
           <div>
-            <h4 className="font-display font-bold text-foreground mb-4">Get In Touch</h4>
+            <h4 className="font-display font-bold text-foreground mb-4">Contact</h4>
             <div className="space-y-3">
               <a
-                href="mailto:contact@onlineadwise.com"
+                href="mailto:info.onlineadwise@gmail.com"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
               >
                 <Mail className="w-4 h-4" />
-                contact@onlineadwise.com
+                info.onlineadwise@gmail.com
+              </a>
+              <a
+                href="tel:+917065578055"
+                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-sm"
+              >
+                <Phone className="w-4 h-4" />
+                +91-7065578055
               </a>
               <div className="flex items-center gap-3 text-muted-foreground text-sm">
-                <MapPin className="w-4 h-4" />
-                Digital Marketing Worldwide
+                <Globe className="w-4 h-4" />
+                Global Clients (USA, UK, Canada, Australia, UAE)
               </div>
             </div>
           </div>
