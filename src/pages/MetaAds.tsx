@@ -8,7 +8,7 @@ import ServicesSection from "@/components/services/metaAds/ServicesSection";
 import NarenMethodSection from "@/components/services/metaAds/NarenMethodSection";
 import CaseStudySection from "@/components/services/metaAds/CaseStudySection";
 import Navbar from "@/components/ui/Navbar";
-import { Footer } from "react-day-picker";
+import Footer from "@/components/ui/Footer";
 
 const MetaAds = () => {
   return (
