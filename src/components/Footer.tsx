@@ -155,7 +155,7 @@ const Footer = () => {
             onClick={scrollToTop}
             className="mt-4 md:mt-0 flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group"
           >
-            Back too top
+            Back to top
             <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
           </button>
         </div>
