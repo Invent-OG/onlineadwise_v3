@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import { Menu as MenuIcon, X } from "lucide-react";
 import Logo from "./Logo";
 import { Button } from "./ui/button";
@@ -16,6 +16,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [active, setActive] = useState<string | null>(null);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHome = location.pathname === "/";
 
   useEffect(() => {
@@ -41,7 +42,9 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Logo />
+        <div onClick={() => navigate("/")} className="cursor-pointer">
+          <Logo />
+        </div>
 
         {/* Desktop Navigation - Aceternity Menu */}
         <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2">
