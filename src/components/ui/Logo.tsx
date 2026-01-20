@@ -10,10 +10,10 @@ const Logo = () => {
         </div>
         <Sparkles className="w-4 h-4 text-primary absolute -top-1 -right-1 float-animation" />
       </div>
-      
+
       {/* Text */}
       <div className="flex flex-col">
-        <span className="text-xl font-display font-bold text-gradient-gold leading-tight">
+        <span className="text-xl font-display font-bold  leading-tight">
           Online Adwise
         </span>
         <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">

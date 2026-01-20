@@ -28,16 +28,12 @@ const WhySection = () => {
     },
   ];
 
-  const donts = [
-    "Random posting",
-    "Guesswork ads",
-    "Patchy funnels",
-  ];
+  const donts = ["Random posting", "Guesswork ads", "Patchy funnels"];
 
   return (
     <section className="py-24 relative overflow-hidden bg-card/30">
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -46,7 +42,7 @@ const WhySection = () => {
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
             <span className="text-foreground">Why </span>
-            <span className="text-gradient-gold">Online Adwise</span>
+            <span className="">Online Adwise</span>
             <span className="text-foreground"> Works</span>
           </h2>
         </div>
@@ -56,7 +52,7 @@ const WhySection = () => {
           <p className="text-center text-lg text-muted-foreground mb-8">
             We treat digital marketing as:
           </p>
-          
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {pillars.map((pillar) => {
               const Icon = pillar.icon;
@@ -68,8 +64,12 @@ const WhySection = () => {
                   <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Icon className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-display font-bold text-foreground mb-1">{pillar.title}</h3>
-                  <p className="text-sm text-muted-foreground">{pillar.subtitle}</p>
+                  <h3 className="text-xl font-display font-bold text-foreground mb-1">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {pillar.subtitle}
+                  </p>
                 </div>
               );
             })}
@@ -81,7 +81,9 @@ const WhySection = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 p-8 rounded-2xl bg-card/50 border border-border/50">
             {/* What We Don't Do */}
             <div className="flex-1">
-              <p className="text-center md:text-left text-muted-foreground mb-4">No more:</p>
+              <p className="text-center md:text-left text-muted-foreground mb-4">
+                No more:
+              </p>
               <div className="space-y-3">
                 {donts.map((item) => (
                   <div key={item} className="flex items-center gap-3">
@@ -99,13 +101,16 @@ const WhySection = () => {
 
             {/* What We Do */}
             <div className="flex-1">
-              <p className="text-center md:text-left text-primary font-medium mb-4">Just:</p>
+              <p className="text-center md:text-left text-primary font-medium mb-4">
+                Just:
+              </p>
               <div className="flex items-center gap-3">
                 <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                   <Check className="w-3 h-3 text-primary" />
                 </div>
                 <span className="text-foreground font-medium">
-                  A structured, proven, behavioral system that grows your business step by step.
+                  A structured, proven, behavioral system that grows your
+                  business step by step.
                 </span>
               </div>
             </div>

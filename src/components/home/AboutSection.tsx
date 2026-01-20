@@ -1,4 +1,12 @@
-import { Check, Brain, LineChart, Video, Cog, Monitor, Layers } from "lucide-react";
+import {
+  Check,
+  Brain,
+  LineChart,
+  Video,
+  Cog,
+  Monitor,
+  Layers,
+} from "lucide-react";
 
 const AboutSection = () => {
   const features = [
@@ -15,7 +23,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/50 to-background" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
@@ -26,23 +34,28 @@ const AboutSection = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
               <span className="text-foreground">More Than An Agency.</span>
               <br />
-              <span className="text-gradient-gold">A Growth Architecture.</span>
+              <span className="">A Growth Architecture.</span>
             </h2>
           </div>
 
           {/* Main Content */}
           <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 p-8 md:p-12 mb-12">
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              <span className="text-primary font-semibold">Online Adwise™</span> is a performance-driven digital marketing consultation service designed for business owners who want <span className="text-foreground font-medium">results, not random campaigns.</span>
+              <span className="text-primary font-semibold">Online Adwise™</span>{" "}
+              is a performance-driven digital marketing consultation service
+              designed for business owners who want{" "}
+              <span className="text-foreground font-medium">
+                results, not random campaigns.
+              </span>
             </p>
 
             <div className="space-y-4 text-lg mb-8">
-              <p className="text-muted-foreground">
-                We don't sell "ads."
-              </p>
+              <p className="text-muted-foreground">We don't sell "ads."</p>
               <p className="text-foreground font-medium">
-                We build growth architectures using a proprietary psychological framework —
-                <span className="text-gradient-gold font-bold"> the NAREN Method™</span>, created by Narender Sharma.
+                We build growth architectures using a proprietary psychological
+                framework —
+                <span className=" font-bold"> the NAREN Method™</span>, created
+                by Narender Sharma.
               </p>
             </div>
 
@@ -56,14 +69,18 @@ const AboutSection = () => {
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Icon className="w-5 h-5 text-primary" />
                   </div>
-                  <span className="text-sm font-medium text-foreground">{text}</span>
+                  <span className="text-sm font-medium text-foreground">
+                    {text}
+                  </span>
                 </div>
               ))}
             </div>
 
             {/* Platforms */}
             <div className="flex flex-wrap items-center gap-3 mb-8">
-              <span className="text-muted-foreground">Multi-platform scaling:</span>
+              <span className="text-muted-foreground">
+                Multi-platform scaling:
+              </span>
               {platforms.map((platform) => (
                 <span
                   key={platform}
@@ -81,7 +98,7 @@ const AboutSection = () => {
               <p className="text-lg md:text-xl font-display font-semibold text-foreground">
                 Our Mission:
               </p>
-              <p className="text-xl md:text-2xl font-display font-bold text-gradient-gold mt-2">
+              <p className="text-xl md:text-2xl font-display font-bold  mt-2">
                 "Turn Your Marketing Into a Predictable Revenue Machine."
               </p>
             </div>

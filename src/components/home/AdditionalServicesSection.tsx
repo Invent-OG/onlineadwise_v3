@@ -1,14 +1,14 @@
-import { 
-  FileText, 
-  Globe, 
-  Layers, 
-  BarChart3, 
-  Cog, 
-  Film, 
+import {
+  FileText,
+  Globe,
+  Layers,
+  BarChart3,
+  Cog,
+  Film,
   Check,
   Star,
   Zap,
-  Crown
+  Crown,
 } from "lucide-react";
 
 const AdditionalServicesSection = () => {
@@ -33,7 +33,10 @@ const AdditionalServicesSection = () => {
       packages: [
         { name: "Basic Copy Package", desc: "3 Pages" },
         { name: "Growth Copy Package", desc: "Full Website + Landing Pages" },
-        { name: "Authority Copy Suite", desc: "Website + Funnels + Email + Ads" },
+        {
+          name: "Authority Copy Suite",
+          desc: "Website + Funnels + Email + Ads",
+        },
         { name: "Ad Creative Copy Bundle", desc: "10 Variations, Hook + CTA" },
       ],
     },
@@ -149,7 +152,7 @@ const AdditionalServicesSection = () => {
   return (
     <section className="py-24 relative overflow-hidden bg-card/30">
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -158,7 +161,7 @@ const AdditionalServicesSection = () => {
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
             <span className="text-foreground">Beyond </span>
-            <span className="text-gradient-gold">Ads</span>
+            <span className="">Ads</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Full-stack digital marketing solutions to power your business growth
@@ -180,33 +183,51 @@ const AdditionalServicesSection = () => {
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
                 </div>
-                
-                <h3 className="text-xl font-display font-bold text-foreground mb-1">{service.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{service.subtitle}</p>
-                
+
+                <h3 className="text-xl font-display font-bold text-foreground mb-1">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  {service.subtitle}
+                </p>
+
                 <div className="mb-4 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 inline-block">
-                  <span className="text-xs text-primary">📌 {service.narenLayer}</span>
+                  <span className="text-xs text-primary">
+                    📌 {service.narenLayer}
+                  </span>
                 </div>
-                
+
                 <ul className="space-y-2 mb-4">
                   {service.items.slice(0, 5).map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-foreground/80">
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-sm text-foreground/80"
+                    >
                       <Check className="w-3 h-3 text-primary shrink-0" />
                       {item}
                     </li>
                   ))}
                   {service.items.length > 5 && (
-                    <li className="text-xs text-muted-foreground">+{service.items.length - 5} more...</li>
+                    <li className="text-xs text-muted-foreground">
+                      +{service.items.length - 5} more...
+                    </li>
                   )}
                 </ul>
 
                 {service.packages && (
                   <div className="space-y-2 pt-4 border-t border-border/30">
-                    <p className="text-xs font-semibold text-primary uppercase tracking-wider">Packages:</p>
+                    <p className="text-xs font-semibold text-primary uppercase tracking-wider">
+                      Packages:
+                    </p>
                     {service.packages.slice(0, 3).map((pkg, i) => (
-                      <div key={i} className="flex items-center justify-between text-xs">
+                      <div
+                        key={i}
+                        className="flex items-center justify-between text-xs"
+                      >
                         <span className="text-foreground">{pkg.name}</span>
-                        <span className="text-muted-foreground">{pkg.desc}</span>
+                        <span className="text-muted-foreground">
+                          {pkg.desc}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -214,9 +235,14 @@ const AdditionalServicesSection = () => {
 
                 {service.deliverables && (
                   <div className="space-y-2 pt-4 border-t border-border/30">
-                    <p className="text-xs font-semibold text-primary uppercase tracking-wider">What We Deliver:</p>
+                    <p className="text-xs font-semibold text-primary uppercase tracking-wider">
+                      What We Deliver:
+                    </p>
                     {service.deliverables.map((item, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs text-foreground/80">
+                      <div
+                        key={i}
+                        className="flex items-center gap-2 text-xs text-foreground/80"
+                      >
                         <Check className="w-3 h-3 text-primary shrink-0" />
                         {item}
                       </div>

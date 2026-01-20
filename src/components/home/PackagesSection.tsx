@@ -1,5 +1,5 @@
 import { Check, Star, Zap, Crown } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 const PackagesSection = () => {
   const packages = [
@@ -60,7 +60,7 @@ const PackagesSection = () => {
   return (
     <section id="packages" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-noise opacity-20" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -69,7 +69,7 @@ const PackagesSection = () => {
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
             <span className="text-foreground">Consultation + Video + </span>
-            <span className="text-gradient-gold">Ads Setup</span>
+            <span className="">Ads Setup</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Choose the package that fits your business needs and growth stage.
@@ -101,21 +101,31 @@ const PackagesSection = () => {
                 <div className="p-8">
                   {/* Icon & Name */}
                   <div className="flex items-center gap-3 mb-4">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                      pkg.popular ? "bg-primary" : "bg-primary/10"
-                    }`}>
-                      <Icon className={`w-6 h-6 ${pkg.popular ? "text-primary-foreground" : "text-primary"}`} />
+                    <div
+                      className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                        pkg.popular ? "bg-primary" : "bg-primary/10"
+                      }`}
+                    >
+                      <Icon
+                        className={`w-6 h-6 ${pkg.popular ? "text-primary-foreground" : "text-primary"}`}
+                      />
                     </div>
-                    <h3 className="text-lg font-display font-bold text-foreground">{pkg.name}</h3>
+                    <h3 className="text-lg font-display font-bold text-foreground">
+                      {pkg.name}
+                    </h3>
                   </div>
 
                   {/* Price */}
                   <div className="mb-4">
-                    <span className="text-3xl font-display font-bold text-gradient-gold">{pkg.price}</span>
+                    <span className="text-3xl font-display font-bold ">
+                      {pkg.price}
+                    </span>
                   </div>
 
                   {/* Description */}
-                  <p className="text-muted-foreground mb-6">{pkg.description}</p>
+                  <p className="text-muted-foreground mb-6">
+                    {pkg.description}
+                  </p>
 
                   {/* Features */}
                   <ul className="space-y-3 mb-8">
@@ -124,7 +134,9 @@ const PackagesSection = () => {
                         <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                           <Check className="w-3 h-3 text-primary" />
                         </div>
-                        <span className="text-sm text-foreground">{feature}</span>
+                        <span className="text-sm text-foreground">
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>

@@ -1,5 +1,5 @@
 import { Check, Zap, TrendingUp, Award } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 const CompleteSuitesSection = () => {
   const suites = [
@@ -70,7 +70,7 @@ const CompleteSuitesSection = () => {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-noise opacity-20" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -79,7 +79,7 @@ const CompleteSuitesSection = () => {
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
             <span className="text-foreground">NAREN Method™ </span>
-            <span className="text-gradient-gold">Complete Suites</span>
+            <span className="">Complete Suites</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Everything you need in one powerful package
@@ -108,12 +108,18 @@ const CompleteSuitesSection = () => {
                 )}
 
                 <div className="p-8">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${suite.color} flex items-center justify-center mb-6 glow-gold-sm`}>
+                  <div
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${suite.color} flex items-center justify-center mb-6 glow-gold-sm`}
+                  >
                     <Icon className="w-8 h-8 text-white" />
                   </div>
 
-                  <h3 className="text-xl font-display font-bold text-foreground mb-2">{suite.name}</h3>
-                  <p className="text-muted-foreground mb-6">{suite.description}</p>
+                  <h3 className="text-xl font-display font-bold text-foreground mb-2">
+                    {suite.name}
+                  </h3>
+                  <p className="text-muted-foreground mb-6">
+                    {suite.description}
+                  </p>
 
                   <ul className="space-y-3 mb-8">
                     {suite.features.map((feature) => (
@@ -121,7 +127,9 @@ const CompleteSuitesSection = () => {
                         <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                           <Check className="w-3 h-3 text-primary" />
                         </div>
-                        <span className="text-sm text-foreground">{feature}</span>
+                        <span className="text-sm text-foreground">
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -145,9 +153,9 @@ const CompleteSuitesSection = () => {
         <div className="text-center">
           <h3 className="text-2xl font-display font-bold mb-8">
             <span className="text-foreground">⭐ Niches We </span>
-            <span className="text-gradient-gold">Specialize In</span>
+            <span className="">Specialize In</span>
           </h3>
-          
+
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {niches.map((niche) => (
               <span

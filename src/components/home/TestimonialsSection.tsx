@@ -3,19 +3,22 @@ import { Quote, Star } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      quote: "The NAREN Method changed our revenue pattern completely. Our leads doubled in 18 days.",
+      quote:
+        "The NAREN Method changed our revenue pattern completely. Our leads doubled in 18 days.",
       name: "Dr. Andrew",
       role: "Dentist (USA)",
       rating: 5,
     },
     {
-      quote: "Our Google Ads were dead. After Narender fixed tracking + GHL, we finally get consistent calls daily.",
+      quote:
+        "Our Google Ads were dead. After Narender fixed tracking + GHL, we finally get consistent calls daily.",
       name: "Rajan",
       role: "Plumbing Service (UK)",
       rating: 5,
     },
     {
-      quote: "The video templates with US voiceover alone gave us more trust and better conversions than anything before.",
+      quote:
+        "The video templates with US voiceover alone gave us more trust and better conversions than anything before.",
       name: "Mason",
       role: "Roofing Business (USA)",
       rating: 5,
@@ -25,7 +28,7 @@ const TestimonialsSection = () => {
   return (
     <section className="py-24 relative overflow-hidden bg-card/30">
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -34,7 +37,7 @@ const TestimonialsSection = () => {
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
             <span className="text-foreground">Client </span>
-            <span className="text-gradient-gold">Success Stories</span>
+            <span className="">Success Stories</span>
           </h2>
         </div>
 
@@ -70,8 +73,12 @@ const TestimonialsSection = () => {
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-display font-bold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  <p className="font-display font-bold text-foreground">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {testimonial.role}
+                  </p>
                 </div>
               </div>
             </div>

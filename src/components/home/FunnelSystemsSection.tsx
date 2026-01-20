@@ -1,4 +1,11 @@
-import { Workflow, Camera, Megaphone, BarChart3, Wrench, Check } from "lucide-react";
+import {
+  Workflow,
+  Camera,
+  Megaphone,
+  BarChart3,
+  Wrench,
+  Check,
+} from "lucide-react";
 
 const FunnelSystemsSection = () => {
   const systems = [
@@ -8,7 +15,8 @@ const FunnelSystemsSection = () => {
       emoji: "🚀",
       title: "Funnel Strategy & Scaling Systems (GHL)",
       subtitle: "Conversion Infrastructure Build",
-      description: "We build complete funnels using GoHighLevel (GHL) that convert cold users into booked appointments.",
+      description:
+        "We build complete funnels using GoHighLevel (GHL) that convert cold users into booked appointments.",
       funnelTypes: [
         "Lead gen funnels",
         "Appointment booking funnels",
@@ -33,7 +41,8 @@ const FunnelSystemsSection = () => {
       emoji: "🧲",
       title: "Creative & Video Suite",
       subtitle: "Pre-Built Video Store with US/UK Voiceovers",
-      description: "For 20+ niches: Commercial Videos, Explainer Videos, Storytelling Videos",
+      description:
+        "For 20+ niches: Commercial Videos, Explainer Videos, Storytelling Videos",
       features: [
         "Animation",
         "Voiceovers (US/UK)",
@@ -71,7 +80,8 @@ const FunnelSystemsSection = () => {
       emoji: "📈",
       title: "Tracking, Analytics & Automation",
       subtitle: "Multi-layered Scaling Infrastructure",
-      description: "Complete tracking and automation stack for maximum performance.",
+      description:
+        "Complete tracking and automation stack for maximum performance.",
       tools: [
         "Google Analytics 4 (GA4)",
         "Google Tag Manager (GTM)",
@@ -103,7 +113,7 @@ const FunnelSystemsSection = () => {
   return (
     <section className="py-24 relative overflow-hidden bg-card/30">
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -112,7 +122,7 @@ const FunnelSystemsSection = () => {
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
             <span className="text-foreground">Growth </span>
-            <span className="text-gradient-gold">Infrastructure</span>
+            <span className="">Infrastructure</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Beyond ads — complete systems that scale your business predictably
@@ -130,21 +140,32 @@ const FunnelSystemsSection = () => {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <span className="text-2xl">{system.emoji}</span>
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${system.color} flex items-center justify-center glow-gold-sm`}>
+                  <div
+                    className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${system.color} flex items-center justify-center glow-gold-sm`}
+                  >
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                 </div>
 
-                <h3 className="text-xl font-display font-bold text-foreground mb-2">{system.title}</h3>
+                <h3 className="text-xl font-display font-bold text-foreground mb-2">
+                  {system.title}
+                </h3>
                 <p className="text-primary text-sm mb-4">{system.subtitle}</p>
-                <p className="text-muted-foreground mb-6">{system.description}</p>
+                <p className="text-muted-foreground mb-6">
+                  {system.description}
+                </p>
 
                 {system.funnelTypes && (
                   <div className="mb-6">
-                    <p className="text-sm font-semibold text-foreground mb-3">Funnel Types:</p>
+                    <p className="text-sm font-semibold text-foreground mb-3">
+                      Funnel Types:
+                    </p>
                     <div className="flex flex-wrap gap-2">
                       {system.funnelTypes.map((type, i) => (
-                        <span key={i} className="px-3 py-1 rounded-full bg-primary/10 text-xs text-primary border border-primary/20">
+                        <span
+                          key={i}
+                          className="px-3 py-1 rounded-full bg-primary/10 text-xs text-primary border border-primary/20"
+                        >
                           {type}
                         </span>
                       ))}
@@ -155,7 +176,10 @@ const FunnelSystemsSection = () => {
                 {system.whatWeBuild && (
                   <div className="grid grid-cols-2 gap-2">
                     {system.whatWeBuild.map((item, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm text-foreground/80">
+                      <div
+                        key={i}
+                        className="flex items-center gap-2 text-sm text-foreground/80"
+                      >
                         <Check className="w-3 h-3 text-primary shrink-0" />
                         {item}
                       </div>
@@ -166,7 +190,10 @@ const FunnelSystemsSection = () => {
                 {system.features && (
                   <div className="space-y-2">
                     {system.features.map((feature, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm text-foreground/80">
+                      <div
+                        key={i}
+                        className="flex items-center gap-2 text-sm text-foreground/80"
+                      >
                         <Check className="w-3 h-3 text-primary shrink-0" />
                         {feature}
                       </div>
@@ -176,10 +203,15 @@ const FunnelSystemsSection = () => {
 
                 {system.usedFor && (
                   <div className="mt-4 pt-4 border-t border-border/30">
-                    <p className="text-xs font-semibold text-primary mb-2">Used For:</p>
+                    <p className="text-xs font-semibold text-primary mb-2">
+                      Used For:
+                    </p>
                     <div className="flex flex-wrap gap-1">
                       {system.usedFor.map((use, i) => (
-                        <span key={i} className="px-2 py-0.5 rounded bg-secondary/50 text-xs text-muted-foreground">
+                        <span
+                          key={i}
+                          className="px-2 py-0.5 rounded bg-secondary/50 text-xs text-muted-foreground"
+                        >
                           {use}
                         </span>
                       ))}
@@ -190,7 +222,10 @@ const FunnelSystemsSection = () => {
                 {system.tools && (
                   <div className="grid grid-cols-2 gap-2">
                     {system.tools.map((tool, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm text-foreground/80">
+                      <div
+                        key={i}
+                        className="flex items-center gap-2 text-sm text-foreground/80"
+                      >
                         <Check className="w-3 h-3 text-primary shrink-0" />
                         {tool}
                       </div>
@@ -206,9 +241,9 @@ const FunnelSystemsSection = () => {
         <div className="text-center">
           <h3 className="text-2xl font-display font-bold mb-8">
             <span className="text-foreground">🧰 Tools We </span>
-            <span className="text-gradient-gold">Use</span>
+            <span className="">Use</span>
           </h3>
-          
+
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {toolsWeUse.map((tool) => (
               <span

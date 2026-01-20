@@ -1,5 +1,16 @@
-import { Facebook, Search, Youtube, Linkedin, Instagram, Check, Star, Zap, Crown, Film } from "lucide-react";
-import { Button } from "./ui/button";
+import {
+  Facebook,
+  Search,
+  Youtube,
+  Linkedin,
+  Instagram,
+  Check,
+  Star,
+  Zap,
+  Crown,
+  Film,
+} from "lucide-react";
+import { Button } from "../ui/button";
 
 const PlatformServicesSection = () => {
   const platforms = [
@@ -26,20 +37,36 @@ const PlatformServicesSection = () => {
         {
           icon: Star,
           name: "Starter Meta Package",
-          features: ["Basic Campaign Launch", "1 Funnel Entry Point", "2 Ad Creatives", "Basic Reporting"],
+          features: [
+            "Basic Campaign Launch",
+            "1 Funnel Entry Point",
+            "2 Ad Creatives",
+            "Basic Reporting",
+          ],
         },
         {
           icon: Zap,
           name: "Growth Meta Package",
-          features: ["Multi-layer NAREN Audience Framework", "6–8 Creatives", "Retargeting + Automation", "Weekly Optimization Reporting"],
+          features: [
+            "Multi-layer NAREN Audience Framework",
+            "6–8 Creatives",
+            "Retargeting + Automation",
+            "Weekly Optimization Reporting",
+          ],
         },
         {
           icon: Crown,
           name: "Performance Scaling Package",
-          features: ["Full NAREN Implementation", "CAPI + Advanced Tracking", "Funnel Optimization", "Weekly Strategy Calls"],
+          features: [
+            "Full NAREN Implementation",
+            "CAPI + Advanced Tracking",
+            "Funnel Optimization",
+            "Weekly Strategy Calls",
+          ],
         },
       ],
-      includes: "🎬 Includes: Whiteboard Video Explainer (1 Video for Ads/Funnel)",
+      includes:
+        "🎬 Includes: Whiteboard Video Explainer (1 Video for Ads/Funnel)",
     },
     {
       id: "google",
@@ -74,7 +101,12 @@ const PlatformServicesSection = () => {
         {
           icon: Crown,
           name: "Google Performance Suite",
-          features: ["Search + Pmax + Display + YouTube", "Full Tracking Stack", "NAREN Analytics Layer", "Weekly Strategy Call"],
+          features: [
+            "Search + Pmax + Display + YouTube",
+            "Full Tracking Stack",
+            "NAREN Analytics Layer",
+            "Weekly Strategy Call",
+          ],
         },
       ],
       includes: "🎬 Includes: 1 Whiteboard Explainer for YouTube Ads",
@@ -136,7 +168,7 @@ const PlatformServicesSection = () => {
   return (
     <section id="services" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-noise opacity-20" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -145,10 +177,11 @@ const PlatformServicesSection = () => {
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
             <span className="text-foreground">Multi-Platform </span>
-            <span className="text-gradient-gold">Ad Services</span>
+            <span className="">Ad Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Digital Marketing Consultant • Paid Media Expert • Funnel Scaling Strategist
+            Digital Marketing Consultant • Paid Media Expert • Funnel Scaling
+            Strategist
           </p>
         </div>
 
@@ -162,7 +195,7 @@ const PlatformServicesSection = () => {
                 className="group relative bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 hover:border-primary/50 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
+
                 <div className="relative p-6 md:p-8">
                   {/* Header */}
                   <div className="flex flex-col lg:flex-row lg:items-center gap-4 mb-6">
@@ -172,8 +205,12 @@ const PlatformServicesSection = () => {
                         <Icon className="w-7 h-7 text-primary" />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-display font-bold text-foreground">{platform.title}</h3>
-                        <p className="text-muted-foreground">{platform.subtitle}</p>
+                        <h3 className="text-2xl font-display font-bold text-foreground">
+                          {platform.title}
+                        </h3>
+                        <p className="text-muted-foreground">
+                          {platform.subtitle}
+                        </p>
                       </div>
                     </div>
                     <div className="lg:ml-auto">
@@ -185,10 +222,15 @@ const PlatformServicesSection = () => {
 
                   {/* Execution Points */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">What We Execute</h4>
+                    <h4 className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">
+                      What We Execute
+                    </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
                       {platform.execution.map((item, i) => (
-                        <div key={i} className="flex items-center gap-2 text-sm text-foreground/90">
+                        <div
+                          key={i}
+                          className="flex items-center gap-2 text-sm text-foreground/90"
+                        >
                           <Check className="w-4 h-4 text-primary shrink-0" />
                           {item}
                         </div>
@@ -202,14 +244,22 @@ const PlatformServicesSection = () => {
                       {platform.packages.map((pkg) => {
                         const PkgIcon = pkg.icon;
                         return (
-                          <div key={pkg.name} className="p-4 rounded-xl bg-secondary/50 border border-border/30">
+                          <div
+                            key={pkg.name}
+                            className="p-4 rounded-xl bg-secondary/50 border border-border/30"
+                          >
                             <div className="flex items-center gap-2 mb-3">
                               <PkgIcon className="w-5 h-5 text-primary" />
-                              <span className="font-semibold text-foreground">{pkg.name}</span>
+                              <span className="font-semibold text-foreground">
+                                {pkg.name}
+                              </span>
                             </div>
                             <ul className="space-y-1">
                               {pkg.features.map((feature, i) => (
-                                <li key={i} className="text-xs text-muted-foreground flex items-center gap-1">
+                                <li
+                                  key={i}
+                                  className="text-xs text-muted-foreground flex items-center gap-1"
+                                >
                                   <span className="w-1 h-1 rounded-full bg-primary" />
                                   {feature}
                                 </li>
@@ -225,7 +275,9 @@ const PlatformServicesSection = () => {
                   {platform.includes && (
                     <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 inline-flex">
                       <Film className="w-4 h-4 text-primary" />
-                      <span className="text-sm text-foreground">{platform.includes}</span>
+                      <span className="text-sm text-foreground">
+                        {platform.includes}
+                      </span>
                     </div>
                   )}
                 </div>

@@ -1,18 +1,18 @@
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import NarenMethodSection from "@/components/NarenMethodSection";
-import PlatformServicesSection from "@/components/PlatformServicesSection";
-import AdditionalServicesSection from "@/components/AdditionalServicesSection";
-import VideoPacksSection from "@/components/VideoPacksSection";
-import CompleteSuitesSection from "@/components/CompleteSuitesSection";
-import FunnelSystemsSection from "@/components/FunnelSystemsSection";
-import PackagesSection from "@/components/PackagesSection";
-import CaseStudySection from "@/components/CaseStudySection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import WhySection from "@/components/WhySection";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
+import HeroSection from "@/components/home/HeroSection";
+import AboutSection from "@/components/home/AboutSection";
+import NarenMethodSection from "@/components/home/NarenMethodSection";
+import PlatformServicesSection from "@/components/home/PlatformServicesSection";
+import AdditionalServicesSection from "@/components/home/AdditionalServicesSection";
+import VideoPacksSection from "@/components/home/VideoPacksSection";
+import CompleteSuitesSection from "@/components/home/CompleteSuitesSection";
+import FunnelSystemsSection from "@/components/home/FunnelSystemsSection";
+import PackagesSection from "@/components/home/PackagesSection";
+import CaseStudySection from "@/components/home/CaseStudySection";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
+import WhySection from "@/components/home/WhySection";
+import CTASection from "@/components/home/CTASection";
+import Footer from "@/components/ui/Footer";
+import Navbar from "@/components/ui/Navbar";
 
 const Index = () => {
   return (

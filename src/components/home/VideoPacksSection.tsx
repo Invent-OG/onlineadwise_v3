@@ -6,8 +6,10 @@ const VideoPacksSection = () => {
       icon: Film,
       emoji: "1️⃣",
       title: "Commercial Video",
-      description: "High-impact animations designed to trigger immediate action.",
-      useCase: "Perfect for Meta Ads, YouTube Ads, and landing page hero sections.",
+      description:
+        "High-impact animations designed to trigger immediate action.",
+      useCase:
+        "Perfect for Meta Ads, YouTube Ads, and landing page hero sections.",
     },
     {
       icon: MessageSquare,
@@ -66,7 +68,7 @@ const VideoPacksSection = () => {
   return (
     <section id="videos" className="py-24 relative overflow-hidden bg-card/30">
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -75,10 +77,11 @@ const VideoPacksSection = () => {
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
             <span className="text-foreground">Explainer Video </span>
-            <span className="text-gradient-gold">Packs</span>
+            <span className="">Packs</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A powerful add-on included in our consulting ecosystem. 3 ready-to-use video formats for 20+ local business niches.
+            A powerful add-on included in our consulting ecosystem. 3
+            ready-to-use video formats for 20+ local business niches.
           </p>
         </div>
 
@@ -92,7 +95,7 @@ const VideoPacksSection = () => {
                 className="group relative bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 hover:border-primary/50 p-6 transition-all duration-500 hover:glow-gold-sm"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                
+
                 <div className="relative">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-2xl">{type.emoji}</span>
@@ -100,9 +103,13 @@ const VideoPacksSection = () => {
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
                   </div>
-                  
-                  <h3 className="text-xl font-display font-bold text-foreground mb-2">{type.title}</h3>
-                  <p className="text-muted-foreground mb-4">{type.description}</p>
+
+                  <h3 className="text-xl font-display font-bold text-foreground mb-2">
+                    {type.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {type.description}
+                  </p>
                   <p className="text-sm text-primary">{type.useCase}</p>
                 </div>
               </div>
@@ -132,9 +139,9 @@ const VideoPacksSection = () => {
         <div className="mb-16">
           <h3 className="text-2xl font-display font-bold text-center mb-8">
             <span className="text-foreground">🎯 </span>
-            <span className="text-gradient-gold">20+ Local Business Niches</span>
+            <span className="">20+ Local Business Niches</span>
           </h3>
-          
+
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
             {niches.map((niche) => (
               <div
@@ -142,7 +149,9 @@ const VideoPacksSection = () => {
                 className="flex items-center gap-2 p-3 rounded-xl bg-secondary/50 border border-border/30 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 cursor-pointer group"
               >
                 <span className="text-xl">{niche.emoji}</span>
-                <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">{niche.name}</span>
+                <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                  {niche.name}
+                </span>
               </div>
             ))}
           </div>
