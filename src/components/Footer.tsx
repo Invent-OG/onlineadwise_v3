@@ -32,12 +32,25 @@ const Footer = () => {
     "🧾 Bookkeeper",
   ];
 
-  const tools = ["Meta", "Google", "GHL", "Zapier", "Make", "N8n", "GA4", "GTM", "Calendars"];
+  const tools = [
+    "Meta",
+    "Google",
+    "GHL",
+    "Zapier",
+    "Make",
+    "N8n",
+    "GA4",
+    "GTM",
+    "Calendars",
+  ];
 
   return (
-    <footer id="contact" className="py-16 border-t border-border/50 relative overflow-hidden bg-background">
+    <footer
+      id="contact"
+      className="py-16 border-t border-border/50 relative overflow-hidden bg-background"
+    >
       <div className="absolute inset-0 bg-noise opacity-20" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
@@ -56,7 +69,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display font-bold text-foreground mb-4">Quick Links</h4>
+            <h4 className="font-display font-bold text-foreground mb-4">
+              Quick Links
+            </h4>
             <ul className="grid grid-cols-2 gap-2">
               {quickLinks.map((link) => (
                 <li key={link}>
@@ -73,7 +88,9 @@ const Footer = () => {
 
           {/* Niches We Serve */}
           <div>
-            <h4 className="font-display font-bold text-foreground mb-4">Niches We Serve</h4>
+            <h4 className="font-display font-bold text-foreground mb-4">
+              Niches We Serve
+            </h4>
             <div className="flex flex-wrap gap-1">
               {niches.map((niche) => (
                 <span key={niche} className="text-xs text-muted-foreground">
@@ -82,10 +99,15 @@ const Footer = () => {
               ))}
             </div>
             <div className="mt-4">
-              <h5 className="text-sm font-medium text-foreground mb-2">Tools We Use</h5>
+              <h5 className="text-sm font-medium text-foreground mb-2">
+                Tools We Use
+              </h5>
               <div className="flex flex-wrap gap-1">
                 {tools.map((tool) => (
-                  <span key={tool} className="px-2 py-0.5 rounded bg-primary/10 text-xs text-primary">
+                  <span
+                    key={tool}
+                    className="px-2 py-0.5 rounded bg-primary/10 text-xs text-primary"
+                  >
                     {tool}
                   </span>
                 ))}
@@ -95,7 +117,9 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display font-bold text-foreground mb-4">Contact</h4>
+            <h4 className="font-display font-bold text-foreground mb-4">
+              Contact
+            </h4>
             <div className="space-y-3">
               <a
                 href="mailto:info.onlineadwise@gmail.com"
@@ -122,15 +146,16 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border/30">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Online Adwise™. All rights reserved. Powered by The NAREN Method™
+            © {new Date().getFullYear()} Online Adwise™. All rights reserved.
+            Powered by The NAREN Method™
           </p>
-          
+
           {/* Back to Top */}
           <button
             onClick={scrollToTop}
             className="mt-4 md:mt-0 flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group"
           >
-            Back to top
+            Back too top
             <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
           </button>
         </div>
