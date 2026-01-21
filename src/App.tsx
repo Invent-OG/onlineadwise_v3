@@ -12,7 +12,8 @@ import PaintersLanding from "./pages/industry/PaintersLanding";
 import PestControlLanding from "./pages/industry/PestControlLanding";
 import PlumbersLanding from "./pages/industry/PlumbersLanding";
 import RoofersLanding from "./pages/industry/RoofersLanding";
-import Index from "./pages/industry/Index";
+import Industry from "./pages/industry/Index";
+import Services from "./pages/services/Index";
 
 const queryClient = new QueryClient();
 
@@ -23,17 +24,26 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/meta-ads" element={<MetaAds />} />
+          <Route path="/" element={<Services />} />
+          <Route path="/services/meta-ads" element={<MetaAds />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
-          <Route path="/" element={<Index />} />
-          <Route path="/painters" element={<PaintersLanding />} />
-          <Route path="/pest-control" element={<PestControlLanding />} />
-          <Route path="/carpet-cleaners" element={<CarpetCleanersLanding />} />
-          <Route path="/roofers" element={<RoofersLanding />} />
-          <Route path="/electricians" element={<ElectriciansLanding />} />
-          <Route path="/hvac" element={<HVACLanding />} />
+          <Route path="/industry" element={<Industry />} />
+          <Route path="/industry/painters" element={<PaintersLanding />} />
+          <Route
+            path="/industry/pest-control"
+            element={<PestControlLanding />}
+          />
+          <Route
+            path="/industry/carpet-cleaners"
+            element={<CarpetCleanersLanding />}
+          />
+          <Route path="/industry/roofers" element={<RoofersLanding />} />
+          <Route
+            path="/industry/electricians"
+            element={<ElectriciansLanding />}
+          />
+          <Route path="/industry/hvac" element={<HVACLanding />} />
           <Route path="/plumbers" element={<PlumbersLanding />} />{" "}
         </Routes>
       </BrowserRouter>
