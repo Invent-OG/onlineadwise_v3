@@ -2,15 +2,12 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { nicheData } from "@/components/data/nicheData.ts";
-import FloatingWidgets from "@/components/whiteboardvideo/FloatingWidgets.ts";
 
 const Index = () => {
   const calendarUrl = "https://calendar.app.google/MhdR6MKNu8SXgaUy5";
 
   return (
     <div className="min-h-screen">
-      <FloatingWidgets />
-
       {/* Hero */}
       <section className="hero-gradient py-20 lg:py-32">
         <div className="container mx-auto px-4 text-center text-white">
@@ -21,7 +18,7 @@ const Index = () => {
             Hand-drawn animated videos that convert viewers into customers.
             Specialized for 20 industries with proven results.
           </p>
-          <Button asChild size="xl">
+          <Button asChild size="xl" variant="gold">
             <a href={calendarUrl} target="_blank" rel="noopener noreferrer">
               Book Free Strategy Call
               <ArrowRight className="w-5 h-5" />
@@ -50,7 +47,7 @@ const Index = () => {
             {nicheData.map((niche) => (
               <Link
                 key={niche.id}
-                to={`/${niche.id}`}
+                to={`/whiteboard-video/${niche.id}`}
                 className="group bg-card rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border/50"
               >
                 <div className="text-4xl mb-3">{niche.icon}</div>

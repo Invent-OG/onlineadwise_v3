@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -51,10 +51,27 @@
     --radius: 0.75rem;
 
     /* Custom Gradients (User Provided) */
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 6%) 50%, hsl(0 0% 4%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(42 92% 56%) 0%, hsl(35 90% 45%) 100%);
-    --gradient-purple: linear-gradient(135deg, hsl(280 70% 50%) 0%, hsl(320 80% 50%) 100%);
-    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(42 92% 56% / 0.12) 0%, transparent 60%);
+    --gradient-hero: linear-gradient(
+      180deg,
+      hsl(0 0% 4%) 0%,
+      hsl(0 0% 6%) 50%,
+      hsl(0 0% 4%) 100%
+    );
+    --gradient-gold: linear-gradient(
+      135deg,
+      hsl(42 92% 56%) 0%,
+      hsl(35 90% 45%) 100%
+    );
+    --gradient-purple: linear-gradient(
+      135deg,
+      hsl(280 70% 50%) 0%,
+      hsl(320 80% 50%) 100%
+    );
+    --gradient-glow: radial-gradient(
+      circle at 50% 50%,
+      hsl(42 92% 56% / 0.12) 0%,
+      transparent 60%
+    );
 
     /* Shadows (User Provided) */
     --shadow-glow: 0 0 50px hsl(42 92% 56% / 0.25);
@@ -76,7 +93,12 @@
     --gold-light: 45 90% 70%;
     --gold-dark: 45 80% 40%;
     --gold-muted: 45 40% 50%;
-    --gradient-gold-shine: linear-gradient(90deg, transparent, hsl(45 90% 70% / 0.3), transparent);
+    --gradient-gold-shine: linear-gradient(
+      90deg,
+      transparent,
+      hsl(45 90% 70% / 0.3),
+      transparent
+    );
     --shadow-gold: 0 4px 30px hsl(45 85% 55% / 0.15);
     --shadow-gold-lg: 0 10px 50px hsl(45 85% 55% / 0.25);
   }
@@ -93,11 +115,16 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', system-ui, sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", system-ui, sans-serif;
     @apply font-bold tracking-tight;
   }
 }
@@ -116,6 +143,37 @@
     background: var(--gradient-purple);
   }
 
+  /* Pattern Backgrounds */
+  .grid-pattern {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.3) 1px, transparent 1px);
+    mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  }
+
+  .section-pattern {
+    background-image: radial-gradient(
+      hsl(var(--primary) / 0.05) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .badge-gold {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium border border-primary/30 bg-primary/10 text-primary;
+    box-shadow: 0 0 10px hsl(42 92% 56% / 0.1);
+  }
+
+  .video-placeholder {
+    @apply relative w-full aspect-video bg-card/50 overflow-hidden;
+    background-image: radial-gradient(circle at center, hsl(var(--card-elevated)), hsl(var(--card)));
+  }
+
   /* . {
     @apply bg-clip-text text-transparent;
     background: var(--gradient-gold);
@@ -126,12 +184,34 @@
     background: var(--gradient-purple);
   }
 
+  /* Utility aliases to match component usage */
+  .gold-gradient {
+    background: var(--gradient-gold);
+  }
+
+  .accent-gradient {
+    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-hover)) 100%);
+  }
+
+  .text-gradient {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block; /* Often needed for gradients on spans */
+  }
+
+
   .glow-gold {
     box-shadow: var(--shadow-glow);
   }
 
   .glow-gold-sm {
     box-shadow: var(--shadow-glow-sm);
+  }
+
+  .shadow-accent {
+    box-shadow: 0 4px 20px hsl(var(--accent) / 0.3);
   }
 
   .card-glass {
@@ -144,7 +224,7 @@
   }
 
   .stat-number {
-    font-family: 'Montserrat', system-ui, sans-serif;
+    font-family: "Montserrat", system-ui, sans-serif;
     @apply font-bold;
   }
 
@@ -165,13 +245,19 @@
   .emoji-card:hover {
     border-color: hsl(42 92% 56% / 0.4);
     transform: translateY(-4px);
-    box-shadow: 0 20px 40px hsl(0 0% 0% / 0.5), 0 0 50px hsl(42 92% 56% / 0.1);
+    box-shadow:
+      0 20px 40px hsl(0 0% 0% / 0.5),
+      0 0 50px hsl(42 92% 56% / 0.1);
   }
 
   .emoji-card::before {
-    content: '';
+    content: "";
     @apply absolute inset-0 opacity-0 transition-opacity duration-500;
-    background: radial-gradient(circle at 50% 0%, hsl(42 92% 56% / 0.08) 0%, transparent 50%);
+    background: radial-gradient(
+      circle at 50% 0%,
+      hsl(42 92% 56% / 0.08) 0%,
+      transparent 50%
+    );
   }
 
   .emoji-card:hover::before {
@@ -209,19 +295,29 @@
   }
 
   .shine-effect::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, hsl(45 90% 70% / 0.2), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(45 90% 70% / 0.2),
+      transparent
+    );
     animation: shine 3s ease-in-out infinite;
   }
 
   @keyframes shine {
-    0%, 100% { left: -100%; }
-    50% { left: 100%; }
+    0%,
+    100% {
+      left: -100%;
+    }
+    50% {
+      left: 100%;
+    }
   }
 
   .pulse-gold {
@@ -229,16 +325,31 @@
   }
 
   @keyframes pulse-gold {
-    0%, 100% { box-shadow: 0 0 20px hsl(45 85% 55% / 0.3); }
-    50% { box-shadow: 0 0 40px hsl(45 85% 55% / 0.5); }
+    0%,
+    100% {
+      box-shadow: 0 0 20px hsl(45 85% 55% / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(45 85% 55% / 0.5);
+    }
   }
-    
+
   /* Helper classes from old file that might be useful to keep */
-  .stagger-1 { animation-delay: 0.1s; }
-  .stagger-2 { animation-delay: 0.2s; }
-  .stagger-3 { animation-delay: 0.3s; }
-  .stagger-4 { animation-delay: 0.4s; }
-  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-1 {
+    animation-delay: 0.1s;
+  }
+  .stagger-2 {
+    animation-delay: 0.2s;
+  }
+  .stagger-3 {
+    animation-delay: 0.3s;
+  }
+  .stagger-4 {
+    animation-delay: 0.4s;
+  }
+  .stagger-5 {
+    animation-delay: 0.5s;
+  }
 }
 
 @layer utilities {
@@ -283,8 +394,12 @@
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   @keyframes scaleIn {
@@ -310,33 +425,64 @@
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-10px) rotate(1deg); }
-    50% { transform: translateY(-5px) rotate(0deg); }
-    75% { transform: translateY(-15px) rotate(-1deg); }
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-10px) rotate(1deg);
+    }
+    50% {
+      transform: translateY(-5px) rotate(0deg);
+    }
+    75% {
+      transform: translateY(-15px) rotate(-1deg);
+    }
   }
 
   @keyframes pulseGlow {
-    0%, 100% { 
+    0%,
+    100% {
       box-shadow: 0 0 20px hsl(45 100% 51% / 0.2);
     }
-    50% { 
-      box-shadow: 0 0 40px hsl(45 100% 51% / 0.4), 0 0 60px hsl(45 100% 51% / 0.2);
+    50% {
+      box-shadow:
+        0 0 40px hsl(45 100% 51% / 0.4),
+        0 0 60px hsl(45 100% 51% / 0.2);
     }
   }
 
   @keyframes bounceSlow {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
   }
 
-  .delay-100 { animation-delay: 100ms; }
-  .delay-200 { animation-delay: 200ms; }
-  .delay-300 { animation-delay: 300ms; }
-  .delay-400 { animation-delay: 400ms; }
-  .delay-500 { animation-delay: 500ms; }
-  .delay-600 { animation-delay: 600ms; }
-  .delay-700 { animation-delay: 700ms; }
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+  .delay-600 {
+    animation-delay: 600ms;
+  }
+  .delay-700 {
+    animation-delay: 700ms;
+  }
 
   /* PRESERVED Utilities from Old File */
   .bg-noise {

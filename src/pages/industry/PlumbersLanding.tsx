@@ -5,7 +5,6 @@ import { NarenMethodSection } from "@/components/industry/NarenMethodSection";
 import { PricingSection } from "@/components/industry/PricingSection";
 import { ProblemSection } from "@/components/industry/ProblemSection";
 import { ProcessSection } from "@/components/industry/ProcessSection";
-import Navbar from "@/components/ui/Navbar";
 
 const plumbersData = {
   hero: {
@@ -293,7 +292,6 @@ const plumbersData = {
 export default function PlumbersLanding() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <main className="pt-16 md:pt-20">
         <HeroSection {...plumbersData.hero} />
         <ProblemSection

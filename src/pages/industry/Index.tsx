@@ -13,54 +13,53 @@ import {
   Brain,
   TrendingUp,
 } from "lucide-react";
-import Navbar from "@/components/ui/Navbar";
 
 const niches = [
   {
     name: "Painters",
-    path: "/painters",
+    path: "/industry/painters",
     icon: Paintbrush,
     leads: "20-35 estimates/mo",
     avgJob: "$3,500-$5,000",
   },
   {
     name: "Pest Control",
-    path: "/pest-control",
+    path: "/industry/pest-control",
     icon: Bug,
     leads: "30-50 leads/mo",
     avgJob: "$400-$1,200/yr",
   },
   {
     name: "Carpet Cleaners",
-    path: "/carpet-cleaners",
+    path: "/industry/carpet-cleaners",
     icon: Sparkles,
     leads: "25-40 jobs/mo",
     avgJob: "$200-$350",
   },
   {
     name: "Roofers",
-    path: "/roofers",
+    path: "/industry/roofers",
     icon: Home,
     leads: "15-30 leads/mo",
     avgJob: "$8,000-$25,000",
   },
   {
     name: "Electricians",
-    path: "/electricians",
+    path: "/industry/electricians",
     icon: Zap,
     leads: "25-40 calls/mo",
     avgJob: "$500-$3,000",
   },
   {
     name: "HVAC",
-    path: "/hvac",
+    path: "/industry/hvac",
     icon: Thermometer,
     leads: "40-60 leads/mo",
     avgJob: "$5,000-$15,000",
   },
   {
     name: "Plumbers",
-    path: "/plumbers",
+    path: "/industry/plumbers",
     icon: Wrench,
     leads: "30-50 calls/mo",
     avgJob: "$500-$2,000",
@@ -70,8 +69,6 @@ const niches = [
 export default function Index() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
-
       <main className="pt-20">
         {/* Hero Section */}
         <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden section-glow">

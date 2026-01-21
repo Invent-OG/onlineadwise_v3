@@ -1,4 +1,3 @@
-
 import { CaseStudySection } from "@/components/industry/CaseStudySection";
 import { FAQSection } from "@/components/industry/FAQSection";
 import { FinalCTASection } from "@/components/industry/FinalCTASection";
@@ -7,7 +6,6 @@ import { NarenMethodSection } from "@/components/industry/NarenMethodSection";
 import { PricingSection } from "@/components/industry/PricingSection";
 import { ProblemSection } from "@/components/industry/ProblemSection";
 import { ProcessSection } from "@/components/industry/ProcessSection";
-import Navbar from "@/components/ui/Navbar";
 
 const pestControlData = {
   hero: {
@@ -346,7 +344,6 @@ const pestControlData = {
 export default function PestControlLanding() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <main className="pt-16 md:pt-20">
         <HeroSection {...pestControlData.hero} />
         <ProblemSection

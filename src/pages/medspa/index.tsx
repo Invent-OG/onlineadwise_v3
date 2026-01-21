@@ -8,13 +8,10 @@ import QualificationSection from "@/components/medspa/QualificationSection";
 import FAQSection from "@/components/medspa/FAQSection";
 import FounderSection from "@/components/medspa/FounderSection";
 import FinalCTASection from "@/components/medspa/FinalCTASection";
-import Navbar from "@/components/ui/Navbar";
-import Footer from "@/components/ui/Footer";
 
 const Index = () => {
   return (
     <main className="min-h-screen">
-      <Navbar />
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
@@ -25,7 +22,6 @@ const Index = () => {
       <FAQSection />
       <FounderSection />
       <FinalCTASection />
-      <Footer />
     </main>
   );
 };

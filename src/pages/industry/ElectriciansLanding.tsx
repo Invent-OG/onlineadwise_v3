@@ -1,4 +1,3 @@
-
 import { FAQSection } from "@/components/industry/FAQSection";
 import { FinalCTASection } from "@/components/industry/FinalCTASection";
 import { HeroSection } from "@/components/industry/HeroSection";
@@ -6,8 +5,6 @@ import { NarenMethodSection } from "@/components/industry/NarenMethodSection";
 import { PricingSection } from "@/components/industry/PricingSection";
 import { ProblemSection } from "@/components/industry/ProblemSection";
 import { ProcessSection } from "@/components/industry/ProcessSection";
-import Navbar from "@/components/ui/Navbar";
-
 
 const electriciansData = {
   hero: {
@@ -296,7 +293,6 @@ const electriciansData = {
 export default function ElectriciansLanding() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <main className="pt-16 md:pt-20">
         <HeroSection {...electriciansData.hero} />
         <ProblemSection

@@ -2,7 +2,6 @@ import { Check, Star, Zap, Crown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NicheData } from "@/components/data/nicheData.ts";
 
-
 interface PackagesSectionProps {
   niche: NicheData;
 }
@@ -68,16 +67,16 @@ const PackagesSection = ({ niche }: PackagesSectionProps) => {
   ];
 
   return (
-    <section className="py-20 dark-gradient text-primary-foreground">
+    <section className="py-20 dark-gradient ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-white/10 text-primary-foreground font-medium text-sm mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary text-primary-foreground font-medium text-sm mb-4">
             Pricing Packages
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Choose Your Growth Package
           </h2>
-          <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
+          <p className="text-lg t max-w-2xl mx-auto">
             Flexible options designed for {niche.nichePlural} at every stage of
             growth
           </p>
@@ -94,51 +93,55 @@ const PackagesSection = ({ niche }: PackagesSectionProps) => {
               }`}
             >
               {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full accent-gradient text-accent-foreground text-sm font-bold shadow-accent">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-amber-500 to-yellow-500 text-black text-sm font-bold shadow-lg shadow-amber-500/25">
                   Most Popular
                 </div>
               )}
 
               <div
-                className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
-                  pkg.popular ? "hero-gradient" : "bg-white/10"
+                className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 border ${
+                  pkg.popular
+                    ? "bg-primary/10 border-primary/20"
+                    : "bg-white/10 border-white/20"
                 }`}
               >
                 <pkg.icon
-                  className={`w-7 h-7 ${pkg.popular ? "text-primary-foreground" : "text-accent"}`}
+                  className={`w-7 h-7 ${pkg.popular ? "text-primary" : "text-white"}`}
                 />
               </div>
 
               <h3
-                className={`text-2xl font-bold mb-2 ${pkg.popular ? "text-foreground" : "text-primary-foreground"}`}
+                className={`text-2xl font-bold mb-2 ${pkg.popular ? "text-foreground" : "text-white"}`}
               >
                 {pkg.name}
               </h3>
 
               <div
-                className={`text-4xl font-bold mb-2 ${pkg.popular ? "text-primary" : "text-accent"}`}
+                className={`text-4xl font-bold mb-2 ${pkg.popular ? "text-primary" : "text-white"}`}
               >
                 {pkg.price}
               </div>
 
               <p
-                className={`text-sm mb-6 ${pkg.popular ? "text-muted-foreground" : "text-primary-foreground/70"}`}
+                className={`text-sm mb-6 ${pkg.popular ? "text-muted-foreground" : "text-white/70"}`}
               >
                 {pkg.description}
               </p>
 
-              <div className="space-y-3 mb-8">
+              <div className="space-y-4 mb-8">
                 {pkg.features.map((feature, fIndex) => (
                   <div key={fIndex} className="flex items-start gap-3">
                     <div
                       className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                        pkg.popular ? "bg-success/20" : "bg-success/30"
+                        pkg.popular
+                          ? "bg-primary/20 text-primary"
+                          : "bg-white/20 text-white"
                       }`}
                     >
-                      <Check className="w-3 h-3 text-success" />
+                      <Check className="w-3 h-3" />
                     </div>
                     <span
-                      className={`text-sm ${pkg.popular ? "text-foreground" : "text-primary-foreground/90"}`}
+                      className={`text-sm ${pkg.popular ? "text-foreground" : "text-white/90"}`}
                     >
                       {feature}
                     </span>
@@ -148,7 +151,7 @@ const PackagesSection = ({ niche }: PackagesSectionProps) => {
 
               <Button
                 asChild
-               
+                variant={pkg.popular ? "gold" : "outline"}
                 size="lg"
                 className={`w-full ${!pkg.popular ? "border-white/30 text-white hover:bg-white/10" : ""}`}
               >

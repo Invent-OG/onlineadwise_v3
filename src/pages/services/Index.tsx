@@ -11,13 +11,10 @@ import CaseStudySection from "@/components/home/CaseStudySection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import WhySection from "@/components/home/WhySection";
 import CTASection from "@/components/home/CTASection";
-import Footer from "@/components/ui/Footer";
-import Navbar from "@/components/ui/Navbar";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <HeroSection />
       <AboutSection />
       <NarenMethodSection />
@@ -31,7 +28,6 @@ const Index = () => {
       <TestimonialsSection />
       <WhySection />
       <CTASection />
-      <Footer />
     </div>
   );
 };

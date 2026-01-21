@@ -39,14 +39,14 @@ const CTASection = ({ niche }: CTASectionProps) => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button asChild  size="xl">
+            <Button asChild variant="gold" size="xl">
               <a href={calendarUrl} target="_blank" rel="noopener noreferrer">
                 <Calendar className="w-5 h-5" />
                 Start Your Growth Journey
                 <ArrowRight className="w-5 h-5" />
               </a>
             </Button>
-            <Button asChild  size="xl">
+            <Button asChild variant="secondary" size="xl">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5" />
                 Chat on WhatsApp

@@ -1,7 +1,6 @@
 import { ArrowRight, Play, Star, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { NicheData } from "@/components/data/nicheData.ts";
-
+import { NicheData } from "../data/nicheData";
 
 interface HeroSectionProps {
   niche: NicheData;
@@ -75,13 +74,13 @@ const HeroSection = ({ niche }: HeroSectionProps) => {
               className="flex flex-col sm:flex-row gap-4 animate-fade-in"
               style={{ animationDelay: "0.4s" }}
             >
-              <Button asChild  size="xl">
+              <Button asChild variant="gold" size="xl">
                 <a href={calendarUrl} target="_blank" rel="noopener noreferrer">
                   Start Your Growth Journey
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>
-              <Button  size="xl">
+              <Button variant="hero-secondary" size="xl">
                 <Play className="w-5 h-5" />
                 Explore Video Templates
               </Button>
