@@ -14,6 +14,14 @@ import PlumbersLanding from "./pages/industry/PlumbersLanding";
 import RoofersLanding from "./pages/industry/RoofersLanding";
 import Industry from "./pages/industry/Index";
 import Services from "./pages/services/Index";
+import AdPlanner from "./pages/adplanner/Index";
+import Booking from "./pages/booking/Index";
+import PaymentLinks from "./pages/booking/PaymentLinks";
+import ThankYou from "./pages/booking/ThankYou";
+import DentalGrowthSystem from "./pages/dentalgrowthsystem/Index";
+import MedSpa from "./pages/medspa/index";
+import Scorecard from "./pages/scorecard/Index";
+import WhiteboardVideo from "./pages/whiteboardvideo/Index";
 
 const queryClient = new QueryClient();
 
@@ -26,8 +34,28 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Services />} />
           <Route path="/services/meta-ads" element={<MetaAds />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          
+          {/* Ad Planner */}
+          <Route path="/ad-planner" element={<AdPlanner />} />
+
+          {/* Booking & Payment */}
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/booking/payment-links" element={<PaymentLinks />} />
+          <Route path="/booking/thank-you" element={<ThankYou />} />
+
+          {/* Dental Growth System */}
+          <Route path="/dental-growth-system" element={<DentalGrowthSystem />} />
+
+          {/* MedSpa */}
+          <Route path="/medspa" element={<MedSpa />} />
+
+          {/* Scorecard */}
+          <Route path="/scorecard" element={<Scorecard />} />
+
+          {/* Whiteboard Video */}
+          <Route path="/whiteboard-video" element={<WhiteboardVideo />} />
+
+          {/* Industry Routes */}
           <Route path="/industry" element={<Industry />} />
           <Route path="/industry/painters" element={<PaintersLanding />} />
           <Route
@@ -45,7 +73,9 @@ const App = () => (
           />
           <Route path="/industry/hvac" element={<HVACLanding />} />
           <Route path="/plumbers" element={<PlumbersLanding />} />{" "}
-          {/* whiteboard video routes */}
+
+          {/* Catch-all */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { nicheData } from "@/components/data/nicheData.ts";
-import FloatingWidgets from "@/components/whiteboardvideo/FloatingWidgets.ts";
+import { nicheData } from "@/components/data/nicheData";
+import FloatingWidgets from "@/components/whiteboardvideo/FloatingWidgets";
 
 const Index = () => {
   const calendarUrl = "https://calendar.app.google/MhdR6MKNu8SXgaUy5";
