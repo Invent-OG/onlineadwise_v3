@@ -45,6 +45,7 @@ const App = () => (
           />
           <Route path="/industry/hvac" element={<HVACLanding />} />
           <Route path="/plumbers" element={<PlumbersLanding />} />{" "}
+          {/* whiteboard video routes */}
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
