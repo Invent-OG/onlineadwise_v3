@@ -118,17 +118,17 @@ const VideoPacksSection = () => {
         </div>
 
         {/* All Videos Include */}
-        <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 p-8 mb-16">
+        <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 p-6 md:p-8 mb-16">
           <h3 className="text-xl font-display font-bold text-foreground mb-6 text-center">
             All Videos Include:
           </h3>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="grid grid-cols-1 gap-4 md:flex md:flex-wrap md:justify-center">
             {features.map((feature) => (
               <div
                 key={feature}
                 className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
               >
-                <Check className="w-4 h-4 text-primary" />
+                <Check className="w-4 h-4 text-primary shrink-0" />
                 <span className="text-sm text-foreground">{feature}</span>
               </div>
             ))}
@@ -162,13 +162,13 @@ const VideoPacksSection = () => {
           <h3 className="text-xl font-display font-bold text-foreground mb-6">
             Each Niche Pack Includes:
           </h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="grid grid-cols-1 gap-3 text-left md:flex md:flex-wrap md:justify-center">
             {nicheIncludes.map((item) => (
               <div
                 key={item}
                 className="flex items-center gap-2 px-4 py-2 rounded-lg bg-card border border-primary/30"
               >
-                <Check className="w-4 h-4 text-primary" />
+                <Check className="w-4 h-4 text-primary shrink-0" />
                 <span className="text-sm text-foreground">{item}</span>
               </div>
             ))}

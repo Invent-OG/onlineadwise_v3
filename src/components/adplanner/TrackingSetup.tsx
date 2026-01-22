@@ -114,7 +114,7 @@ gtag('event', 'conversion', {'send_to': '${pixelId || "AW-XXXXXXXXX"}/XXXXX'});
               <label className="block text-sm font-body text-muted-foreground mb-3">
                 Select Ad Platform
               </label>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {platforms.map((platform) => (
                   <button
                     key={platform.id}
@@ -133,7 +133,7 @@ gtag('event', 'conversion', {'send_to': '${pixelId || "AW-XXXXXXXXX"}/XXXXX'});
             </div>
 
             {/* Pixel ID & Event Type */}
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div>
                 <label className="block text-sm font-body text-muted-foreground mb-2">
                   Pixel ID / Conversion ID

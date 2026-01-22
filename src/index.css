@@ -173,6 +173,13 @@
     mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
   }
 
+  .grid-background {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.3) 1px, transparent 1px);
+  }
+
   .section-pattern {
     background-image: radial-gradient(
       hsl(var(--primary) / 0.05) 1px,
@@ -233,6 +240,20 @@
 
   .shadow-accent {
     box-shadow: 0 4px 20px hsl(var(--accent) / 0.3);
+  }
+
+  /* Missing classes fixed */
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50;
+  }
+
+  .gold-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .icon-circle {
+    @apply flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground;
+    box-shadow: var(--shadow-glow);
   }
 
   .card-glass {

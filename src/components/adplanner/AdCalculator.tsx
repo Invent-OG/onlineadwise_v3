@@ -225,7 +225,7 @@ export const AdCalculator = () => {
               </div>
 
               {/* Product Value & Margin */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-body text-muted-foreground mb-2">
                     Product Value (₹)
@@ -302,7 +302,7 @@ export const AdCalculator = () => {
               </div>
 
               {/* Objective & Conversion */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-body text-muted-foreground mb-2">
                     Campaign Objective

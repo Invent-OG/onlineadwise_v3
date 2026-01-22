@@ -189,7 +189,7 @@ export const NamingConventions = () => {
           viewport={{ once: true }}
           className="mt-12 max-w-4xl mx-auto"
         >
-          <div className="card-sci-fi p-6 grid md:grid-cols-4 gap-4 text-center">
+          <div className="card-sci-fi p-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
             {[
               "Instantly identify winners",
               "Faster scaling decisions",

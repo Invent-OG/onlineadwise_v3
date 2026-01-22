@@ -102,7 +102,7 @@ const NarenMethodSection = () => {
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 flex items-center justify-center gap-2">
             <Brain className="w-4 h-4" /> Our Signature Framework
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
+          <h2 className="text-3xl font-serif md:text-4xl lg:text-5xl font-display font-bold mb-6">
             <span className="text-foreground">THE </span>
             <span className="">NAREN METHOD™</span>
           </h2>

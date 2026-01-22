@@ -171,14 +171,14 @@ const CompleteSuitesSection = () => {
             <span className="">Specialize In</span>
           </h3>
 
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-w-4xl mx-auto">
             {niches.map((niche) => (
-              <span
+              <div
                 key={niche}
-                className="px-4 py-2 rounded-full bg-secondary/50 border border-border/30 text-sm text-foreground hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 cursor-pointer"
+                className="px-4 py-3 rounded-xl bg-secondary/50 border border-border/30 text-sm font-medium text-foreground hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 cursor-pointer flex items-center justify-center text-center"
               >
                 {niche}
-              </span>
+              </div>
             ))}
           </div>
         </div>

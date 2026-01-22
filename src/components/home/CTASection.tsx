@@ -6,19 +6,16 @@ const CTASection = () => {
     {
       icon: Calendar,
       label: "Book Strategy Call",
-      emoji: "🔮",
       primary: true,
     },
     {
       icon: FileText,
       label: "Fill Intake Form",
-      emoji: "📝",
       primary: false,
     },
     {
       icon: ShoppingBag,
       label: "Browse Video Store",
-      emoji: "🛒",
       primary: false,
     },
   ];
@@ -66,7 +63,7 @@ const CTASection = () => {
                       : "bg-secondary/80 text-foreground hover:bg-primary/20 hover:border-primary border border-border/50"
                   }`}
                 >
-                  <span className="mr-2">{action.emoji}</span>
+                  <Icon className="w-5 h-5 mr-2" />
                   {action.label}
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>

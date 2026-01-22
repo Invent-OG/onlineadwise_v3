@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Zap } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import Logo from "./Logo";
 import { Button } from "./button";
 
@@ -16,14 +17,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    // { href: "#about", label: "About" },
-    // { href: "#method", label: "NAREN Method™" },
     { href: "/", label: "Home" },
     { href: "#services", label: "Services" },
     { href: "#industries", label: "Industries" },
     { href: "#tools", label: "Tools" },
-    // { href: "#packages", label: "Packages" },
-    // { href: "#contact", label: "Contact" },
   ];
 
   return (
@@ -166,111 +163,148 @@ const Navbar = () => {
           className="lg:hidden p-2 text-foreground"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <Menu className="w-6 h-6" />
-          )}
+          <Menu className="w-6 h-6" />
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-lg border-b border-border animate-fade-in max-h-[85vh] overflow-y-auto">
-          <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
-            {navLinks.map((link) => {
-              if (link.label === "Services") {
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="lg:hidden fixed inset-0 z-[60] bg-background/95 backdrop-blur-xl border-b border-border flex flex-col"
+          >
+            {/* Mobile Menu Header */}
+            <div className="p-5 flex items-center justify-between border-b border-border/50">
+              <Logo />
+              <button
+                className="p-2 text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* Mobile Menu Content */}
+            <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-6">
+              {navLinks.map((link) => {
+                if (link.label === "Services") {
+                  return (
+                    <div key={link.label} className="flex flex-col gap-3">
+                      <span className="text-lg font-bold text-foreground">
+                        {link.label}
+                      </span>
+                      <div className="pl-4 flex flex-col gap-3 border-l-2 border-primary/10">
+                        <a
+                          href="/meta-ads"
+                          className="text-muted-foreground hover:text-primary transition-colors text-base"
+                        >
+                          Meta Ads
+                        </a>
+                        <a
+                          href="/google-ads"
+                          className="text-muted-foreground hover:text-primary transition-colors text-base"
+                        >
+                          Google Ads
+                        </a>
+                        <a
+                          href="/whiteboard-video"
+                          className="text-muted-foreground hover:text-primary transition-colors text-base"
+                        >
+                          Whiteboard Video
+                        </a>
+                      </div>
+                    </div>
+                  );
+                }
+                if (link.label === "Industries") {
+                  return (
+                    <div key={link.label} className="flex flex-col gap-3">
+                      <span className="text-lg font-bold text-foreground">
+                        {link.label}
+                      </span>
+                      <div className="pl-4 flex flex-col gap-3 border-l-2 border-primary/10">
+                        <a
+                          href="/industry"
+                          className="text-muted-foreground hover:text-primary transition-colors text-base"
+                        >
+                          All Industries
+                        </a>
+                        <a
+                          href="/medspa"
+                          className="text-muted-foreground hover:text-primary transition-colors text-base"
+                        >
+                          MedSpa
+                        </a>
+                        <a
+                          href="/dental-growth-system"
+                          className="text-muted-foreground hover:text-primary transition-colors text-base"
+                        >
+                          Dental
+                        </a>
+                        <a
+                          href="/industry/painters"
+                          className="text-muted-foreground hover:text-primary transition-colors text-base"
+                        >
+                          Painters
+                        </a>
+                        <a
+                          href="/industry/hvac"
+                          className="text-muted-foreground hover:text-primary transition-colors text-base"
+                        >
+                          HVAC
+                        </a>
+                      </div>
+                    </div>
+                  );
+                }
+                if (link.label === "Tools") {
+                  return (
+                    <div key={link.label} className="flex flex-col gap-3">
+                      <span className="text-lg font-bold text-foreground">
+                        {link.label}
+                      </span>
+                      <div className="pl-4 flex flex-col gap-3 border-l-2 border-primary/10">
+                        <a
+                          href="/adplanner"
+                          className="text-muted-foreground hover:text-primary transition-colors text-base"
+                        >
+                          Ad Planner
+                        </a>
+                        <a
+                          href="/scorecard"
+                          className="text-muted-foreground hover:text-primary transition-colors text-base"
+                        >
+                          Scorecard
+                        </a>
+                      </div>
+                    </div>
+                  );
+                }
                 return (
-                  <div key={link.label} className="flex flex-col gap-2">
-                    <span className="text-lg font-medium text-foreground">
-                      {link.label}
-                    </span>
-                    <a
-                      href="/meta-ads"
-                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
-                    >
-                      Meta Ads
-                    </a>
-                    <a
-                      href="/google-ads"
-                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
-                    >
-                      Google Ads
-                    </a>
-                    <a
-                      href="/whiteboard-video"
-                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
-                    >
-                      Whiteboard Video
-                    </a>
-                  </div>
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-lg font-bold text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
                 );
-              }
-              if (link.label === "Industries") {
-                return (
-                  <div key={link.label} className="flex flex-col gap-2">
-                    <span className="text-lg font-medium text-foreground">
-                      {link.label}
-                    </span>
-                    <a
-                      href="/industry"
-                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
-                    >
-                      All Industries
-                    </a>
-                    <a
-                      href="/medspa"
-                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
-                    >
-                      MedSpa
-                    </a>
-                    <a
-                      href="/dental-growth-system"
-                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
-                    >
-                      Dental
-                    </a>
-                  </div>
-                );
-              }
-              if (link.label === "Tools") {
-                return (
-                  <div key={link.label} className="flex flex-col gap-2">
-                    <span className="text-lg font-medium text-foreground">
-                      {link.label}
-                    </span>
-                    <a
-                      href="/adplanner"
-                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
-                    >
-                      Ad Planner
-                    </a>
-                    <a
-                      href="/scorecard"
-                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
-                    >
-                      Scorecard
-                    </a>
-                  </div>
-                );
-              }
-              return (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-lg font-medium text-foreground hover:text-primary transition-colors py-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              );
-            })}
-            <Button className="w-full bg-primary text-primary-foreground mt-4 py-6">
-              Get Started ⚡
-            </Button>
-          </div>
-        </div>
-      )}
+              })}
+              
+              <div className="mt-auto pt-6">
+                <Button className="w-full bg-primary text-primary-foreground py-6 text-lg font-bold shadow-lg shadow-primary/25">
+                  Get Started ⚡
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

@@ -252,15 +252,15 @@ const FunnelSystemsSection = () => {
             <span className="">Use</span>
           </h3>
 
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-w-4xl mx-auto">
             {toolsWeUse.map((tool) => (
-              <span
+              <div
                 key={tool}
-                className="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm text-foreground flex items-center gap-2"
+                className="px-4 py-3 rounded-xl bg-primary/10 border border-primary/20 text-sm font-medium text-foreground flex items-center gap-3 justify-start overflow-hidden"
               >
-                <Zap className="w-3.5 h-3.5 text-primary" />
-                {tool}
-              </span>
+                <Zap className="w-4 h-4 text-primary shrink-0" />
+                <span className="truncate">{tool}</span>
+              </div>
             ))}
           </div>
         </div>
