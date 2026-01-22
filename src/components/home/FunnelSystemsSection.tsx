@@ -144,9 +144,9 @@ const FunnelSystemsSection = () => {
                 className="group bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 hover:border-primary/50 p-8 transition-all duration-500 hover:glow-gold-sm"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  {SecondaryIcon && (
+                  {/* {SecondaryIcon && (
                     <SecondaryIcon className="w-8 h-8 text-primary" />
-                  )}
+                  )} */}
                   <div
                     className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${system.color} flex items-center justify-center glow-gold-sm`}
                   >

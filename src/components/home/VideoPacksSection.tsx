@@ -4,7 +4,7 @@ const VideoPacksSection = () => {
   const videoTypes = [
     {
       icon: Film,
-      emoji: "1️⃣",
+      // emoji: "1️⃣",
       title: "Commercial Video",
       description:
         "High-impact animations designed to trigger immediate action.",
@@ -13,14 +13,14 @@ const VideoPacksSection = () => {
     },
     {
       icon: MessageSquare,
-      emoji: "2️⃣",
+      // emoji: "2️⃣",
       title: "Explainer Video",
       description: "Question-based, educational videos ideal for awareness.",
       useCase: "YouTube SEO, Website trust-building, Top-of-funnel ads.",
     },
     {
       icon: Heart,
-      emoji: "3️⃣",
+      // emoji: "3️⃣",
       title: "Storytelling Video",
       description: "Emotion-driven brand story videos for deep connection.",
       useCase: "Perfect for retargeting & credibility building.",
@@ -98,7 +98,7 @@ const VideoPacksSection = () => {
 
                 <div className="relative">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-2xl">{type.emoji}</span>
+                    {/* <span className="text-2xl">{type.emoji}</span> */}
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
@@ -138,7 +138,7 @@ const VideoPacksSection = () => {
         {/* Niche Packs */}
         <div className="mb-16">
           <h3 className="text-2xl font-display font-bold text-center mb-8">
-            <span className="text-foreground">🎯 </span>
+            {/* <span className="text-foreground">🎯 </span> */}
             <span className="">20+ Local Business Niches</span>
           </h3>
 

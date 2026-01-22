@@ -1,4 +1,4 @@
-import { Compass, Magnet, Settings, Expand, Repeat } from "lucide-react";
+import { Compass, Magnet, Settings, Expand, Repeat, Brain } from "lucide-react";
 
 const NarenMethodSection = () => {
   const stages = [
@@ -99,8 +99,8 @@ const NarenMethodSection = () => {
       <div className="container-narrow relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-            🧠 Our Signature Framework
+          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 flex items-center justify-center gap-2">
+            <Brain className="w-4 h-4" /> Our Signature Framework
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
             <span className="text-foreground">THE </span>

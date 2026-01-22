@@ -75,7 +75,7 @@ const CompleteSuitesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 flex items-center justify-center gap-2">
-            <Star className="w-4 h-4 fill-current" /> Complete Packages
+            <Star className="w-4 h-4 " /> Complete Packages
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
             <span className="text-foreground">NAREN Method™ </span>
@@ -166,7 +166,7 @@ const CompleteSuitesSection = () => {
         <div className="text-center">
           <h3 className="text-2xl font-display font-bold mb-8 flex items-center justify-center gap-2">
             <span className="text-foreground flex items-center gap-2">
-              <Star className="w-6 h-6 text-primary fill-current" /> Niches We
+              <Star className="w-6 h-6 text-primary " /> Niches We
             </span>
             <span className="">Specialize In</span>
           </h3>

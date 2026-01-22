@@ -11,14 +11,16 @@ import CaseStudySection from "@/components/home/CaseStudySection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import WhySection from "@/components/home/WhySection";
 import CTASection from "@/components/home/CTASection";
+import { AdService } from "@/components/home/AdService";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <HeroSection />
+      <HeroSection />  
       <AboutSection />
       <NarenMethodSection />
-      <PlatformServicesSection />
+      {/* <PlatformServicesSection /> */}
+      <AdService/>
       <AdditionalServicesSection />
       <VideoPacksSection />
       <CompleteSuitesSection />

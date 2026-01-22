@@ -3,7 +3,7 @@ import { Sparkles } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <motion.section
+    <motion.section 
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
@@ -20,10 +20,9 @@ const HeroSection = () => {
           <span className="text-gradient-gold">in Just 30 Minutes</span>
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          Connect with our expert strategists to unlock your brand's full
-          potential. Whether you're looking to scale your advertising campaigns,
-          optimize your ROI, or build a comprehensive digital strategy — we're
-          here to guide you.
+          Connect with our expert strategists to unlock your brand's full potential. 
+          Whether you're looking to scale your advertising campaigns, optimize your ROI, 
+          or build a comprehensive digital strategy — we're here to guide you.
         </p>
       </div>
     </motion.section>

@@ -6,6 +6,7 @@ import {
   Cog,
   Monitor,
   Layers,
+  Target,
 } from "lucide-react";
 
 const AboutSection = () => {
@@ -28,8 +29,8 @@ const AboutSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-              🎯 Who We Are
+            <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 flex items-center justify-center gap-2">
+              <Target className="w-4 h-4" /> Who We Are
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
               <span className="text-foreground">More Than An Agency.</span>

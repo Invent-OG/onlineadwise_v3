@@ -9,6 +9,8 @@ import {
   Star,
   Zap,
   Crown,
+  Briefcase,
+  MapPin,
 } from "lucide-react";
 
 const AdditionalServicesSection = () => {
@@ -16,7 +18,6 @@ const AdditionalServicesSection = () => {
     {
       id: "content",
       icon: FileText,
-      emoji: "6️⃣",
       title: "Content Writing Services",
       subtitle: "Complete Copy Suite",
       narenLayer: "Narrative Psychology + Emotional Hooks",
@@ -43,7 +44,6 @@ const AdditionalServicesSection = () => {
     {
       id: "website",
       icon: Globe,
-      emoji: "7️⃣",
       title: "Website Design & Development",
       subtitle: "Execute Funnels + Navigation Psychology",
       narenLayer: "Execute Funnels + Navigation Psychology",
@@ -66,7 +66,6 @@ const AdditionalServicesSection = () => {
     {
       id: "funnel",
       icon: Layers,
-      emoji: "8️⃣",
       title: "Funnel Design & Optimization",
       subtitle: "Execute + Retarget + Nurture",
       narenLayer: "Execute + Retarget + Nurture",
@@ -89,7 +88,6 @@ const AdditionalServicesSection = () => {
     {
       id: "tracking",
       icon: BarChart3,
-      emoji: "9️⃣",
       title: "Tracking & Analytics Setup",
       subtitle: "Full Stack Implementation",
       narenLayer: "Analyze & Evolve",
@@ -112,7 +110,6 @@ const AdditionalServicesSection = () => {
     {
       id: "automation",
       icon: Cog,
-      emoji: "🔟",
       title: "Automation & CRM Setup",
       subtitle: "GHL, Zapier, Make, n8n",
       narenLayer: "Nurture + Retarget + Scale",
@@ -129,7 +126,6 @@ const AdditionalServicesSection = () => {
     {
       id: "video",
       icon: Film,
-      emoji: "🎬",
       title: "Whiteboard Video Explainer",
       subtitle: "Store Item",
       narenLayer: "NAREN Psychology Scripting",
@@ -156,8 +152,8 @@ const AdditionalServicesSection = () => {
       <div className="container-narrow relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-            🛠️ Complete Service Suite
+          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 flex items-center justify-center gap-2">
+            <Briefcase className="w-4 h-4" /> Complete Service Suite
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
             <span className="text-foreground">Beyond </span>
@@ -178,7 +174,6 @@ const AdditionalServicesSection = () => {
                 className="group bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 hover:border-primary/50 p-6 transition-all duration-500 hover:glow-gold-sm"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-xl">{service.emoji}</span>
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
@@ -191,9 +186,10 @@ const AdditionalServicesSection = () => {
                   {service.subtitle}
                 </p>
 
-                <div className="mb-4 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 inline-block">
+                <div className="mb-4 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 inline-flex items-center gap-2">
+                  <MapPin className="w-3 h-3 text-primary" />
                   <span className="text-xs text-primary">
-                    📌 {service.narenLayer}
+                    {service.narenLayer}
                   </span>
                 </div>
 
