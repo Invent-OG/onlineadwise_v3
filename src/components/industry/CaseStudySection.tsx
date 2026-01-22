@@ -29,7 +29,7 @@ export function CaseStudySection({
   caseStudies,
 }: CaseStudySectionProps) {
   return (
-    <section className="py-20 md:py-32 relative">
+    <section className="py-16 md:py-24 relative">
       <div className="container-narrow px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section heading */}
@@ -97,7 +97,7 @@ export function CaseStudySection({
                     <h4 className="text-sm uppercase tracking-wider text-muted-foreground mb-4">
                       The Results
                     </h4>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                       {study.results.map((result, rIndex) => {
                         const Icon = result.icon;
                         return (

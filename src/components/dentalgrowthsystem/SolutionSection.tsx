@@ -57,8 +57,8 @@ const pillars = [
 
 const SolutionSection = () => {
   return (
-    <section className="py-20 lg:py-28 bg-background">
-      <div className="section-container">
+    <section className="py-16 md:py-20 lg:py-28 bg-background">
+      <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

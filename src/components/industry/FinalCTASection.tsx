@@ -42,7 +42,7 @@ export function FinalCTASection({
   contact,
 }: FinalCTASectionProps) {
   return (
-    <section className="py-20 md:py-32 relative section-glow">
+    <section className="py-16 md:py-24 relative section-glow">
       {/* Background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-primary/5 blur-[200px] rounded-full pointer-events-none" />
 

@@ -7,9 +7,9 @@ const HeroSection = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="text-center py-12 px-4"
+      className="text-center py-8 px-4 md:py-12"
     >
-      <div className="glass-card gold-glow rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+      <div className="glass-card gold-glow rounded-2xl p-6 md:p-12 max-w-4xl mx-auto">
         <div className="flex justify-center mb-6">
           <div className="icon-circle animate-pulse-glow">
             <Sparkles className="w-8 h-8 text-primary-foreground" />

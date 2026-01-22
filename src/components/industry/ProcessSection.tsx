@@ -21,7 +21,7 @@ export function ProcessSection({
   timeline,
 }: ProcessSectionProps) {
   return (
-    <section className="py-20 md:py-32 relative section-glow">
+    <section className="py-16 md:py-24 relative section-glow">
       <div className="container-narrow px-4">
         <div className="max-w-5xl mx-auto">
           {/* Section heading */}

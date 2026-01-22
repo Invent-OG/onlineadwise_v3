@@ -23,18 +23,18 @@ export function HeroSection({
   rating,
 }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden section-glow">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden section-glow py-20 md:py-0">
       {/* Floating decorative icons */}
       <Target
-        className="absolute top-20 left-[10%] w-12 h-12 floating-icon"
+        className="absolute top-20 left-[10%] w-12 h-12 floating-icon hidden md:block"
         style={{ animationDelay: "0s" }}
       />
       <TrendingUp
-        className="absolute bottom-40 left-[8%] w-10 h-10 floating-icon"
+        className="absolute bottom-40 left-[8%] w-10 h-10 floating-icon hidden md:block"
         style={{ animationDelay: "2s" }}
       />
       <Brain
-        className="absolute top-32 right-[12%] w-14 h-14 floating-icon"
+        className="absolute top-32 right-[12%] w-14 h-14 floating-icon hidden md:block"
         style={{ animationDelay: "1s" }}
       />
 

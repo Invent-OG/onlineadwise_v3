@@ -48,7 +48,7 @@ const item = {
 
 const BenefitsSection = () => {
   return (
-    <section className="py-16 px-4">
+    <section className="py-12 md:py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ const BenefitsSection = () => {
             <motion.div
               key={index}
               variants={item}
-              className="glass-card rounded-2xl p-8 hover:gold-glow transition-all duration-300 group"
+              className="glass-card rounded-2xl p-6 md:p-8 hover:gold-glow transition-all duration-300 group"
             >
               <div className="icon-circle mb-6 group-hover:animate-pulse-glow transition-all">
                 <benefit.icon className="w-8 h-8 text-primary-foreground" />

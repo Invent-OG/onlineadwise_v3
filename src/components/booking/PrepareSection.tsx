@@ -11,7 +11,7 @@ const checklist = [
 
 const PrepareSection = () => {
   return (
-    <section className="py-16 px-4">
+    <section className="py-12 md:py-16 px-4">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ const PrepareSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="glass-card rounded-2xl p-8"
+          className="glass-card rounded-2xl p-6 md:p-8"
         >
           <h3 className="text-lg font-semibold text-foreground mb-6">
             Preparation Checklist:

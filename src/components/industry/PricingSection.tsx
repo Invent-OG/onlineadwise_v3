@@ -43,7 +43,7 @@ export function PricingSection({
   availability,
 }: PricingSectionProps) {
   return (
-    <section className="py-20 md:py-32 relative">
+    <section className="py-16 md:py-24 relative">
       <div className="container-narrow px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section heading */}
@@ -63,7 +63,7 @@ export function PricingSection({
                 key={index}
                 className={`relative rounded-2xl border overflow-hidden transition-all duration-300 ${
                   tier.popular
-                    ? "border-primary bg-card glow-gold scale-105 z-10"
+                    ? "border-primary bg-card glow-gold md:scale-105 z-10"
                     : "border-border/50 bg-card card-glow"
                 }`}
               >

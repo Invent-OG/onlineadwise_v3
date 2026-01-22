@@ -30,7 +30,7 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
           transition={{ delay: 0.1 }}
           className="mb-6"
         >
-          <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-gold flex items-center justify-center shadow-gold">
+          <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gold-gradient flex items-center justify-center shadow-gold">
             <Target className="w-8 h-8 text-primary-foreground" />
           </div>
           <span className="text-xs font-medium text-primary uppercase tracking-widest">
@@ -94,7 +94,7 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
           <Button
             onClick={onStart}
             size="lg"
-            className="w-full h-14 text-lg font-semibold bg-gradient-gold hover:opacity-90 text-primary-foreground glow-gold transition-all duration-300"
+            className="w-full h-14 text-lg font-semibold bg-gold-gradient hover:opacity-90 text-primary-foreground glow-gold transition-all duration-300"
           >
             Start Assessment
             <ArrowRight className="w-5 h-5 ml-2" />

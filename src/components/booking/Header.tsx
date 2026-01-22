@@ -6,7 +6,7 @@ const Header = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="pt-8 pb-12 text-center"
+      className="pt-8 pb-8 md:pb-12 text-center"
     >
       <div className="flex flex-col items-center gap-4">
         <h1 className="text-3xl md:text-4xl font-bold text-gradient-gold tracking-wide">

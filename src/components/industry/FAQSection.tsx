@@ -17,7 +17,7 @@ interface FAQSectionProps {
 
 export function FAQSection({ headline, items }: FAQSectionProps) {
   return (
-    <section className="py-20 md:py-32 relative section-glow">
+    <section className="py-16 md:py-24 relative section-glow">
       <div className="container-narrow px-4">
         <div className="max-w-3xl mx-auto">
           {/* Section heading */}

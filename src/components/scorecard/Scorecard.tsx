@@ -164,7 +164,7 @@ export function Scorecard() {
                   size="lg"
                   onClick={handleNext}
                   disabled={isSubmitting}
-                  className="flex-1 h-12 text-base font-semibold bg-gradient-gold hover:opacity-90 text-primary-foreground transition-all"
+                  className="flex-1 h-12 text-base font-semibold bg-gold-gradient hover:opacity-90 text-primary-foreground transition-all"
                 >
                   {isSubmitting ? (
                     <>
