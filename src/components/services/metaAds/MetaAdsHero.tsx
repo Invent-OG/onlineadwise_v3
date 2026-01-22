@@ -1,14 +1,24 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, TrendingUp, ArrowRight } from "lucide-react";
+import {
+  CheckCircle,
+  TrendingUp,
+  ArrowRight,
+  CheckCircle2,
+  DollarSign,
+  Rocket,
+  Zap,
+  Target,
+  Flame,
+} from "lucide-react";
 import { useRef, useState } from "react";
 import narender from "@/assets/narender-sharma.png";
 
 const trustBadges = [
-  { emoji: "✅", text: "Meta Certified" },
-  { emoji: "💰", text: "$5M+ Ad Spend Managed" },
-  { emoji: "🚀", text: "100+ Campaigns" },
-  { emoji: "⚡", text: "24hr Response" },
+  { icon: CheckCircle2, text: "Meta Certified" },
+  { icon: DollarSign, text: "$5M+ Ad Spend Managed" },
+  { icon: Rocket, text: "100+ Campaigns" },
+  { icon: Zap, text: "24hr Response" },
 ];
 
 const HeroSection = () => {
@@ -59,9 +69,9 @@ const HeroSection = () => {
       <motion.div
         animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-32 left-[15%] text-4xl hidden lg:block"
+        className="absolute top-32 left-[15%] text-primary/20 hidden lg:block"
       >
-        📈
+        <TrendingUp className="w-12 h-12" />
       </motion.div>
       <motion.div
         animate={{ y: [0, -20, 0], rotate: [0, -5, 0] }}
@@ -71,9 +81,9 @@ const HeroSection = () => {
           ease: "easeInOut",
           delay: 0.5,
         }}
-        className="absolute top-48 right-[10%] text-5xl hidden lg:block"
+        className="absolute top-48 right-[10%] text-secondary/20 hidden lg:block"
       >
-        🎯
+        <Target className="w-16 h-16" />
       </motion.div>
       <motion.div
         animate={{ y: [0, -12, 0], rotate: [0, 8, 0] }}
@@ -83,9 +93,9 @@ const HeroSection = () => {
           ease: "easeInOut",
           delay: 1,
         }}
-        className="absolute bottom-32 left-[10%] text-4xl hidden lg:block"
+        className="absolute bottom-32 left-[10%] text-primary/20 hidden lg:block"
       >
-        💰
+        <DollarSign className="w-12 h-12" />
       </motion.div>
 
       {/* Floating Badge */}
@@ -96,9 +106,9 @@ const HeroSection = () => {
         className="absolute top-24 left-1/2 -translate-x-1/2 z-10"
       >
         <div className="bg-card border border-primary/30 text-foreground px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2">
-          <span className="text-primary">🔥</span>
+          <Flame className="w-4 h-4 text-primary fill-primary" />
           Limited Slots Available for Q1 2026
-          <span className="text-primary">🔥</span>
+          <Flame className="w-4 h-4 text-primary fill-primary" />
         </div>
       </motion.div>
 
@@ -106,7 +116,7 @@ const HeroSection = () => {
         style={{ opacity }}
         className="container-narrow relative z-10 flex items-center min-h-screen"
       >
-        <div className="grid lg:grid-cols-2 gap-12 items-center py-32">
+        <div className="grid lg:grid-cols-2 gap-12 items-center hero-padding">
           {/* Text Content */}
           <div className="text-center lg:text-left">
             <motion.div
@@ -126,7 +136,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.15] mb-5 text-foreground"
+              className="h1 mb-5 text-foreground"
             >
               <span className="text-primary">Meta Ads</span> for SMBs & Service
               Agencies
@@ -140,7 +150,7 @@ const HeroSection = () => {
               className="bg-gradient-to-r from-primary/20 to-primary/5 border border-primary/30 rounded-2xl p-5 mb-6"
             >
               <div className="flex items-center gap-4 justify-center lg:justify-start">
-                <span className="text-4xl">📈</span>
+                <TrendingUp className="w-10 h-10 text-primary" />
                 <div>
                   <p className="text-2xl md:text-3xl font-bold text-primary">
                     25–40% ROI Improvement
@@ -156,7 +166,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.55 }}
-              className="text-base md:text-lg text-muted-foreground mb-6 leading-relaxed max-w-xl mx-auto lg:mx-0"
+              className="subheading mb-6 max-w-xl mx-auto lg:mx-0"
             >
               Turn your Facebook & Instagram ad spend into{" "}
               <span className="text-foreground font-medium">
@@ -201,7 +211,7 @@ const HeroSection = () => {
                   transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
                   className="flex items-center gap-2 text-muted-foreground bg-muted/30 px-3 py-1.5 rounded-full"
                 >
-                  <span className="text-sm">{badge.emoji}</span>
+                  <badge.icon className="w-4 h-4 text-primary" />
                   <span className="text-xs font-medium">{badge.text}</span>
                 </motion.div>
               ))}
@@ -280,7 +290,7 @@ const HeroSection = () => {
                 className="absolute -top-4 -right-8 bg-card border border-border rounded-xl p-3 shadow-lg"
               >
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl">🚀</span>
+                  <Rocket className="w-6 h-6 text-primary" />
                   <div>
                     <p className="text-lg font-bold text-foreground">100+</p>
                     <p className="text-xs text-muted-foreground">Campaigns</p>
@@ -299,7 +309,7 @@ const HeroSection = () => {
                 className="absolute -bottom-4 -left-8 bg-card border border-border rounded-xl p-3 shadow-lg"
               >
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl">💰</span>
+                  <DollarSign className="w-6 h-6 text-primary" />
                   <div>
                     <p className="text-lg font-bold text-foreground">$5M+</p>
                     <p className="text-xs text-muted-foreground">Ad Spend</p>

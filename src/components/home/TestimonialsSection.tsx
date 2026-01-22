@@ -1,4 +1,4 @@
-import { Quote, Star } from "lucide-react";
+import { Quote, Star, MessageSquare } from "lucide-react";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -29,11 +29,11 @@ const TestimonialsSection = () => {
     <section className="py-24 relative overflow-hidden bg-card/30">
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container-narrow relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-            ⭐ Testimonials
+          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 inline-flex items-center gap-2">
+            <Star className="w-4 h-4 fill-primary" /> Testimonials
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
             <span className="text-foreground">Client </span>
@@ -63,8 +63,9 @@ const TestimonialsSection = () => {
               </div>
 
               {/* Quote */}
-              <p className="text-lg text-foreground mb-6 leading-relaxed italic">
-                💬 "{testimonial.quote}"
+              <p className="text-lg text-foreground mb-6 leading-relaxed italic relative">
+                <MessageSquare className="w-4 h-4 text-primary/40 inline mr-2 -mt-1" />
+                "{testimonial.quote}"
               </p>
 
               {/* Author */}

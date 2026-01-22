@@ -56,7 +56,7 @@ const HeroSection = () => {
         <TrendingUp className="w-10 h-10" />
       </motion.div>
 
-      <div className="container-wide relative z-10 py-16 md:py-24 lg:py-32">
+      <div className="container-wide relative z-10 hero-padding">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <motion.div
@@ -78,12 +78,12 @@ const HeroSection = () => {
               </span>
             </motion.div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold text-foreground leading-tight mb-4">
+            <h1 className="h1 mb-4 text-foreground">
               Fill Your Med Spa Calendar with{" "}
               <span className="text-gradient-gold">Qualified Appointments</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-4">
+            <p className="subheading max-w-2xl mx-auto lg:mx-0 mb-4">
               — Predictably, Profitably, Every Month
             </p>
 

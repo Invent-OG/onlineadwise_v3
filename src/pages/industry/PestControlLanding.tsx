@@ -6,6 +6,15 @@ import { NarenMethodSection } from "@/components/industry/NarenMethodSection";
 import { PricingSection } from "@/components/industry/PricingSection";
 import { ProblemSection } from "@/components/industry/ProblemSection";
 import { ProcessSection } from "@/components/industry/ProcessSection";
+import {
+  TrendingUp,
+  BarChart3,
+  DollarSign,
+  Search,
+  ClipboardList,
+  Rocket,
+  Zap,
+} from "lucide-react";
 
 const pestControlData = {
   hero: {
@@ -127,25 +136,25 @@ const pestControlData = {
             label: "Leads per month",
             before: "62",
             after: "44 (higher quality)",
-            icon: "trending" as const,
+            icon: TrendingUp,
           },
           {
             label: "Annual contract rate",
             before: "18%",
             after: "52%",
-            icon: "chart" as const,
+            icon: BarChart3,
           },
           {
             label: "Average customer LTV",
             before: "$380",
             after: "$1,240",
-            icon: "dollar" as const,
+            icon: DollarSign,
           },
           {
             label: "Monthly recurring revenue",
             before: "$22K",
             after: "$68K",
-            icon: "dollar" as const,
+            icon: DollarSign,
           },
         ],
         testimonial:
@@ -161,7 +170,7 @@ const pestControlData = {
       {
         week: "Week 1",
         title: "NAREN Audit",
-        icon: "search" as const,
+        icon: Search,
         description: "We analyze your current marketing and operations:",
         items: [
           "Lead quality analysis",
@@ -175,7 +184,7 @@ const pestControlData = {
       {
         week: "Week 2-3",
         title: "Strategy & Setup",
-        icon: "clipboard" as const,
+        icon: ClipboardList,
         description: "We build your recurring revenue infrastructure:",
         items: [
           "Create annual contract-focused positioning",
@@ -188,7 +197,7 @@ const pestControlData = {
       {
         week: "Week 4-8",
         title: "Launch & Optimize",
-        icon: "rocket" as const,
+        icon: Rocket,
         description: "Your campaigns go live with contract-focused testing:",
         items: [
           "Test annual plan offers vs. monthly options",
@@ -201,7 +210,7 @@ const pestControlData = {
       {
         week: "Month 3+",
         title: "Scale & Systematize",
-        icon: "trending" as const,
+        icon: TrendingUp,
         description: "We turn leads into a recurring revenue engine:",
         items: [
           "Scale winning campaigns to new territories",
@@ -221,7 +230,7 @@ const pestControlData = {
       "Build predictable recurring revenue with the right level of support.",
     tiers: [
       {
-        icon: "🔍",
+        icon: Search,
         name: "NAREN AUDIT",
         price: "$997",
         period: undefined,
@@ -237,7 +246,7 @@ const pestControlData = {
         ctaText: "Book Your Audit",
       },
       {
-        icon: "🚀",
+        icon: Rocket,
         name: "IMPLEMENTATION",
         popular: true,
         price: "$4,000",
@@ -256,7 +265,7 @@ const pestControlData = {
         ctaText: "Apply Now",
       },
       {
-        icon: "⚡",
+        icon: Zap,
         name: "PARTNERSHIP",
         price: "$7,000",
         period: "month",

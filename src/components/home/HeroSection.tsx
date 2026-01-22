@@ -29,8 +29,8 @@ const HeroSection = () => {
         <TrendingUp className="w-14 h-14 text-primary" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
+      <div className="container-narrow relative z-10 text-center hero-padding">
+        <div className="max-w-5xl mx-auto">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8 slide-up">
             <Zap className="w-4 h-4 text-primary" />
@@ -40,14 +40,14 @@ const HeroSection = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6 slide-up stagger-1">
+          <h1 className="h1 mb-6 slide-up stagger-1">
             <span className="text-foreground">Where Strategy Meets</span>
             <br />
             <span className="">Psychology</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 slide-up stagger-2 font-light">
+          <p className="subheading mb-4 slide-up stagger-2 font-light">
             Where Ads Become Systems. Where Businesses Grow Predictably.
           </p>
 
@@ -82,15 +82,15 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-muted-foreground">
               <div className="flex items-center gap-2">
-                <span className="text-2xl">🎯</span>
+                <Target className="w-6 h-6 text-primary" />
                 <span className="text-sm">Performance-Driven</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-2xl">🧠</span>
+                <Zap className="w-6 h-6 text-primary" />
                 <span className="text-sm">Psychology-Based</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-2xl">📈</span>
+                <TrendingUp className="w-6 h-6 text-primary" />
                 <span className="text-sm">Predictable Growth</span>
               </div>
             </div>

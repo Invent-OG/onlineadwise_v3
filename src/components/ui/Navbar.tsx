@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Zap } from "lucide-react";
 import Logo from "./Logo";
 import { Button } from "./button";
 
@@ -33,7 +33,7 @@ const Navbar = () => {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container-narrow flex items-center justify-between">
         <Logo />
 
         {/* Desktop Navigation */}
@@ -155,8 +155,8 @@ const Navbar = () => {
               </a>
             );
           })}
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-gold-sm hover:glow-gold transition-all duration-300">
-            Get Started ⚡
+          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-gold-sm hover:glow-gold transition-all duration-300 gap-2">
+            Get Started <Zap className="w-4 h-4 fill-current" />
           </Button>
         </div>
 

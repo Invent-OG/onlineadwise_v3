@@ -11,7 +11,7 @@ import FinalCTASection from "@/components/medspa/FinalCTASection";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen">
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
@@ -22,7 +22,7 @@ const Index = () => {
       <FAQSection />
       <FounderSection />
       <FinalCTASection />
-    </main>
+    </div>
   );
 };
 

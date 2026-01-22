@@ -6,8 +6,6 @@ import { HeroSection } from "@/components/adplanner/HeroSection";
 import { NamingConventions } from "@/components/adplanner/NamingConventions";
 import PaidAdsSystem from "@/components/adplanner/PaidAdsSystem";
 import { TrackingSetup } from "@/components/adplanner/TrackingSetup";
-import Navbar from "@/components/ui/Navbar";
-import { Footer } from "react-day-picker";
 
 const Index = () => {
   return (

@@ -18,7 +18,7 @@ const HeroSection = ({ niche }: HeroSectionProps) => {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/10 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px]" />
 
-      <div className="container mx-auto px-4 relative z-10 py-20">
+      <div className="container-narrow relative z-10 hero-padding">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-foreground">
@@ -30,7 +30,7 @@ const HeroSection = ({ niche }: HeroSectionProps) => {
 
             {/* Main Headline */}
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in"
+              className="h1 mb-6 animate-fade-in"
               style={{ animationDelay: "0.1s" }}
             >
               Get More {niche.customerType} with{" "}
@@ -41,7 +41,7 @@ const HeroSection = ({ niche }: HeroSectionProps) => {
 
             {/* Subheadline */}
             <p
-              className="text-xl text-muted-foreground mb-4 leading-relaxed animate-fade-in"
+              className="subheading mb-4 animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
               Ready-made whiteboard video templates personalized with your{" "}

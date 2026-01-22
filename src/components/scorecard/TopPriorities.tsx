@@ -1,7 +1,7 @@
 import { PillarScore } from "@/utils/scoring";
 import { motion } from "framer-motion";
 
-import { Target, AlertTriangle, AlertCircle } from "lucide-react";
+import { Target, AlertTriangle, AlertCircle, PartyPopper } from "lucide-react";
 
 interface TopPrioritiesProps {
   priorities: PillarScore[];
@@ -15,7 +15,9 @@ export function TopPriorities({ priorities }: TopPrioritiesProps) {
         animate={{ opacity: 1, y: 0 }}
         className="bg-success/10 border border-success/30 rounded-lg p-6 text-center"
       >
-        <span className="text-4xl mb-2 block">🎉</span>
+        <span className="text-4xl mb-2 block flex justify-center">
+          <PartyPopper className="w-10 h-10 text-success" />
+        </span>
         <h3 className="text-lg font-serif font-semibold text-success mb-2">
           Excellent Marketing Foundation!
         </h3>
@@ -32,9 +34,10 @@ export function TopPriorities({ priorities }: TopPrioritiesProps) {
     return <AlertTriangle className="w-5 h-5 text-warning" />;
   };
 
-  const getEmoji = (percentage: number) => {
-    if (percentage < 30) return "🚨";
-    return "⚠️";
+  const getStatusIcon = (percentage: number) => {
+    if (percentage < 30)
+      return <AlertCircle className="w-5 h-5 text-destructive" />;
+    return <AlertTriangle className="w-5 h-5 text-warning" />;
   };
 
   return (
@@ -58,7 +61,7 @@ export function TopPriorities({ priorities }: TopPrioritiesProps) {
             }`}
           >
             <div className="flex items-start gap-3">
-              <span className="text-xl">{getEmoji(priority.percentage)}</span>
+              <span className="mt-1">{getStatusIcon(priority.percentage)}</span>
               <div className="flex-1">
                 <div className="flex items-center justify-between">
                   <span className="font-medium text-foreground">

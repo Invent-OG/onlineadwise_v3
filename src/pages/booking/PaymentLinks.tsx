@@ -29,11 +29,11 @@ import {
   Layers,
   Wrench,
   Heart,
+  Flame,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import NicheGrowthOffers from "@/components/booking/pricing/NicheGrowthOffers";
-
 
 const PAYPAL_LINK =
   "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2PR53447K01030136NFIYRLQ";
@@ -1114,7 +1114,13 @@ interface ServiceCardProps {
   badge?: string;
 }
 
-const ServiceCard = ({ service, index }: { service: ServiceCardProps; index: number }) => (
+const ServiceCard = ({
+  service,
+  index,
+}: {
+  service: ServiceCardProps;
+  index: number;
+}) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -1124,8 +1130,8 @@ const ServiceCard = ({ service, index }: { service: ServiceCardProps; index: num
   >
     {service.mostPopular && (
       <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-        <span className="px-4 py-1 text-xs font-bold rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground whitespace-nowrap">
-          ⭐ MOST POPULAR
+        <span className="px-4 py-1 text-xs font-bold rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground whitespace-nowrap flex items-center gap-1">
+          <Star className="w-3 h-3 fill-current" /> MOST POPULAR
         </span>
       </div>
     )}
@@ -1253,13 +1259,15 @@ const CategorySection = ({
     </div>
 
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {category.services.map((service: ServiceCardProps, serviceIndex: number) => (
-        <ServiceCard
-          key={serviceIndex}
-          service={service}
-          index={serviceIndex}
-        />
-      ))}
+      {category.services.map(
+        (service: ServiceCardProps, serviceIndex: number) => (
+          <ServiceCard
+            key={serviceIndex}
+            service={service}
+            index={serviceIndex}
+          />
+        ),
+      )}
     </div>
   </motion.section>
 );
@@ -1381,7 +1389,7 @@ const PaymentLinks = () => {
         >
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 text-primary font-bold mb-4">
-              🚀 OUR 3 CORE OFFERS (HIGH-CONVERSION)
+              <Rocket className="w-4 h-4" /> OUR 3 CORE OFFERS (HIGH-CONVERSION)
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               <span className="text-gradient-gold">Quick-Start</span> Video
@@ -1408,8 +1416,8 @@ const PaymentLinks = () => {
 
             <div className="relative z-10">
               <div className="text-center mb-6">
-                <span className="px-6 py-2 text-sm font-bold rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground">
-                  🔥 MOST POPULAR COMBO OFFER
+                <span className="px-6 py-2 text-sm font-bold rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground flex items-center gap-2">
+                  <Flame className="w-4 h-4" /> MOST POPULAR COMBO OFFER
                 </span>
               </div>
 
@@ -1483,8 +1491,8 @@ const PaymentLinks = () => {
                   </div>
                 </div>
 
-                <p className="text-center text-primary font-semibold mb-6">
-                  💰 {comboOffer.savings}
+                <p className="text-center text-primary font-semibold mb-6 flex items-center justify-center gap-2">
+                  <DollarSign className="w-5 h-5" /> {comboOffer.savings}
                 </p>
 
                 <div className="flex justify-center">
@@ -1517,7 +1525,7 @@ const PaymentLinks = () => {
         >
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold mb-4">
-              🎥 VIDEO TYPES INCLUDED
+              <Video className="w-4 h-4" /> VIDEO TYPES INCLUDED
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               <span className="text-gradient-gold">

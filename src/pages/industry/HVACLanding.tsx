@@ -5,6 +5,7 @@ import { NarenMethodSection } from "@/components/industry/NarenMethodSection";
 import { PricingSection } from "@/components/industry/PricingSection";
 import { ProblemSection } from "@/components/industry/ProblemSection";
 import { ProcessSection } from "@/components/industry/ProcessSection";
+import { Search, Rocket, Zap, ClipboardList, TrendingUp } from "lucide-react";
 
 const hvacData = {
   hero: {
@@ -109,7 +110,7 @@ const hvacData = {
       {
         week: "Week 1",
         title: "NAREN Audit",
-        icon: "search" as const,
+        icon: Search,
         description: "We analyze your current marketing and service mix:",
         items: [
           "Revenue by job type analysis",
@@ -123,7 +124,7 @@ const hvacData = {
       {
         week: "Week 2-3",
         title: "Strategy & Setup",
-        icon: "clipboard" as const,
+        icon: ClipboardList,
         description: "We build your replacement-focused pipeline:",
         items: [
           "Create job-type specific campaigns",
@@ -136,7 +137,7 @@ const hvacData = {
       {
         week: "Week 4-8",
         title: "Launch & Optimize",
-        icon: "rocket" as const,
+        icon: Rocket,
         description: "Your campaigns go live with replacement-focused testing:",
         items: [
           "Test financing offers and seasonal promotions",
@@ -149,7 +150,7 @@ const hvacData = {
       {
         week: "Month 3+",
         title: "Scale & Systematize",
-        icon: "trending" as const,
+        icon: TrendingUp,
         description: "We build year-round revenue predictability:",
         items: [
           "Scale winning campaigns across seasons",
@@ -168,7 +169,7 @@ const hvacData = {
     subheadline: "Close more replacements and build year-round revenue.",
     tiers: [
       {
-        icon: "🔍",
+        icon: Search,
         name: "NAREN AUDIT",
         price: "$997",
         period: undefined,
@@ -184,7 +185,7 @@ const hvacData = {
         ctaText: "Book Your Audit",
       },
       {
-        icon: "🚀",
+        icon: Rocket,
         name: "IMPLEMENTATION",
         popular: true,
         price: "$4,500",
@@ -203,7 +204,7 @@ const hvacData = {
         ctaText: "Apply Now",
       },
       {
-        icon: "⚡",
+        icon: Zap,
         name: "PARTNERSHIP",
         price: "$8,500",
         period: "month",

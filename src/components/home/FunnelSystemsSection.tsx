@@ -5,6 +5,10 @@ import {
   BarChart3,
   Wrench,
   Check,
+  Zap,
+  Gem,
+  Briefcase,
+  Layers,
 } from "lucide-react";
 
 const FunnelSystemsSection = () => {
@@ -12,7 +16,7 @@ const FunnelSystemsSection = () => {
     {
       icon: Workflow,
       color: "from-purple-500 to-purple-600",
-      emoji: "🚀",
+      secondaryIcon: Layers,
       title: "Funnel Strategy & Scaling Systems (GHL)",
       subtitle: "Conversion Infrastructure Build",
       description:
@@ -38,7 +42,7 @@ const FunnelSystemsSection = () => {
     {
       icon: Camera,
       color: "from-primary to-accent",
-      emoji: "🧲",
+      secondaryIcon: Gem,
       title: "Creative & Video Suite",
       subtitle: "Pre-Built Video Store with US/UK Voiceovers",
       description:
@@ -61,7 +65,7 @@ const FunnelSystemsSection = () => {
     {
       icon: Megaphone,
       color: "from-green-500 to-green-600",
-      emoji: "🎤",
+      secondaryIcon: Megaphone,
       title: "Content Strategy & Distribution",
       subtitle: "Full Content Foundation",
       description: "Complete content ecosystem to fuel your growth.",
@@ -77,7 +81,7 @@ const FunnelSystemsSection = () => {
     {
       icon: BarChart3,
       color: "from-blue-500 to-blue-600",
-      emoji: "📈",
+      secondaryIcon: BarChart3,
       title: "Tracking, Analytics & Automation",
       subtitle: "Multi-layered Scaling Infrastructure",
       description:
@@ -114,11 +118,11 @@ const FunnelSystemsSection = () => {
     <section className="py-24 relative overflow-hidden bg-card/30">
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container-narrow relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-            💜 Complete Systems
+          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 inline-flex items-center gap-2">
+            <Gem className="w-4 h-4" /> Complete Systems
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
             <span className="text-foreground">Growth </span>
@@ -133,13 +137,16 @@ const FunnelSystemsSection = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {systems.map((system) => {
             const Icon = system.icon;
+            const SecondaryIcon = system.secondaryIcon;
             return (
               <div
                 key={system.title}
                 className="group bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 hover:border-primary/50 p-8 transition-all duration-500 hover:glow-gold-sm"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <span className="text-2xl">{system.emoji}</span>
+                  {SecondaryIcon && (
+                    <SecondaryIcon className="w-8 h-8 text-primary" />
+                  )}
                   <div
                     className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${system.color} flex items-center justify-center glow-gold-sm`}
                   >
@@ -239,8 +246,9 @@ const FunnelSystemsSection = () => {
 
         {/* Tools We Use */}
         <div className="text-center">
-          <h3 className="text-2xl font-display font-bold mb-8">
-            <span className="text-foreground">🧰 Tools We </span>
+          <h3 className="text-2xl font-display font-bold mb-8 flex items-center justify-center gap-2">
+            <Briefcase className="w-6 h-6 text-primary" />
+            <span className="text-foreground">Tools We </span>
             <span className="">Use</span>
           </h3>
 
@@ -250,7 +258,7 @@ const FunnelSystemsSection = () => {
                 key={tool}
                 className="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm text-foreground flex items-center gap-2"
               >
-                <span className="text-primary">⚡</span>
+                <Zap className="w-3.5 h-3.5 text-primary" />
                 {tool}
               </span>
             ))}

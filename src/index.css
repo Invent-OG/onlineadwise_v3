@@ -115,7 +115,7 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: "Poppins", system-ui, sans-serif;
   }
 
   h1,
@@ -126,6 +126,27 @@
   h6 {
     font-family: "Poppins", system-ui, sans-serif;
     @apply font-bold tracking-tight;
+  }
+
+  /* --- GOLD STANDARD TYPOGRAPHY --- */
+  .h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold leading-[1.1];
+  }
+
+  .h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-heading font-bold leading-tight;
+  }
+
+  .h3 {
+    @apply text-2xl md:text-3xl font-heading font-bold leading-tight;
+  }
+
+  .subheading {
+    @apply text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed;
+  }
+
+  .text-body {
+    @apply text-base text-muted-foreground leading-relaxed;
   }
 }
 
@@ -229,11 +250,19 @@
   }
 
   .section-padding {
-    @apply py-20 md:py-28 lg:py-36;
+    @apply py-16 md:py-24;
+  }
+
+  .hero-padding {
+    @apply pt-32 pb-20 md:pt-40 md:pb-32;
   }
 
   .container-narrow {
-    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8;
   }
 
   .emoji-card {

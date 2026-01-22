@@ -1,15 +1,9 @@
-import {
-  Search,
-  ClipboardList,
-  Rocket,
-  TrendingUp,
-  CheckCircle2,
-} from "lucide-react";
+import { CheckCircle2, LucideIcon, TrendingUp } from "lucide-react";
 
 interface ProcessStep {
   week: string;
   title: string;
-  icon: "search" | "clipboard" | "rocket" | "trending";
+  icon: LucideIcon;
   description: string;
   items: string[];
   deliverable?: string;
@@ -21,13 +15,6 @@ interface ProcessSectionProps {
   timeline: string;
 }
 
-const iconMap = {
-  search: Search,
-  clipboard: ClipboardList,
-  rocket: Rocket,
-  trending: TrendingUp,
-};
-
 export function ProcessSection({
   headline,
   steps,
@@ -35,7 +22,7 @@ export function ProcessSection({
 }: ProcessSectionProps) {
   return (
     <section className="py-20 md:py-32 relative section-glow">
-      <div className="container px-4">
+      <div className="container-narrow px-4">
         <div className="max-w-5xl mx-auto">
           {/* Section heading */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-16">
@@ -49,7 +36,7 @@ export function ProcessSection({
 
             <div className="space-y-8">
               {steps.map((step, index) => {
-                const Icon = iconMap[step.icon];
+                const Icon = step.icon;
                 return (
                   <div key={index} className="relative pl-0 md:pl-20">
                     {/* Step number circle */}

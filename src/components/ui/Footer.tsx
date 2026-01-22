@@ -1,4 +1,21 @@
-import { Zap, Mail, Phone, MapPin, ArrowUp, Globe } from "lucide-react";
+import {
+  Zap,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowUp,
+  Globe,
+  Smile,
+  Activity,
+  Paintbrush,
+  Bug,
+  Sparkles,
+  Home,
+  Scale,
+  Wrench,
+  Thermometer,
+  Calculator,
+} from "lucide-react";
 import Logo from "./Logo";
 
 const Footer = () => {
@@ -18,18 +35,18 @@ const Footer = () => {
   ];
 
   const niches = [
-    "🦷 Dentist",
-    "💆 Chiropractor",
-    "🎨 Painter",
-    "🐜 Pest Control",
-    "🧼 Carpet Cleaner",
-    "💪 Physical Therapist",
-    "🏠 Roofer",
-    "⚖ Lawyer",
-    "🔧 Plumber",
-    "⚡ Electrician",
-    "❄ HVAC",
-    "🧾 Bookkeeper",
+    { label: "Dentist", Icon: Smile },
+    { label: "Chiropractor", Icon: Activity },
+    { label: "Painter", Icon: Paintbrush },
+    { label: "Pest Control", Icon: Bug },
+    { label: "Carpet Cleaner", Icon: Sparkles },
+    { label: "Physical Therapist", Icon: Activity },
+    { label: "Roofer", Icon: Home },
+    { label: "Lawyer", Icon: Scale },
+    { label: "Plumber", Icon: Wrench },
+    { label: "Electrician", Icon: Zap },
+    { label: "HVAC", Icon: Thermometer },
+    { label: "Bookkeeper", Icon: Calculator },
   ];
 
   const tools = [
@@ -51,7 +68,7 @@ const Footer = () => {
     >
       <div className="absolute inset-0 bg-noise opacity-20" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container-narrow relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
@@ -91,10 +108,14 @@ const Footer = () => {
             <h4 className="font-display font-bold text-foreground mb-4">
               Niches We Serve
             </h4>
-            <div className="flex flex-wrap gap-1">
-              {niches.map((niche) => (
-                <span key={niche} className="text-xs text-muted-foreground">
-                  {niche}
+            <div className="flex flex-wrap gap-x-4 gap-y-2">
+              {niches.map(({ label, Icon }) => (
+                <span
+                  key={label}
+                  className="text-xs text-muted-foreground flex items-center gap-1.5 hover:text-primary transition-colors cursor-default"
+                >
+                  <Icon className="w-3 h-3 text-primary/70" />
+                  {label}
                 </span>
               ))}
             </div>

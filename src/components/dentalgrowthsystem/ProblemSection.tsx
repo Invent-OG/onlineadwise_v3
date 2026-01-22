@@ -28,7 +28,7 @@ const itemVariants = {
 const ProblemSection = () => {
   return (
     <section className="py-20 lg:py-28 bg-card">
-      <div className="section-container">
+      <div className="container-narrow">
         <div className="mx-auto max-w-4xl">
           {/* Section Header */}
           <motion.div

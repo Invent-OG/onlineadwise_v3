@@ -1,4 +1,4 @@
-import { Check, Star, Zap, Crown } from "lucide-react";
+import { Check, Star, Zap, Crown, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NicheData } from "@/components/data/nicheData.ts";
 
@@ -11,167 +11,159 @@ const PackagesSection = ({ niche }: PackagesSectionProps) => {
 
   const packages = [
     {
-      name: "Video Only",
-      price: "$497",
-      description: "Perfect for businesses with existing marketing teams",
+      name: "Explainer Video Pack Only",
+      price: "$97-$197",
+      description: "Ideal for businesses who just need video content.",
       icon: Star,
       features: [
-        "3 Premium Whiteboard Videos",
-        "Commercial + Explainer + Story",
-        `${niche.niche}-specific customization`,
-        "Full HD 1080p animation",
-        "Professional voiceover",
-        "All format delivery",
-        "Full ownership rights",
-        "7-day delivery",
-        "2 revision rounds",
+        "3 niche videos",
+        "US & UK voices",
+        "Upload instructions",
+        "Licensing",
+        "Funnel copy template",
       ],
       popular: false,
+      cta: "Get Video Pack",
     },
     {
-      name: "Video + Ads Launch",
-      price: "$1,497",
-      description: "Ready to grow your customer base with proven campaigns",
+      name: "Consultation + DWY Setup",
+      price: "$297-$497",
+      description: "We guide your team step-by-step.",
       icon: Zap,
       features: [
-        "Everything in Video Only",
-        "30-day managed campaign",
-        "Facebook/Instagram OR Google Ads",
-        "Up to $1,500 ad spend included",
-        "Audience research & targeting",
-        "Weekly performance reports",
-        "Strategy calls included",
-        "Landing page review",
-        "Conversion tracking setup",
+        "All videos",
+        "YouTube SEO setup",
+        "Meta Ads blueprint",
+        "Google Ads blueprint",
+        "GHL funnel import",
+        "One strategy session",
+        "Offer guidance",
       ],
       popular: true,
+      cta: "Start Consultation",
     },
     {
-      name: "Complete Growth",
-      price: "$2,997",
-      description: "Dominate your market with full-scale marketing",
+      name: "Full DFY Growth System",
+      price: "$750-$1500",
+      description: "Complete done-for-you solution.",
       icon: Crown,
       features: [
-        "12 Total Whiteboard Videos",
-        "90-day full management",
-        "BOTH Facebook AND Google Ads",
-        "Up to $3,000 ad spend",
-        "YouTube channel setup",
-        "Email marketing integration",
-        "Bi-weekly strategy calls",
-        "Monthly deep dive reports",
-        "Cross-platform optimization",
+        "All videos",
+        "Meta Ads setup",
+        "Google Ads setup",
+        "YouTube Ads setup",
+        "Conversion tracking",
+        "Retargeting strategy",
+        "GHL CRM + automations",
+        "Weekly optimization",
+        "Performance dashboard",
+        "Monthly consulting",
       ],
       popular: false,
+      cta: "Get Full System",
     },
   ];
 
   return (
-    <section className="py-20 dark-gradient ">
-      <div className="container mx-auto px-4">
+    <section className="py-24 relative bg-background">
+      <div className="absolute inset-0 bg-noise opacity-20" />
+
+      <div className="container-narrow relative z-10 px-4">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-primary text-primary-foreground font-medium text-sm mb-4">
-            Pricing Packages
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Choose Your Growth Package
+          <div className="flex justify-center mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/30 bg-gold/10 text-gold text-xs font-bold tracking-widest uppercase">
+              <Package className="w-4 h-4" /> Our Packages
+            </span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-foreground">
+            Consultation + Video + Ads Setup
           </h2>
-          <p className="text-lg t max-w-2xl mx-auto">
-            Flexible options designed for {niche.nichePlural} at every stage of
-            growth
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Choose the package that fits your business needs and growth stage.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start pt-8">
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 ${
+              className={`relative rounded-[2rem] p-8 flex flex-col transition-all duration-300 ${
                 pkg.popular
-                  ? "bg-card text-foreground shadow-2xl scale-105 border-2 border-accent"
-                  : "bg-white/5 backdrop-blur-sm border border-white/10"
+                  ? "bg-card border-2 border-gold shadow-2xl shadow-gold/10 z-30 scale-105 overflow-visible"
+                  : "bg-card/50 border border-border/50 hover:border-gold/30 z-10 hover:-translate-y-1"
               }`}
             >
               {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-amber-500 to-yellow-500 text-black text-sm font-bold shadow-lg shadow-amber-500/25">
-                  Most Popular
+                <div className="absolute -top-5 left-1/2 translate-x-1/2 w-max z-50">
+                  <span className="px-5 py-2 rounded-full bg-gold text-black text-xs font-extrabold tracking-wide uppercase shadow-lg shadow-gold/20 flex items-center gap-2 ring-4 ring-background">
+                    <Crown className="w-4 h-4 fill-black" />
+                    Most Popular
+                  </span>
                 </div>
               )}
 
-              <div
-                className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 border ${
-                  pkg.popular
-                    ? "bg-primary/10 border-primary/20"
-                    : "bg-white/10 border-white/20"
-                }`}
-              >
-                <pkg.icon
-                  className={`w-7 h-7 ${pkg.popular ? "text-primary" : "text-white"}`}
-                />
-              </div>
+              <div className="flex-1 flex flex-col items-center text-center">
+                <div
+                  className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300 ${
+                    pkg.popular
+                      ? "bg-gold text-black shadow-lg shadow-gold/20"
+                      : "bg-black/40 text-gold border border-gold/20"
+                  }`}
+                >
+                  <pkg.icon className="w-8 h-8" />
+                </div>
 
-              <h3
-                className={`text-2xl font-bold mb-2 ${pkg.popular ? "text-foreground" : "text-white"}`}
-              >
-                {pkg.name}
-              </h3>
+                <h3 className="text-xl font-display font-bold text-foreground mb-2">
+                  {pkg.name}
+                </h3>
 
-              <div
-                className={`text-4xl font-bold mb-2 ${pkg.popular ? "text-primary" : "text-white"}`}
-              >
-                {pkg.price}
-              </div>
+                <div className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4 tracking-tight">
+                  {pkg.price}
+                </div>
 
-              <p
-                className={`text-sm mb-6 ${pkg.popular ? "text-muted-foreground" : "text-white/70"}`}
-              >
-                {pkg.description}
-              </p>
+                <p className="text-sm text-muted-foreground mb-8 leading-relaxed max-w-[260px]">
+                  {pkg.description}
+                </p>
 
-              <div className="space-y-4 mb-8">
-                {pkg.features.map((feature, fIndex) => (
-                  <div key={fIndex} className="flex items-start gap-3">
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent mb-8" />
+
+                <div className="w-full space-y-4 mb-8 text-left">
+                  {pkg.features.map((feature, fIndex) => (
                     <div
-                      className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                        pkg.popular
-                          ? "bg-primary/20 text-primary"
-                          : "bg-white/20 text-white"
-                      }`}
+                      key={fIndex}
+                      className="flex items-start gap-3 group/item"
                     >
-                      <Check className="w-3 h-3" />
+                      <div
+                        className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors ${
+                          pkg.popular
+                            ? "bg-gold text-black"
+                            : "bg-gold/10 text-gold group-hover/item:bg-gold group-hover/item:text-black"
+                        }`}
+                      >
+                        <Check className="w-3 h-3" />
+                      </div>
+                      <span className="text-sm text-foreground/80 font-medium group-hover/item:text-foreground transition-colors">
+                        {feature}
+                      </span>
                     </div>
-                    <span
-                      className={`text-sm ${pkg.popular ? "text-foreground" : "text-white/90"}`}
-                    >
-                      {feature}
-                    </span>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
 
               <Button
                 asChild
-                variant={pkg.popular ? "gold" : "outline"}
-                size="lg"
-                className={`w-full ${!pkg.popular ? "border-white/30 text-white hover:bg-white/10" : ""}`}
+                className={`w-full py-7 text-base font-bold tracking-wide transition-all duration-300 rounded-xl ${
+                  pkg.popular
+                    ? "bg-gold text-black hover:bg-gold-light shadow-lg shadow-gold/20 hover:scale-[1.02]"
+                    : "bg-secondary text-foreground hover:bg-gold hover:text-black border border-white/5 hover:border-transparent"
+                }`}
               >
                 <a href={calendarUrl} target="_blank" rel="noopener noreferrer">
-                  Get Started
+                  {pkg.cta}
                 </a>
               </Button>
             </div>
           ))}
-        </div>
-
-        {/* Agency Note */}
-        <div className="mt-12 text-center">
-          <p className="text-primary-foreground/70">
-            <span className="font-semibold text-accent">
-              For Marketing Agencies:
-            </span>{" "}
-            Wholesale pricing available. Contact us for white-label partnership
-            opportunities.
-          </p>
         </div>
       </div>
     </section>

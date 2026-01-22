@@ -9,6 +9,22 @@ import {
   ArrowRight,
   Sparkles,
   ExternalLink,
+  Smile,
+  Activity,
+  Heart,
+  Droplets,
+  Zap,
+  Snowflake,
+  Home,
+  Palette,
+  Bug,
+  Shield,
+  LineChart,
+  Scale,
+  Baby,
+  Briefcase,
+  LucideIcon,
+  Flame,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -17,7 +33,7 @@ const PAYPAL_LINK =
 
 interface NicheOffer {
   name: string;
-  emoji: string;
+  icon: LucideIcon;
   color1: string;
   color2: string;
   offers: {
@@ -34,7 +50,7 @@ interface NicheOffer {
 const nicheOffers: NicheOffer[] = [
   {
     name: "Pediatric Dentist",
-    emoji: "🦷",
+    icon: Smile,
     color1: "from-cyan-400",
     color2: "to-blue-500",
     offers: [
@@ -83,7 +99,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Chiropractor",
-    emoji: "🦴",
+    icon: Activity,
     color1: "from-emerald-400",
     color2: "to-teal-500",
     offers: [
@@ -130,7 +146,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Physical Therapist",
-    emoji: "🏃",
+    icon: Activity,
     color1: "from-orange-400",
     color2: "to-red-500",
     offers: [
@@ -177,7 +193,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Massage Therapist",
-    emoji: "💆",
+    icon: Sparkles,
     color1: "from-purple-400",
     color2: "to-pink-500",
     offers: [
@@ -224,7 +240,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Dermatologist",
-    emoji: "🧴",
+    icon: Sparkles,
     color1: "from-rose-400",
     color2: "to-orange-500",
     offers: [
@@ -271,7 +287,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Pediatrician",
-    emoji: "👶",
+    icon: Baby,
     color1: "from-sky-400",
     color2: "to-indigo-500",
     offers: [
@@ -318,7 +334,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Senior Care",
-    emoji: "👵",
+    icon: Heart,
     color1: "from-amber-400",
     color2: "to-yellow-500",
     offers: [
@@ -365,7 +381,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Plumber",
-    emoji: "🚰",
+    icon: Droplets,
     color1: "from-blue-400",
     color2: "to-cyan-500",
     offers: [
@@ -412,7 +428,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Electrician",
-    emoji: "⚡",
+    icon: Zap,
     color1: "from-yellow-400",
     color2: "to-orange-500",
     offers: [
@@ -459,7 +475,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "HVAC Contractor",
-    emoji: "❄️",
+    icon: Snowflake,
     color1: "from-teal-400",
     color2: "to-blue-500",
     offers: [
@@ -506,7 +522,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Roofer",
-    emoji: "🏠",
+    icon: Home,
     color1: "from-stone-400",
     color2: "to-slate-600",
     offers: [
@@ -553,7 +569,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Painter",
-    emoji: "🎨",
+    icon: Palette,
     color1: "from-pink-400",
     color2: "to-purple-500",
     offers: [
@@ -600,7 +616,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Carpet Cleaner",
-    emoji: "🧼",
+    icon: Sparkles,
     color1: "from-green-400",
     color2: "to-emerald-500",
     offers: [
@@ -647,7 +663,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Pest Control",
-    emoji: "🐜",
+    icon: Bug,
     color1: "from-lime-400",
     color2: "to-green-500",
     offers: [
@@ -694,7 +710,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Insurance Agency",
-    emoji: "🛡️",
+    icon: Shield,
     color1: "from-indigo-400",
     color2: "to-blue-500",
     offers: [
@@ -741,7 +757,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Bookkeeper",
-    emoji: "📊",
+    icon: LineChart,
     color1: "from-violet-400",
     color2: "to-purple-500",
     offers: [
@@ -788,7 +804,7 @@ const nicheOffers: NicheOffer[] = [
   },
   {
     name: "Bankruptcy Lawyer",
-    emoji: "⚖️",
+    icon: Scale,
     color1: "from-slate-400",
     color2: "to-gray-600",
     offers: [
@@ -1178,7 +1194,7 @@ const NicheGrowthOffers = () => {
                   transform: "perspective(500px) rotateX(5deg)",
                 }}
               >
-                {niche.emoji}
+                <niche.icon className="w-8 h-8 text-white" />
                 <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-12 h-2 bg-black/30 rounded-full blur-sm" />
               </motion.div>
               <div>
@@ -1338,7 +1354,7 @@ const NicheGrowthOffers = () => {
                       "0 10px 30px rgba(0,0,0,0.3), inset 0 -4px 0 rgba(0,0,0,0.2)",
                   }}
                 >
-                  {selectedOffer.niche.emoji}
+                  <selectedOffer.niche.icon className="w-8 h-8 text-white" />
                 </motion.div>
                 <div>
                   <h3 className="text-xl font-bold text-foreground">

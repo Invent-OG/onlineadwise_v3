@@ -8,7 +8,7 @@ interface ChallengesSectionProps {
 const ChallengesSection = ({ niche }: ChallengesSectionProps) => {
   return (
     <section className="py-20 bg-card section-pattern">
-      <div className="container mx-auto px-4">
+      <div className="container-narrow px-4">
         <div className="text-center mb-16">
           <span className="badge-gold mb-4">
             <Zap className="w-4 h-4" />
