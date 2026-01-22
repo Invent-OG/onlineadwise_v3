@@ -1,4 +1,3 @@
-
 import { FAQSection } from "@/components/industry/FAQSection";
 import { FinalCTASection } from "@/components/industry/FinalCTASection";
 import { HeroSection } from "@/components/industry/HeroSection";
@@ -6,8 +5,7 @@ import { NarenMethodSection } from "@/components/industry/NarenMethodSection";
 import { PricingSection } from "@/components/industry/PricingSection";
 import { ProblemSection } from "@/components/industry/ProblemSection";
 import { ProcessSection } from "@/components/industry/ProcessSection";
-import Navbar from "@/components/ui/Navbar";
-
+import { Search, Rocket, Zap, ClipboardList, TrendingUp } from "lucide-react";
 
 const electriciansData = {
   hero: {
@@ -112,7 +110,7 @@ const electriciansData = {
       {
         week: "Week 1",
         title: "NAREN Audit",
-        icon: "search" as const,
+        icon: Search,
         description: "We analyze your current service mix and marketing:",
         items: [
           "Job type profitability analysis",
@@ -126,7 +124,7 @@ const electriciansData = {
       {
         week: "Week 2-3",
         title: "Strategy & Setup",
-        icon: "clipboard" as const,
+        icon: ClipboardList,
         description: "We build your high-ticket project pipeline:",
         items: [
           "Create specialist positioning (EV, generators, panels)",
@@ -139,7 +137,7 @@ const electriciansData = {
       {
         week: "Week 4-8",
         title: "Launch & Optimize",
-        icon: "rocket" as const,
+        icon: Rocket,
         description: "Your campaigns go live with project-focused testing:",
         items: [
           "Test project offers vs. service call offers",
@@ -152,7 +150,7 @@ const electriciansData = {
       {
         week: "Month 3+",
         title: "Scale & Systematize",
-        icon: "trending" as const,
+        icon: TrendingUp,
         description: "We turn leads into a project-focused business:",
         items: [
           "Scale winning campaigns to new areas",
@@ -172,7 +170,7 @@ const electriciansData = {
       "Land more high-ticket projects and transform your electrical business.",
     tiers: [
       {
-        icon: "🔍",
+        icon: Search,
         name: "NAREN AUDIT",
         price: "$997",
         period: undefined,
@@ -188,7 +186,7 @@ const electriciansData = {
         ctaText: "Book Your Audit",
       },
       {
-        icon: "🚀",
+        icon: Rocket,
         name: "IMPLEMENTATION",
         popular: true,
         price: "$3,500",
@@ -207,7 +205,7 @@ const electriciansData = {
         ctaText: "Apply Now",
       },
       {
-        icon: "⚡",
+        icon: Zap,
         name: "PARTNERSHIP",
         price: "$6,500",
         period: "month",
@@ -296,7 +294,6 @@ const electriciansData = {
 export default function ElectriciansLanding() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <main className="pt-16 md:pt-20">
         <HeroSection {...electriciansData.hero} />
         <ProblemSection

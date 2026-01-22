@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
-import { Button } from "react-day-picker";
+import { Menu, X, Zap } from "lucide-react";
 import Logo from "./Logo";
+import { Button } from "./button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,12 +16,13 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: "#about", label: "About" },
-    { href: "#method", label: "NAREN Method™" },
+    // { href: "#about", label: "About" },
+    // { href: "#method", label: "NAREN Method™" },
     { href: "#services", label: "Services" },
-    { href: "#videos", label: "Video Packs" },
-    { href: "#packages", label: "Packages" },
-    { href: "#contact", label: "Contact" },
+    { href: "#industries", label: "Industries" },
+    { href: "#tools", label: "Tools" },
+    // { href: "#packages", label: "Packages" },
+    // { href: "#contact", label: "Contact" },
   ];
 
   return (
@@ -32,11 +33,11 @@ const Navbar = () => {
           : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container-narrow flex items-center justify-between">
         <Logo />
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => {
             if (link.label === "Services") {
               return (
@@ -53,10 +54,90 @@ const Navbar = () => {
                         Meta Ads
                       </a>
                       <a
-                        href="#"
+                        href="/google-ads"
                         className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
                       >
                         Google Ads
+                      </a>
+                      <a
+                        href="/whiteboard-video"
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                      >
+                        Whiteboard Video
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+            if (link.label === "Industries") {
+              return (
+                <div key={link.label} className="relative group">
+                  <button className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center gap-1">
+                    {link.label}
+                  </button>
+                  <div className="absolute top-full left-0 mt-2 w-56 bg-card border border-border rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div className="p-2 flex flex-col gap-1">
+                      <a
+                        href="/industry"
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                      >
+                        All Industries
+                      </a>
+                      <a
+                        href="/medspa"
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                      >
+                        MedSpa
+                      </a>
+                      <a
+                        href="/dental-growth-system"
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                      >
+                        Dental
+                      </a>
+                      <a
+                        href="/industry/painters"
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                      >
+                        Painters
+                      </a>
+                      <a
+                        href="/industry/hvac"
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                      >
+                        HVAC
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+            if (link.label === "Tools") {
+              return (
+                <div key={link.label} className="relative group">
+                  <button className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300 flex items-center gap-1">
+                    {link.label}
+                  </button>
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div className="p-2 flex flex-col gap-1">
+                      <a
+                        href="/adplanner"
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                      >
+                        Ad Planner
+                      </a>
+                      <a
+                        href="/scorecard"
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                      >
+                        Scorecard
+                      </a>
+                      <a
+                        href="/booking"
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                      >
+                        Booking
                       </a>
                     </div>
                   </div>
@@ -74,8 +155,8 @@ const Navbar = () => {
               </a>
             );
           })}
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-gold-sm hover:glow-gold transition-all duration-300">
-            Get Started ⚡
+          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-gold-sm hover:glow-gold transition-all duration-300 gap-2">
+            Get Started <Zap className="w-4 h-4 fill-current" />
           </Button>
         </div>
 
@@ -94,28 +175,85 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-lg border-b border-border animate-fade-in">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-lg border-b border-border animate-fade-in max-h-[85vh] overflow-y-auto">
           <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
-            {navLinks.map((link) =>
-              link.label === "Services" ? (
-                <div key={link.label} className="flex flex-col gap-2">
-                  <span className="text-lg font-medium text-foreground">
-                    {link.label}
-                  </span>
-                  <a
-                    href="/meta-ads"
-                    className="pl-4 text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    Meta Ads
-                  </a>
-                  <a
-                    href="#"
-                    className="pl-4 text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    Google Ads
-                  </a>
-                </div>
-              ) : (
+            {navLinks.map((link) => {
+              if (link.label === "Services") {
+                return (
+                  <div key={link.label} className="flex flex-col gap-2">
+                    <span className="text-lg font-medium text-foreground">
+                      {link.label}
+                    </span>
+                    <a
+                      href="/meta-ads"
+                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
+                    >
+                      Meta Ads
+                    </a>
+                    <a
+                      href="/google-ads"
+                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
+                    >
+                      Google Ads
+                    </a>
+                    <a
+                      href="/whiteboard-video"
+                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
+                    >
+                      Whiteboard Video
+                    </a>
+                  </div>
+                );
+              }
+              if (link.label === "Industries") {
+                return (
+                  <div key={link.label} className="flex flex-col gap-2">
+                    <span className="text-lg font-medium text-foreground">
+                      {link.label}
+                    </span>
+                    <a
+                      href="/industry"
+                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
+                    >
+                      All Industries
+                    </a>
+                    <a
+                      href="/medspa"
+                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
+                    >
+                      MedSpa
+                    </a>
+                    <a
+                      href="/dental-growth-system"
+                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
+                    >
+                      Dental
+                    </a>
+                  </div>
+                );
+              }
+              if (link.label === "Tools") {
+                return (
+                  <div key={link.label} className="flex flex-col gap-2">
+                    <span className="text-lg font-medium text-foreground">
+                      {link.label}
+                    </span>
+                    <a
+                      href="/adplanner"
+                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
+                    >
+                      Ad Planner
+                    </a>
+                    <a
+                      href="/scorecard"
+                      className="pl-4 text-muted-foreground hover:text-primary transition-colors block py-1"
+                    >
+                      Scorecard
+                    </a>
+                  </div>
+                );
+              }
+              return (
                 <a
                   key={link.href}
                   href={link.href}
@@ -124,9 +262,9 @@ const Navbar = () => {
                 >
                   {link.label}
                 </a>
-              ),
-            )}
-            <Button className="w-full bg-primary text-primary-foreground mt-4">
+              );
+            })}
+            <Button className="w-full bg-primary text-primary-foreground mt-4 py-6">
               Get Started ⚡
             </Button>
           </div>

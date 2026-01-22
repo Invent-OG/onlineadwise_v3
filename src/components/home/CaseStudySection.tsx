@@ -8,6 +8,9 @@ import {
   Settings,
   Expand,
   Repeat,
+  XCircle,
+  BookOpen,
+  Flame,
 } from "lucide-react";
 
 const CaseStudySection = () => {
@@ -60,35 +63,45 @@ const CaseStudySection = () => {
       icon: TrendingUp,
       value: "74",
       label: "Booked Appointments",
-      emoji: "📈",
+      subIcon: TrendingUp,
     },
-    { icon: TrendingDown, value: "47%", label: "CPA Reduced", emoji: "📉" },
+    {
+      icon: TrendingDown,
+      value: "47%",
+      label: "CPA Reduced",
+      subIcon: TrendingDown,
+    },
     {
       icon: Phone,
       value: "3X",
       label: "Increase in Inbound Calls",
-      emoji: "📞",
+      subIcon: Phone,
     },
-    { icon: Award, value: "Full-Time", label: "Growth Partner", emoji: "🏆" },
+    {
+      icon: Award,
+      value: "Full-Time",
+      label: "Growth Partner",
+      subIcon: Award,
+    },
   ];
 
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-noise opacity-20" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container-narrow relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-            📚 Case Study
+            <BookOpen className="w-4 h-4 inline mr-2" /> Case Study
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
             <span className="text-foreground">HVAC Company </span>
             <span className="">(USA)</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            🔥 "From Zero Booking System → to 74 Booked Appointments/Month in 42
-            Days"
+            <Flame className="w-5 h-5 text-primary inline mr-2" /> "From Zero
+            Booking System → to 74 Booked Appointments/Month in 42 Days"
           </p>
         </div>
 
@@ -104,7 +117,7 @@ const CaseStudySection = () => {
                   key={i}
                   className="flex items-center gap-2 p-3 rounded-xl bg-destructive/10 border border-destructive/20"
                 >
-                  <span className="text-destructive">❌</span>
+                  <XCircle className="w-4 h-4 text-destructive" />
                   <span className="text-sm text-foreground">{challenge}</span>
                 </div>
               ))}
@@ -152,7 +165,7 @@ const CaseStudySection = () => {
                 return (
                   <div key={i} className="text-center">
                     <div className="w-14 h-14 mx-auto mb-3 rounded-2xl bg-primary/20 flex items-center justify-center">
-                      <span className="text-2xl">{result.emoji}</span>
+                      <result.subIcon className="w-8 h-8 text-primary" />
                     </div>
                     <div className="text-3xl font-display font-bold  mb-1">
                       {result.value}

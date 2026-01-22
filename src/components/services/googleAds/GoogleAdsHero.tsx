@@ -15,7 +15,7 @@ import { useRef, useState } from "react";
 import narender from "@/assets/narender-sharma.png";
 
 const trustBadges = [
-  { icon: CheckCircle2, text: "Meta Certified" },
+  { icon: CheckCircle2, text: "Google Partner" },
   { icon: DollarSign, text: "$5M+ Ad Spend Managed" },
   { icon: Rocket, text: "100+ Campaigns" },
   { icon: Zap, text: "24hr Response" },
@@ -34,7 +34,7 @@ const HeroSection = () => {
 
   const handleWhatsAppClick = () => {
     window.open(
-      "https://wa.me/917065578055?text=Hi%20Narender,%20I'm%20interested%20in%20Facebook%20Ads%20services",
+      "https://wa.me/917065578055?text=Hi%20Narender,%20I'm%20interested%20in%20Google%20Ads%20services",
       "_blank",
     );
   };
@@ -138,8 +138,8 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="h1 mb-5 text-foreground"
             >
-              <span className="text-primary">Meta Ads</span> for SMBs & Service
-              Agencies
+              <span className="text-primary">Google Ads</span> for SMBs &
+              Service Agencies
             </motion.h1>
 
             {/* ROI Promise - Main Offer */}
@@ -168,7 +168,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.55 }}
               className="subheading mb-6 max-w-xl mx-auto lg:mx-0"
             >
-              Turn your Facebook & Instagram ad spend into{" "}
+              Turn your Google Search & YouTube ad spend into{" "}
               <span className="text-foreground font-medium">
                 predictable revenue
               </span>{" "}
@@ -272,7 +272,7 @@ const HeroSection = () => {
                     Performance Marketing Expert
                   </p>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <span>🎓 Meta Blueprint Certified</span>
+                    <span>🎓 Google Ads Certified</span>
                     <span>•</span>
                     <span>7+ Years Experience</span>
                   </div>

@@ -20,7 +20,7 @@ export const CTASection = () => {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-3xl"
       />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container-narrow px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export const CTASection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button  size="xl" className="group min-w-[280px]">
+              <Button size="xl" className="group min-w-[280px]">
                 <Calendar className="h-5 w-5" />
                 Book Free Strategy Call
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -74,7 +74,7 @@ export const CTASection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button  size="xl" className="min-w-[280px]">
+              <Button size="xl" className="min-w-[280px]">
                 <MessageCircle className="h-5 w-5" />
                 Chat on WhatsApp
               </Button>

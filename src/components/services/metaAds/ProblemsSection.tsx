@@ -5,11 +5,28 @@ import {
   useTransform,
   AnimatePresence,
 } from "framer-motion";
-import { ChevronDown, CheckCircle } from "lucide-react";
+import {
+  ChevronDown,
+  CheckCircle,
+  Banknote,
+  TrendingDown,
+  HelpCircle,
+  Ban,
+  AlertTriangle,
+  Target,
+  TrendingUp,
+  Palette,
+  UserX,
+  BarChart3,
+  ClipboardList,
+  Lightbulb,
+  Building2,
+  Landmark,
+} from "lucide-react";
 
 const smbProblems = [
   {
-    emoji: "💸",
+    icon: Banknote,
     title: "We're Spending Money But Not Getting Leads or Sales",
     symptoms: [
       "Ads get clicks, but no real inquiries",
@@ -24,7 +41,7 @@ const smbProblems = [
     ],
   },
   {
-    emoji: "📉",
+    icon: TrendingDown,
     title: "Performance Suddenly Drops Without Explanation",
     symptoms: [
       "Cost per lead increases 2-3x",
@@ -39,7 +56,7 @@ const smbProblems = [
     ],
   },
   {
-    emoji: "🤷",
+    icon: HelpCircle,
     title: "We Don't Know If Ads or Website Is the Problem",
     symptoms: [
       "Good CTR but poor conversions",
@@ -54,7 +71,7 @@ const smbProblems = [
     ],
   },
   {
-    emoji: "⛔",
+    icon: Ban,
     title: "Facebook Keeps Rejecting or Limiting Our Ads",
     symptoms: [
       "Ads disapproved repeatedly",
@@ -69,7 +86,7 @@ const smbProblems = [
     ],
   },
   {
-    emoji: "😵",
+    icon: AlertTriangle,
     title: "We're Overwhelmed by the Complexity",
     symptoms: [
       "Too many settings",
@@ -84,7 +101,7 @@ const smbProblems = [
     ],
   },
   {
-    emoji: "🎯",
+    icon: Target,
     title: "We Get Leads, But They're Low Quality",
     symptoms: ["People don't respond", "Wrong audience", "No buying intent"],
     cause: "Broad targeting + No lead qualification",
@@ -98,7 +115,7 @@ const smbProblems = [
 
 const agencyProblems = [
   {
-    emoji: "📈",
+    icon: TrendingUp,
     title: "We Struggle to Scale Profitable Campaigns",
     symptoms: [
       "Works at ₹50K, breaks at ₹2 lakh+",
@@ -113,7 +130,7 @@ const agencyProblems = [
     ],
   },
   {
-    emoji: "🎨",
+    icon: Palette,
     title: "Creative Fatigue Kills Performance",
     symptoms: [
       "Ads stop working after 2-3 weeks",
@@ -128,7 +145,7 @@ const agencyProblems = [
     ],
   },
   {
-    emoji: "😤",
+    icon: UserX,
     title: "Clients Blame Us for Issues We Don't Control",
     symptoms: [
       "Website conversion issues",
@@ -143,7 +160,7 @@ const agencyProblems = [
     ],
   },
   {
-    emoji: "📊",
+    icon: BarChart3,
     title: "Attribution and Tracking Are Unreliable",
     symptoms: [
       "iOS 14+ broke tracking",
@@ -158,7 +175,7 @@ const agencyProblems = [
     ],
   },
   {
-    emoji: "📋",
+    icon: ClipboardList,
     title: "We Lack a Standardized Process",
     symptoms: [
       "Every client handled differently",
@@ -173,7 +190,7 @@ const agencyProblems = [
     ],
   },
   {
-    emoji: "📉",
+    icon: TrendingDown,
     title: "Our Reporting Doesn't Build Client Trust",
     symptoms: [
       "Data overload but no insights",
@@ -231,10 +248,10 @@ const ProblemsSection = () => {
           >
             🔍 Common Challenges
           </motion.span>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="h2 mb-4 text-foreground">
             Is This <span className="text-primary">You</span>?
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="subheading max-w-2xl mx-auto">
             Different businesses, same frustrations. See if this sounds
             familiar...
           </p>
@@ -260,7 +277,7 @@ const ProblemsSection = () => {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              <span>🏢</span> For Small Businesses
+              <Building2 className="w-5 h-5" /> For Small Businesses
             </button>
             <button
               onClick={() => {
@@ -273,7 +290,7 @@ const ProblemsSection = () => {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              <span>🏛️</span> For Agencies
+              <Landmark className="w-5 h-5" /> For Agencies
             </button>
           </div>
         </motion.div>
@@ -301,10 +318,10 @@ const ProblemsSection = () => {
                   onClick={() => setExpandedCard(isExpanded ? null : index)}
                   className={`emoji-card cursor-pointer ${isExpanded ? "ring-2 ring-primary" : ""}`}
                 >
-                  {/* Emoji Header */}
+                  {/* Icon Header */}
                   <div className="flex items-start gap-4 mb-4">
-                    <motion.span
-                      className="text-4xl"
+                    <motion.div
+                      className="p-3 rounded-xl bg-primary/10 text-primary"
                       animate={
                         isExpanded
                           ? { scale: [1, 1.2, 1], rotate: [0, 10, 0] }
@@ -312,8 +329,8 @@ const ProblemsSection = () => {
                       }
                       transition={{ duration: 0.5 }}
                     >
-                      {problem.emoji}
-                    </motion.span>
+                      <problem.icon className="w-8 h-8" />
+                    </motion.div>
                     <h3 className="font-heading font-semibold text-foreground leading-tight">
                       {problem.title}
                     </h3>
@@ -356,7 +373,7 @@ const ProblemsSection = () => {
                       >
                         <div className="bg-success/10 border border-success/20 rounded-xl p-3">
                           <p className="text-xs font-bold text-success uppercase tracking-wider mb-2 flex items-center gap-1">
-                            ✅ NAREN Method Fix
+                            <CheckCircle className="w-4 h-4" /> NAREN Method Fix
                           </p>
                           <ul className="space-y-2">
                             {problem.fixes.map((fix, i) => (
@@ -398,7 +415,7 @@ const ProblemsSection = () => {
           className="mt-20 text-center"
         >
           <div className="emoji-card max-w-3xl mx-auto text-center">
-            <span className="text-5xl mb-4 block">💡</span>
+            <Lightbulb className="w-16 h-16 text-primary mx-auto mb-6" />
             <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-4">
               Sound Familiar?
             </h3>

@@ -2,7 +2,6 @@ import { Play, ArrowRight, Zap, Mail, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NicheData } from "@/components/data/nicheData.ts";
 
-
 interface VideoSectionProps {
   niche: NicheData;
 }
@@ -134,7 +133,7 @@ const VideoSection = ({ niche }: VideoSectionProps) => {
                   </div>
                 </div>
 
-                <Button asChild  className="w-full">
+                <Button asChild variant="gold" className="w-full">
                   <a
                     href={calendarUrl}
                     target="_blank"

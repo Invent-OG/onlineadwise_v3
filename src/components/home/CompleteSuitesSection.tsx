@@ -1,4 +1,4 @@
-import { Check, Zap, TrendingUp, Award } from "lucide-react";
+import { Check, Zap, TrendingUp, Award, Star } from "lucide-react";
 import { Button } from "../ui/button";
 
 const CompleteSuitesSection = () => {
@@ -68,14 +68,14 @@ const CompleteSuitesSection = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative">
       <div className="absolute inset-0 bg-noise opacity-20" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container-narrow relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-            ⭐ Complete Packages
+          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 flex items-center justify-center gap-2">
+            <Star className="w-4 h-4 fill-current" /> Complete Packages
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
             <span className="text-foreground">NAREN Method™ </span>
@@ -87,58 +87,71 @@ const CompleteSuitesSection = () => {
         </div>
 
         {/* Suites Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-3 gap-8 mb-20 max-w-6xl mx-auto">
           {suites.map((suite) => {
             const Icon = suite.icon;
             return (
               <div
                 key={suite.name}
-                className={`relative group rounded-2xl border transition-all duration-500 overflow-hidden ${
+                className={`relative group rounded-3xl border transition-all duration-300 flex flex-col ${
                   suite.popular
-                    ? "bg-gradient-to-b from-primary/10 to-card border-primary glow-gold"
-                    : "bg-card/50 border-border/50 hover:border-primary/50"
+                    ? "bg-card border-gold shadow-gold-sm z-20 overflow-visible"
+                    : "bg-card border-border/30 hover:border-gold/30 z-10"
                 }`}
               >
                 {suite.popular && (
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <span className="px-4 py-1 rounded-full bg-primary text-primary-foreground text-sm font-semibold">
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-max z-50">
+                    <span className="px-4 py-1.5 rounded-full bg-gold text-black text-xs font-bold tracking-wide uppercase shadow-lg shadow-gold/20 flex items-center gap-1.5">
+                      <TrendingUp className="w-3.5 h-3.5 fill-black" />
                       Most Popular
                     </span>
                   </div>
                 )}
 
-                <div className="p-8">
+                <div className="p-8 flex-1 flex flex-col">
                   <div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${suite.color} flex items-center justify-center mb-6 glow-gold-sm`}
+                    className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
+                      suite.popular
+                        ? "bg-gold text-black"
+                        : suite.name.includes("Paid Ads")
+                          ? "bg-blue-500 text-white"
+                          : "bg-purple-500 text-white"
+                    }`}
                   >
-                    <Icon className="w-8 h-8 text-white" />
+                    <Icon className="w-7 h-7" />
                   </div>
 
-                  <h3 className="text-xl font-display font-bold text-foreground mb-2">
+                  <h3 className="text-xl font-display font-bold text-foreground mb-4">
                     {suite.name}
                   </h3>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-muted-foreground text-sm mb-8 leading-relaxed">
                     {suite.description}
                   </p>
 
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-4 mb-8 flex-1">
                     {suite.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-3">
-                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                          <Check className="w-3 h-3 text-primary" />
+                      <div key={feature} className="flex items-start gap-3">
+                        <div
+                          className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
+                            suite.popular
+                              ? "bg-gold text-black"
+                              : "bg-primary/20 text-gold"
+                          }`}
+                        >
+                          <Check className="w-3 h-3" />
                         </div>
-                        <span className="text-sm text-foreground">
+                        <span className="text-sm text-foreground/90 font-medium">
                           {feature}
                         </span>
-                      </li>
+                      </div>
                     ))}
                   </ul>
 
                   <Button
-                    className={`w-full py-6 font-semibold transition-all duration-300 ${
+                    className={`w-full py-6 font-bold tracking-wide transition-all duration-300 ${
                       suite.popular
-                        ? "bg-primary text-primary-foreground hover:bg-primary/90 glow-gold-sm hover:glow-gold"
-                        : "bg-secondary text-foreground hover:bg-primary hover:text-primary-foreground"
+                        ? "bg-gold text-black hover:bg-gold-light shadow-lg shadow-gold/20"
+                        : "bg-[#2A2A2A] text-white hover:bg-[#3A3A3A] border border-white/5"
                     }`}
                   >
                     Get Started
@@ -151,8 +164,10 @@ const CompleteSuitesSection = () => {
 
         {/* Niches We Specialize In */}
         <div className="text-center">
-          <h3 className="text-2xl font-display font-bold mb-8">
-            <span className="text-foreground">⭐ Niches We </span>
+          <h3 className="text-2xl font-display font-bold mb-8 flex items-center justify-center gap-2">
+            <span className="text-foreground flex items-center gap-2">
+              <Star className="w-6 h-6 text-primary fill-current" /> Niches We
+            </span>
             <span className="">Specialize In</span>
           </h3>
 

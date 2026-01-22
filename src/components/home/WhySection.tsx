@@ -1,28 +1,32 @@
-import { Brain, Calculator, Monitor, Cog, X, Check } from "lucide-react";
+import {
+  Brain,
+  Calculator,
+  Monitor,
+  Cog,
+  X,
+  Check,
+  Puzzle,
+} from "lucide-react";
 
 const WhySection = () => {
   const pillars = [
     {
       icon: Brain,
-      emoji: "🎯",
       title: "Psychology",
       subtitle: "Mindset of the buyer",
     },
     {
       icon: Calculator,
-      emoji: "🎯",
       title: "Math",
       subtitle: "Data + tracking",
     },
     {
       icon: Monitor,
-      emoji: "🎯",
       title: "Media",
       subtitle: "Ads + videos + funnels",
     },
     {
       icon: Cog,
-      emoji: "🎯",
       title: "Mechanism",
       subtitle: "Systems + automation",
     },
@@ -34,11 +38,11 @@ const WhySection = () => {
     <section className="py-24 relative overflow-hidden bg-card/30">
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container-narrow relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
-            🧩 The Difference
+          <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 inline-flex items-center gap-2">
+            <Puzzle className="w-4 h-4" /> The Difference
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
             <span className="text-foreground">Why </span>

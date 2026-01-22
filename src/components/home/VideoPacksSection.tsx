@@ -69,7 +69,7 @@ const VideoPacksSection = () => {
     <section id="videos" className="py-24 relative overflow-hidden bg-card/30">
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container-narrow relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">

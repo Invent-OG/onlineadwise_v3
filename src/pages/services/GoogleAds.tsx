@@ -1,4 +1,4 @@
-import MetaAdsHero from "@/components/services/metaAds/MetaAdsHero";
+import GoogleAdsHero from "@/components/services/googleAds/GoogleAdsHero";
 import ProblemsSection from "@/components/services/metaAds/ProblemsSection";
 import MetaAdsProcess from "@/components/services/metaAds/MetaAdsProcess";
 import BenefitsSection from "@/components/services/metaAds/BenefitsSection";
@@ -8,11 +8,11 @@ import ServicesSection from "@/components/services/metaAds/ServicesSection";
 import NarenMethodSection from "@/components/services/metaAds/NarenMethodSection";
 import CaseStudySection from "@/components/services/metaAds/CaseStudySection";
 
-const MetaAds = () => {
+const GoogleAds = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <main>
-        <MetaAdsHero />
+        <GoogleAdsHero />
         <ProblemsSection />
         <NarenMethodSection />
         <ServicesSection />
@@ -26,4 +26,4 @@ const MetaAds = () => {
   );
 };
 
-export default MetaAds;
+export default GoogleAds;

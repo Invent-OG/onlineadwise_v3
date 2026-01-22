@@ -5,12 +5,20 @@ import {
   useTransform,
   AnimatePresence,
 } from "framer-motion";
-import { ChevronDown, CheckCircle } from "lucide-react";
+import {
+  ChevronDown,
+  CheckCircle,
+  Target,
+  TrendingUp,
+  BarChart3,
+  FlaskConical,
+  Settings,
+} from "lucide-react";
 
 const pillars = [
   {
     letter: "N",
-    emoji: "🎯",
+    icon: Target,
     title: "Niche & Narrative",
     subtitle: "Clear Positioning & Irresistible Offers",
     description:
@@ -26,7 +34,7 @@ const pillars = [
   },
   {
     letter: "A",
-    emoji: "📈",
+    icon: TrendingUp,
     title: "Acquisition Systems",
     subtitle: "Platform-Specific Growth That Compounds",
     description: "We build campaigns that scale systematically—not randomly.",
@@ -42,7 +50,7 @@ const pillars = [
   },
   {
     letter: "R",
-    emoji: "📊",
+    icon: BarChart3,
     title: "Revenue Tracking",
     subtitle: "GA4, CAPI, LTV & Real Attribution",
     description: "We track revenue, LTV, and true ROI—not just clicks.",
@@ -58,7 +66,7 @@ const pillars = [
   },
   {
     letter: "E",
-    emoji: "🔬",
+    icon: FlaskConical,
     title: "Experimentation",
     subtitle: "Structured Testing, Not Random Optimization",
     description: "We test systematically using the Scientific Method.",
@@ -74,7 +82,7 @@ const pillars = [
   },
   {
     letter: "N",
-    emoji: "⚙️",
+    icon: Settings,
     title: "Normalized Operations",
     subtitle: "SOPs, Automation & Team-Ready Systems",
     description: "We build systems that run without you—documented & scalable.",
@@ -194,8 +202,8 @@ const NarenMethodSection = () => {
                   onClick={() => setExpandedPillar(isExpanded ? null : index)}
                   className="w-full flex items-center gap-4 text-left"
                 >
-                  <motion.span
-                    className="text-4xl md:text-5xl"
+                  <motion.div
+                    className="text-primary p-2 bg-primary/10 rounded-xl"
                     animate={
                       isExpanded
                         ? { rotate: [0, 20, 0], scale: [1, 1.2, 1] }
@@ -203,8 +211,8 @@ const NarenMethodSection = () => {
                     }
                     transition={{ duration: 0.5 }}
                   >
-                    {pillar.emoji}
-                  </motion.span>
+                    <pillar.icon className="w-8 h-8 md:w-10 md:h-10" />
+                  </motion.div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-sm font-bold text-primary">

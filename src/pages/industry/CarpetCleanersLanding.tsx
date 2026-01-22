@@ -6,7 +6,15 @@ import { NarenMethodSection } from "@/components/industry/NarenMethodSection";
 import { PricingSection } from "@/components/industry/PricingSection";
 import { ProblemSection } from "@/components/industry/ProblemSection";
 import { ProcessSection } from "@/components/industry/ProcessSection";
-import Navbar from "@/components/ui/Navbar";
+import {
+  Search,
+  Rocket,
+  Zap,
+  ClipboardList,
+  TrendingUp,
+  DollarSign,
+  BarChart3,
+} from "lucide-react";
 
 const carpetCleanersData = {
   hero: {
@@ -126,25 +134,25 @@ const carpetCleanersData = {
             label: "Jobs per month",
             before: "48",
             after: "32 (higher value)",
-            icon: "trending" as const,
+            icon: TrendingUp,
           },
           {
             label: "Average job value",
             before: "$110",
             after: "$285",
-            icon: "dollar" as const,
+            icon: DollarSign,
           },
           {
             label: "Repeat customer rate",
             before: "8%",
             after: "34%",
-            icon: "chart" as const,
+            icon: BarChart3,
           },
           {
             label: "Monthly revenue",
             before: "$27K",
             after: "$78K",
-            icon: "dollar" as const,
+            icon: DollarSign,
           },
         ],
         testimonial:
@@ -160,7 +168,7 @@ const carpetCleanersData = {
       {
         week: "Week 1",
         title: "NAREN Audit",
-        icon: "search" as const,
+        icon: Search,
         description: "We analyze your current positioning and operations:",
         items: [
           "Pricing analysis",
@@ -174,7 +182,7 @@ const carpetCleanersData = {
       {
         week: "Week 2-3",
         title: "Strategy & Setup",
-        icon: "clipboard" as const,
+        icon: ClipboardList,
         description: "We build your premium positioning infrastructure:",
         items: [
           "Create premium service packages",
@@ -187,7 +195,7 @@ const carpetCleanersData = {
       {
         week: "Week 4-8",
         title: "Launch & Optimize",
-        icon: "rocket" as const,
+        icon: Rocket,
         description: "Your campaigns go live with value-focused testing:",
         items: [
           "Test premium offers vs. discount offers",
@@ -200,7 +208,7 @@ const carpetCleanersData = {
       {
         week: "Month 3+",
         title: "Scale & Systematize",
-        icon: "trending" as const,
+        icon: TrendingUp,
         description: "We turn leads into a repeat business engine:",
         items: [
           "Scale winning campaigns to new areas",
@@ -220,7 +228,7 @@ const carpetCleanersData = {
       "Escape the discount trap and build a premium carpet cleaning business.",
     tiers: [
       {
-        icon: "🔍",
+        icon: Search,
         name: "NAREN AUDIT",
         price: "$997",
         period: undefined,
@@ -236,7 +244,7 @@ const carpetCleanersData = {
         ctaText: "Book Your Audit",
       },
       {
-        icon: "🚀",
+        icon: Rocket,
         name: "IMPLEMENTATION",
         popular: true,
         price: "$3,000",
@@ -256,7 +264,7 @@ const carpetCleanersData = {
         ctaText: "Apply Now",
       },
       {
-        icon: "⚡",
+        icon: Zap,
         name: "PARTNERSHIP",
         price: "$5,500",
         period: "month",
@@ -344,7 +352,6 @@ const carpetCleanersData = {
 export default function CarpetCleanersLanding() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <main className="pt-16 md:pt-20">
         <HeroSection {...carpetCleanersData.hero} />
         <ProblemSection

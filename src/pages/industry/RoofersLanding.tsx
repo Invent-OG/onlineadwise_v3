@@ -5,8 +5,7 @@ import { NarenMethodSection } from "@/components/industry/NarenMethodSection";
 import { PricingSection } from "@/components/industry/PricingSection";
 import { ProblemSection } from "@/components/industry/ProblemSection";
 import { ProcessSection } from "@/components/industry/ProcessSection";
-import Navbar from "@/components/ui/Navbar";
-
+import { Search, ClipboardList, Rocket, TrendingUp, Zap } from "lucide-react";
 
 const roofersData = {
   hero: {
@@ -109,7 +108,7 @@ const roofersData = {
       {
         week: "Week 1",
         title: "NAREN Audit",
-        icon: "search" as const,
+        icon: Search,
         description: "We analyze your current marketing and sales process:",
         items: [
           "Lead source analysis",
@@ -123,7 +122,7 @@ const roofersData = {
       {
         week: "Week 2-3",
         title: "Strategy & Setup",
-        icon: "clipboard" as const,
+        icon: ClipboardList,
         description: "We build your high-ticket lead infrastructure:",
         items: [
           "Create insurance specialist positioning",
@@ -136,7 +135,7 @@ const roofersData = {
       {
         week: "Week 4-8",
         title: "Launch & Optimize",
-        icon: "rocket" as const,
+        icon: Rocket,
         description: "Your campaigns go live with replacement-focused testing:",
         items: [
           "Test insurance messaging vs. retail offers",
@@ -149,7 +148,7 @@ const roofersData = {
       {
         week: "Month 3+",
         title: "Scale & Systematize",
-        icon: "trending" as const,
+        icon: TrendingUp,
         description: "We turn leads into a full replacement pipeline:",
         items: [
           "Scale to adjacent territories",
@@ -168,7 +167,7 @@ const roofersData = {
     subheadline: "Land more full replacements and dominate your market.",
     tiers: [
       {
-        icon: "🔍",
+        icon: Search,
         name: "NAREN AUDIT",
         price: "$997",
         period: undefined,
@@ -184,7 +183,7 @@ const roofersData = {
         ctaText: "Book Your Audit",
       },
       {
-        icon: "🚀",
+        icon: Rocket,
         name: "IMPLEMENTATION",
         popular: true,
         price: "$4,500",
@@ -204,7 +203,7 @@ const roofersData = {
         ctaText: "Apply Now",
       },
       {
-        icon: "⚡",
+        icon: Zap,
         name: "PARTNERSHIP",
         price: "$8,000",
         period: "month",
@@ -293,7 +292,6 @@ const roofersData = {
 export default function RoofersLanding() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <main className="pt-16 md:pt-20">
         <HeroSection {...roofersData.hero} />
         <ProblemSection

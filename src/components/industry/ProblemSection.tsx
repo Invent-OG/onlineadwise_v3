@@ -12,13 +12,11 @@ export function ProblemSection({
   transition,
 }: ProblemSectionProps) {
   return (
-    <section className="py-20 md:py-32 relative">
-      <div className="container px-4">
+    <section className="section-padding relative">
+      <div className="container-narrow">
         <div className="max-w-4xl mx-auto">
           {/* Section heading */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-16">
-            {headline}
-          </h2>
+          <h2 className="h2 text-center mb-16">{headline}</h2>
 
           {/* Problems list */}
           <div className="space-y-6 mb-16">

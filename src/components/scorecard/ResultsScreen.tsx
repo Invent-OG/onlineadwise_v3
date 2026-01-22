@@ -1,7 +1,17 @@
 import { motion } from "framer-motion";
 import { PillarScores } from "./PillarScores";
 import { Button } from "@/components/ui/button";
-import { Calendar, Mail, RotateCcw, ExternalLink } from "lucide-react";
+import {
+  Calendar,
+  Mail,
+  RotateCcw,
+  ExternalLink,
+  Trophy,
+  Award,
+  TrendingUp,
+  AlertCircle,
+  AlertTriangle,
+} from "lucide-react";
 import { ScoreResult } from "@/utils/scoring";
 import { ScoreGauge } from "./ScoreGauge";
 import { TopPriorities } from "./TopPriorities";
@@ -63,7 +73,21 @@ export function ResultsScreen({
           <div
             className={`inline-flex items-center gap-2 px-6 py-3 rounded-full bg-card border border-border`}
           >
-            <span className="text-2xl">{result.bandEmoji}</span>
+            {result.band === "ELITE" && (
+              <Trophy className="w-6 h-6 text-yellow-400" />
+            )}
+            {result.band === "STRONG" && (
+              <Award className="w-6 h-6 text-primary" />
+            )}
+            {result.band === "AVERAGE" && (
+              <TrendingUp className="w-6 h-6 text-blue-400" />
+            )}
+            {result.band === "STRUGGLING" && (
+              <AlertCircle className="w-6 h-6 text-orange-400" />
+            )}
+            {result.band === "CRITICAL" && (
+              <AlertTriangle className="w-6 h-6 text-red-500" />
+            )}
             <span
               className={`text-xl font-serif font-bold ${result.bandColor}`}
             >

@@ -1,16 +1,10 @@
-import {
-  TrendingUp,
-  DollarSign,
-  BarChart3,
-  Clock,
-  CheckCircle2,
-} from "lucide-react";
+import { LucideIcon, CheckCircle2 } from "lucide-react";
 
 interface CaseStudyResult {
   label: string;
   before: string;
   after: string;
-  icon: "trending" | "dollar" | "chart" | "clock";
+  icon: LucideIcon;
 }
 
 interface CaseStudy {
@@ -30,20 +24,13 @@ interface CaseStudySectionProps {
   caseStudies: CaseStudy[];
 }
 
-const iconMap = {
-  trending: TrendingUp,
-  dollar: DollarSign,
-  chart: BarChart3,
-  clock: Clock,
-};
-
 export function CaseStudySection({
   headline,
   caseStudies,
 }: CaseStudySectionProps) {
   return (
     <section className="py-20 md:py-32 relative">
-      <div className="container px-4">
+      <div className="container-narrow px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section heading */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-16">
@@ -112,7 +99,7 @@ export function CaseStudySection({
                     </h4>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                       {study.results.map((result, rIndex) => {
-                        const Icon = iconMap[result.icon];
+                        const Icon = result.icon;
                         return (
                           <div
                             key={rIndex}

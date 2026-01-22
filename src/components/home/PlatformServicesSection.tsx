@@ -169,7 +169,7 @@ const PlatformServicesSection = () => {
     <section id="services" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-noise opacity-20" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container-narrow relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">

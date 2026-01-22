@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Target, Brain, TrendingUp } from "lucide-react";
+import { ArrowRight, Target, Brain, TrendingUp, Star } from "lucide-react";
 
 interface HeroSectionProps {
   headline: string;
@@ -41,7 +41,7 @@ export function HeroSection({
       {/* Glow effect behind content */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
 
-      <div className="container relative z-10 px-4 py-20 md:py-32">
+      <div className="container-narrow relative z-10 hero-padding">
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge */}
           {tagline && (
@@ -52,7 +52,7 @@ export function HeroSection({
           )}
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-bold leading-tight mb-6 animate-fade-up opacity-0 delay-100">
+          <h1 className="h1 mb-6 animate-fade-up opacity-0 delay-100">
             <span className="text-foreground">{headline}</span>
             {highlightedText && (
               <>
@@ -63,7 +63,7 @@ export function HeroSection({
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-up opacity-0 delay-200">
+          <p className="subheading max-w-3xl mx-auto mb-8 animate-fade-up opacity-0 delay-200">
             {subheadline}
           </p>
 
@@ -81,9 +81,7 @@ export function HeroSection({
             <p className="text-muted-foreground text-sm mb-3">{trustText}</p>
             <div className="flex items-center justify-center gap-1">
               {[...Array(5)].map((_, i) => (
-                <span key={i} className="text-primary text-xl">
-                  ★
-                </span>
+                <Star key={i} className="w-5 h-5 fill-current text-primary" />
               ))}
               <span className="ml-2 text-foreground font-medium">{rating}</span>
             </div>

@@ -1,20 +1,16 @@
-
 import { getNicheBySlug } from "@/components/data/nicheData";
 import LandingPage from "@/components/whiteboardvideo/LandingPage";
-import { Navigate } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 
-interface NichePageProps {
-  slug: string;
-}
+const NichePage = () => {
+  const { niche: slug } = useParams();
+  const nicheData = slug ? getNicheBySlug(slug) : undefined;
 
-const NichePage = ({ slug }: NichePageProps) => {
-  const niche = getNicheBySlug(slug);
-
-  if (!niche) {
-    return <Navigate to="/" replace />;
+  if (!nicheData) {
+    return <Navigate to="/whiteboard-video" replace />;
   }
 
-  return <LandingPage niche={niche} />;
+  return <LandingPage niche={nicheData} />;
 };
 
 export default NichePage;

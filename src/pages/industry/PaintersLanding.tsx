@@ -6,8 +6,15 @@ import { NarenMethodSection } from "@/components/industry/NarenMethodSection";
 import { PricingSection } from "@/components/industry/PricingSection";
 import { ProblemSection } from "@/components/industry/ProblemSection";
 import { ProcessSection } from "@/components/industry/ProcessSection";
-import Navbar from "@/components/ui/Navbar";
-
+import {
+  Search,
+  Rocket,
+  Zap,
+  ClipboardList,
+  TrendingUp,
+  DollarSign,
+  BarChart3,
+} from "lucide-react";
 
 const paintersData = {
   hero: {
@@ -123,25 +130,25 @@ const paintersData = {
             label: "Qualified estimates/month",
             before: "15",
             after: "28",
-            icon: "trending" as const,
+            icon: TrendingUp,
           },
           {
             label: "Average job value",
             before: "$3,200",
             after: "$4,800",
-            icon: "dollar" as const,
+            icon: DollarSign,
           },
           {
             label: "Close rate",
             before: "22%",
             after: "41%",
-            icon: "chart" as const,
+            icon: BarChart3,
           },
           {
             label: "Monthly revenue",
             before: "$48K",
             after: "$118K",
-            icon: "dollar" as const,
+            icon: DollarSign,
           },
         ],
         testimonial:
@@ -167,25 +174,25 @@ const paintersData = {
             label: "Commercial estimates/month",
             before: "3",
             after: "18",
-            icon: "trending" as const,
+            icon: TrendingUp,
           },
           {
             label: "Residential estimates/month",
             before: "8",
             after: "22",
-            icon: "trending" as const,
+            icon: TrendingUp,
           },
           {
             label: "Signed contract rate",
             before: "31%",
             after: "48%",
-            icon: "chart" as const,
+            icon: BarChart3,
           },
           {
             label: "Monthly revenue",
             before: "$62K",
             after: "$156K",
-            icon: "dollar" as const,
+            icon: DollarSign,
           },
         ],
         testimonial:
@@ -201,7 +208,7 @@ const paintersData = {
       {
         week: "Week 1",
         title: "NAREN Audit",
-        icon: "search" as const,
+        icon: Search,
         description: "We analyze your current marketing setup:",
         items: [
           "Review any existing ad campaigns (Facebook, Google, LSA)",
@@ -216,7 +223,7 @@ const paintersData = {
       {
         week: "Week 2-3",
         title: "Strategy & Setup",
-        icon: "clipboard" as const,
+        icon: ClipboardList,
         description: "We build your growth infrastructure:",
         items: [
           "Create your premium positioning and irresistible offer",
@@ -230,7 +237,7 @@ const paintersData = {
       {
         week: "Week 4-8",
         title: "Launch & Optimize",
-        icon: "rocket" as const,
+        icon: Rocket,
         description: "Your campaigns go live with structured testing:",
         items: [
           "Test 3-5 audience segments (neighborhoods, home values, home age)",
@@ -243,7 +250,7 @@ const paintersData = {
       {
         week: "Month 3+",
         title: "Scale & Systematize",
-        icon: "trending" as const,
+        icon: TrendingUp,
         description: "We turn your lead generation into a predictable engine:",
         items: [
           "Document SOPs for estimate follow-ups and customer communication",
@@ -262,7 +269,7 @@ const paintersData = {
       "Whether you're new to paid ads or ready to dominate your market, we have a solution for you.",
     tiers: [
       {
-        icon: "🔍",
+        icon: Search,
         name: "NAREN AUDIT",
         price: "$997",
         period: undefined,
@@ -280,7 +287,7 @@ const paintersData = {
         ctaText: "Book Your Audit",
       },
       {
-        icon: "🚀",
+        icon: Rocket,
         name: "IMPLEMENTATION",
         popular: true,
         price: "$3,500",
@@ -302,7 +309,7 @@ const paintersData = {
         ctaText: "Apply Now",
       },
       {
-        icon: "⚡",
+        icon: Zap,
         name: "PARTNERSHIP",
         price: "$6,500",
         period: "month",
@@ -411,7 +418,6 @@ const paintersData = {
 export default function PaintersLanding() {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <main className="pt-16 md:pt-20">
         <HeroSection {...paintersData.hero} />
         <ProblemSection

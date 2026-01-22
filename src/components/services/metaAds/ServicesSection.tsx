@@ -104,10 +104,10 @@ const ServicesSection = () => {
           >
             Our Services
           </motion.span>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="h2 mb-4 text-foreground">
             Complete Facebook Ads Services
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="subheading max-w-2xl mx-auto">
             Everything You Need to Dominate Facebook & Instagram Advertising
           </p>
         </motion.div>

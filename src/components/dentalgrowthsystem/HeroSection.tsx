@@ -20,7 +20,7 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="section-container relative">
+      <div className="container-narrow relative hero-padding">
         <div className="mx-auto max-w-4xl text-center">
           {/* Badge */}
           <motion.div
@@ -38,7 +38,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-6 text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance"
+            className="h1 mb-6 text-foreground text-balance"
           >
             Stop Wasting Ad Dollars on Tire-Kickers.{" "}
             <span className="text-primary">Start Filling Your Schedule</span>{" "}
@@ -50,7 +50,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl"
+            className="subheading mx-auto mb-10 max-w-2xl"
           >
             The NAREN Method turns your ad spend into predictable new patient
             appointments—without the guesswork, wasted budget, or "hope

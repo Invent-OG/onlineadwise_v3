@@ -1,8 +1,15 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Sparkles, ArrowRight, AlertCircle } from "lucide-react";
+import {
+  CheckCircle2,
+  Sparkles,
+  ArrowRight,
+  AlertCircle,
+  Lightbulb,
+  LucideIcon,
+} from "lucide-react";
 
 interface PricingTier {
-  icon: string;
+  icon: LucideIcon;
   name: string;
   popular?: boolean;
   price: string;
@@ -37,7 +44,7 @@ export function PricingSection({
 }: PricingSectionProps) {
   return (
     <section className="py-20 md:py-32 relative">
-      <div className="container px-4">
+      <div className="container-narrow px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section heading */}
           <div className="text-center mb-16">
@@ -71,7 +78,9 @@ export function PricingSection({
                 <div className={`p-6 md:p-8 ${tier.popular ? "pt-14" : ""}`}>
                   {/* Icon & Name */}
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-2xl">{tier.icon}</span>
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <tier.icon className="w-6 h-6 text-primary" />
+                    </div>
                     <h3 className="text-xl font-heading font-bold text-foreground">
                       {tier.name}
                     </h3>
@@ -141,7 +150,7 @@ export function PricingSection({
           {/* Scorecard CTA */}
           <div className="text-center mb-8">
             <p className="text-muted-foreground mb-4 flex items-center justify-center gap-2">
-              <span className="text-xl">💡</span>
+              <Lightbulb className="w-5 h-5 text-primary" />
               {scorecardCTA.text}
             </p>
             <Button size="lg">

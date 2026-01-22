@@ -30,7 +30,7 @@ export const HeroSection = () => {
         className="absolute bottom-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
       />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container-narrow relative z-10 hero-padding">
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge */}
           <motion.div
@@ -50,7 +50,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight"
+            className="h1 mb-6"
           >
             <span className="text-foreground">Transform Your</span>
             <br />
@@ -66,7 +66,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground font-body max-w-3xl mx-auto mb-10"
+            className="subheading max-w-3xl mx-auto mb-10"
           >
             Remove the guesswork from paid advertising. Get data-driven audience
             targeting, campaign structures, and ROI forecasts that turn ad
@@ -81,7 +81,7 @@ export const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
             <a href={CALENDAR_LINK} target="_blank" rel="noopener noreferrer">
-              <Button  size="xl" className="group">
+              <Button size="xl" className="group">
                 <Calendar className="h-5 w-5" />
                 Book Strategy Call
                 <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />

@@ -36,7 +36,7 @@ export function NarenMethodSection({
 }: NarenMethodSectionProps) {
   return (
     <section className="py-20 md:py-32 relative section-glow">
-      <div className="container px-4">
+      <div className="container-narrow px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section heading */}
           <div className="text-center mb-16">

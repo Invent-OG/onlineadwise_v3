@@ -1,4 +1,12 @@
-import { Check, Search, Rocket, Zap, ArrowRight } from "lucide-react";
+import {
+  Check,
+  Search,
+  Rocket,
+  Zap,
+  ArrowRight,
+  Lightbulb,
+  AlertTriangle,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -76,7 +84,7 @@ const plans = [
 const PricingSection = () => {
   return (
     <section className="py-20 lg:py-28 bg-card">
-      <div className="section-container">
+      <div className="container-narrow">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -217,16 +225,20 @@ const PricingSection = () => {
           transition={{ duration: 0.5 }}
           className="mt-12 text-center"
         >
-          <p className="mb-4 text-muted-foreground">
-            💡 NOT SURE WHICH IS RIGHT FOR YOU?
+          <p className="mb-4 text-muted-foreground flex items-center justify-center gap-2">
+            <Lightbulb className="w-5 h-5 text-primary" /> NOT SURE WHICH IS
+            RIGHT FOR YOU?
           </p>
           <Button variant="outline" size="lg" className="group">
             Take the Free NAREN Scorecard (2 minutes)
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
-          <p className="mt-6 text-sm text-muted-foreground">
-            ⚠️ <strong className="text-foreground">IMPORTANT:</strong> We only
-            take 5 new Implementation clients per quarter to ensure quality.
+          <p className="mt-6 text-sm text-muted-foreground flex items-center justify-center gap-2">
+            <AlertTriangle className="w-4 h-4 text-amber-500" />
+            <span>
+              <strong className="text-foreground">IMPORTANT:</strong> We only
+              take 5 new Implementation clients per quarter to ensure quality.
+            </span>
             <span className="text-primary font-semibold">
               {" "}
               Current availability: 2 spots remaining.

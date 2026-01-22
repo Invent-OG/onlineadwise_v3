@@ -46,7 +46,7 @@ export function FinalCTASection({
       {/* Background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-primary/5 blur-[200px] rounded-full pointer-events-none" />
 
-      <div className="container px-4 relative z-10">
+      <div className="container-narrow px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
