@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Calendar, Calendar1, Calendar1Icon, Menu, X, Zap } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Logo from "./Logo";
 import { Button } from "./button";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -166,8 +168,11 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <Button className="rounded-full bg-primary text-black font-semibold hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)]">
-              Get Started <Zap className="w-4 h-4 ml-2 fill-current" />
+            <Button
+              className="rounded-full bg-primary text-black font-semibold hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_30px_rgba(234,179,8,0.4)]"
+              onClick={() => navigate("/booking")}
+            >
+              Book a call <Calendar className="w-5 h-5 ml-2 " />
             </Button>
           </div>
 
@@ -310,8 +315,11 @@ const Navbar = () => {
               transition={{ delay: 0.5 }}
               className="mt-auto"
             >
-              <Button className="w-full h-14 text-lg font-bold rounded-xl bg-primary text-black shadow-lg shadow-primary/20">
-                Get Started <Zap className="w-5 h-5 ml-2 fill-current" />
+              <Button
+                className="w-full h-14 text-lg font-bold rounded-xl bg-primary text-black shadow-lg shadow-primary/20"
+                onClick={() => navigate("/booking")}
+              >
+                Book a call <Calendar className="w-5 h-5 ml-2 " />
               </Button>
             </motion.div>
           </motion.div>
