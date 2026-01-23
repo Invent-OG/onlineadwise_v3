@@ -18,12 +18,12 @@ const FounderSection = () => {
     <section
       id="about"
       ref={ref}
-      className="section-padding bg-secondary/20 relative overflow-hidden"
+      className="section-padding  bg-secondary/20 relative overflow-hidden"
     >
       <div className="absolute inset-0 section-gradient" />
 
-      <div className="container-wide relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="container-wide max-w-6xl relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Image */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

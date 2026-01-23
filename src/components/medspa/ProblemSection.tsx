@@ -23,12 +23,12 @@ const ProblemSection = () => {
   return (
     <section
       ref={ref}
-      className="section-padding bg-background relative overflow-hidden"
+      className="section-padding  bg-background relative overflow-hidden"
     >
       {/* Subtle background pattern */}
       <div className="absolute inset-0 section-gradient" />
 
-      <div className="container-wide relative z-10">
+      <div className="container-wide max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -48,7 +48,7 @@ const ProblemSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

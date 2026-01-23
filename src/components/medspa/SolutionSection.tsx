@@ -45,11 +45,11 @@ const SolutionSection = () => {
     <section
       id="how-it-works"
       ref={ref}
-      className="section-padding bg-secondary/20 relative overflow-hidden"
+      className="section-padding   bg-secondary/20 relative overflow-hidden"
     >
       <div className="absolute inset-0 section-gradient" />
 
-      <div className="container-wide relative z-10">
+      <div className="container-wide max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -71,7 +71,7 @@ const SolutionSection = () => {
         </motion.div>
 
         {/* Pillars Grid */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
           {pillars.map((pillar, index) => (
             <motion.div
               key={pillar.title}
@@ -111,10 +111,10 @@ const SolutionSection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <Button size="xl" className="group shadow-gold" asChild>
-            <a href="#audit">
-              See How It Works For Your Med Spa
-              <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+          <Button size="xl" className="group shadow-gold w-full sm:w-auto h-auto py-4 md:py-6 whitespace-normal text-left sm:text-center" asChild>
+            <a href="#audit" className="flex items-center justify-center gap-2">
+              <span className="flex-1 sm:flex-none">See How It Works For Your Med Spa</span>
+              <ArrowRight className="ml-2 hidden md:block w-5 h-5 transition-transform group-hover:translate-x-1 flex-shrink-0" />
             </a>
           </Button>
         </motion.div>

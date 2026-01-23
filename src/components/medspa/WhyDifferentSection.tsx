@@ -40,11 +40,11 @@ const WhyDifferentSection = () => {
   return (
     <section
       ref={ref}
-      className="section-padding bg-secondary/20 relative overflow-hidden"
+      className="section-padding  bg-secondary/20 relative overflow-hidden"
     >
       <div className="absolute inset-0 section-gradient" />
 
-      <div className="container-wide relative z-10">
+      <div className="container-wide max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -70,7 +70,7 @@ const WhyDifferentSection = () => {
               transition={{ duration: 0.6, delay: 0.1 * index }}
               className="bg-card rounded-2xl shadow-lg border border-border/50 overflow-hidden"
             >
-              <div className="grid md:grid-cols-2 gap-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                 {/* Problem */}
                 <div className="p-6 lg:p-8 bg-destructive/5 border-b md:border-b-0 md:border-r border-destructive/20">
                   <div className="flex items-start gap-4">

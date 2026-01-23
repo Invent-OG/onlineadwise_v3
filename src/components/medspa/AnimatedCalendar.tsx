@@ -40,7 +40,7 @@ const AnimatedCalendar = () => {
   }
 
   return (
-    <div className="bg-card rounded-2xl shadow-xl border border-border/50 overflow-hidden max-w-md mx-auto glow-gold">
+    <div className="bg-card container-narrow rounded-2xl shadow-xl border border-border/50 overflow-hidden max-w-md mx-auto glow-gold">
       {/* Calendar Header */}
       <div className="bg-secondary/50 px-6 py-4 border-b border-border/50">
         <div className="flex items-center justify-between">

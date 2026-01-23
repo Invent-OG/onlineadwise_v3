@@ -62,7 +62,7 @@ const NARENMethodSection = () => {
     <section
       id="method"
       ref={ref}
-      className="section-padding bg-background relative overflow-hidden"
+      className="section-padding container-narrow bg-background relative overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute inset-0">
@@ -171,10 +171,10 @@ const NARENMethodSection = () => {
           transition={{ duration: 0.6, delay: 0.9 }}
           className="text-center"
         >
-          <Button size="xl" className="group shadow-gold" asChild>
-            <a href="#audit">
-              See How NAREN Works For Your Med Spa
-              <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+          <Button size="xl" className="group shadow-gold w-full sm:w-auto h-auto py-4 md:py-6 whitespace-normal text-left sm:text-center" asChild>
+            <a href="#audit" className="flex items-center justify-center gap-2">
+              <span className="flex-1 sm:flex-none">See How NAREN Works For Your Med Spa</span>
+              <ArrowRight className="ml-2 hidden md:block w-5 h-5 transition-transform group-hover:translate-x-1 flex-shrink-0" />
             </a>
           </Button>
         </motion.div>

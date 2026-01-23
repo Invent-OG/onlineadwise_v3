@@ -19,11 +19,11 @@ const FinalCTASection = () => {
     <section
       id="audit"
       ref={ref}
-      className="section-padding bg-background relative overflow-hidden"
+      className="section-padding container-narrow bg-background relative overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-[150px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] h-[500px] md:h-[800px] bg-gold/5 rounded-full blur-[100px] md:blur-[150px]" />
       </div>
 
       <div className="container-narrow relative z-10">

@@ -59,9 +59,9 @@ const FAQSection = () => {
     <section
       id="faq"
       ref={ref}
-      className="section-padding bg-background relative overflow-hidden"
+      className="section-padding  bg-background relative overflow-hidden"
     >
-      <div className="container-narrow relative z-10">
+      <div className="container-narrow max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}

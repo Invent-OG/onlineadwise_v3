@@ -57,9 +57,9 @@ const CaseStudiesSection = () => {
     <section
       id="results"
       ref={ref}
-      className="section-padding bg-background relative overflow-hidden"
+      className="section-padding  bg-background relative overflow-hidden"
     >
-      <div className="container-wide relative z-10">
+      <div className="container-wide max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -89,7 +89,7 @@ const CaseStudiesSection = () => {
               transition={{ duration: 0.6, delay: 0.2 * index }}
               className="bg-card rounded-3xl shadow-xl border border-border/50 overflow-hidden"
             >
-              <div className="grid lg:grid-cols-5 gap-0">
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
                 {/* Left - Info */}
                 <div className="lg:col-span-2 p-8 lg:p-10 bg-secondary/30 border-b lg:border-b-0 lg:border-r border-border/30">
                   <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
