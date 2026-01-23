@@ -50,7 +50,7 @@ export const NamingConventions = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl  font-bold mb-4">
             Professional{" "}
             <span className="text-gradient-gold">Naming Conventions</span>
           </h2>
@@ -69,7 +69,7 @@ export const NamingConventions = () => {
             transition={{ delay: 0.1 }}
             className="card-sci-fi p-6"
           >
-            <h3 className="text-lg font-display font-bold mb-2 text-primary">
+            <h3 className="text-lg  font-bold mb-2 text-primary">
               Campaign Naming
             </h3>
             <p className="text-xs text-muted-foreground font-mono mb-4 p-2 bg-muted/50 rounded">
@@ -109,7 +109,7 @@ export const NamingConventions = () => {
             transition={{ delay: 0.2 }}
             className="card-sci-fi p-6"
           >
-            <h3 className="text-lg font-display font-bold mb-2 text-primary">
+            <h3 className="text-lg  font-bold mb-2 text-primary">
               Ad Set Naming
             </h3>
             <p className="text-xs text-muted-foreground font-mono mb-4 p-2 bg-muted/50 rounded">
@@ -149,9 +149,7 @@ export const NamingConventions = () => {
             transition={{ delay: 0.3 }}
             className="card-sci-fi p-6"
           >
-            <h3 className="text-lg font-display font-bold mb-2 text-primary">
-              Ad Naming
-            </h3>
+            <h3 className="text-lg  font-bold mb-2 text-primary">Ad Naming</h3>
             <p className="text-xs text-muted-foreground font-mono mb-4 p-2 bg-muted/50 rounded">
               {namingExamples.ad.format}
             </p>

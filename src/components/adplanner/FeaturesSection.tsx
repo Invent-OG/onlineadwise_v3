@@ -74,7 +74,7 @@ export const FeaturesSection = () => {
               Powerful Features
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl  font-bold mb-4">
             Everything You Need to
             <br />
             <span className="text-gradient-gold">Dominate Paid Ads</span>
@@ -104,7 +104,7 @@ export const FeaturesSection = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-display font-bold mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-lg  font-bold mb-2 group-hover:text-primary transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-sm text-muted-foreground font-body leading-relaxed">

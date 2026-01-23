@@ -54,7 +54,7 @@ const MetaAdsServices = () => {
           <span className="text-blue-500 text-sm font-semibold tracking-wider uppercase mb-4 block">
             🛠️ Our Expertise
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold mb-4">
             <span className="text-foreground">Full-Stack </span>
             <span className="text-blue-500">Meta Ads Solutions</span>
           </h2>

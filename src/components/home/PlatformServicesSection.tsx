@@ -175,7 +175,7 @@ const PlatformServicesSection = () => {
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
             ⚡🌐 Platform-Wise Execution
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold mb-4">
             <span className="text-foreground">Multi-Platform </span>
             <span className="">Ad Services</span>
           </h2>
@@ -205,7 +205,7 @@ const PlatformServicesSection = () => {
                         <Icon className="w-7 h-7 text-primary" />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-display font-bold text-foreground">
+                        <h3 className="text-2xl  font-bold text-foreground">
                           {platform.title}
                         </h3>
                         <p className="text-muted-foreground">

@@ -75,7 +75,7 @@ const PackagesSection = ({ niche }: PackagesSectionProps) => {
               <Package className="w-4 h-4" /> Our Packages
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-foreground">
+          <h2 className="text-3xl md:text-5xl  font-bold mb-6 text-foreground">
             Consultation + Video + Ads Setup
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -113,11 +113,11 @@ const PackagesSection = ({ niche }: PackagesSectionProps) => {
                   <pkg.icon className="w-8 h-8" />
                 </div>
 
-                <h3 className="text-xl font-display font-bold text-foreground mb-2">
+                <h3 className="text-xl  font-bold text-foreground mb-2">
                   {pkg.name}
                 </h3>
 
-                <div className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4 tracking-tight">
+                <div className="text-4xl md:text-5xl  font-bold text-foreground mb-4 tracking-tight">
                   {pkg.price}
                 </div>
 

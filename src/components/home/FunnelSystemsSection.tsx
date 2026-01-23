@@ -124,7 +124,7 @@ const FunnelSystemsSection = () => {
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 inline-flex items-center gap-2">
             <Gem className="w-4 h-4" /> Complete Systems
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold mb-4">
             <span className="text-foreground">Growth </span>
             <span className="">Infrastructure</span>
           </h2>
@@ -154,7 +154,7 @@ const FunnelSystemsSection = () => {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-display font-bold text-foreground mb-2">
+                <h3 className="text-xl  font-bold text-foreground mb-2">
                   {system.title}
                 </h3>
                 <p className="text-primary text-sm mb-4">{system.subtitle}</p>
@@ -246,7 +246,7 @@ const FunnelSystemsSection = () => {
 
         {/* Tools We Use */}
         <div className="text-center">
-          <h3 className="text-2xl font-display font-bold mb-8 flex items-center justify-center gap-2">
+          <h3 className="text-2xl  font-bold mb-8 flex items-center justify-center gap-2">
             <Briefcase className="w-6 h-6 text-primary" />
             <span className="text-foreground">Tools We </span>
             <span className="">Use</span>

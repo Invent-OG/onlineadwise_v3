@@ -40,7 +40,7 @@ const CTASection = () => {
           </div>
 
           {/* Main CTA */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold mb-6">
             <span className="text-foreground">Ready To Build Your </span>
             <span className="">Predictable Scaling System?</span>
           </h2>

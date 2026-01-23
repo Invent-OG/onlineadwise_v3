@@ -391,7 +391,7 @@ const PaidAdsSystem: React.FC = () => {
       className={`rounded-xl p-4 border ${color === "gold" ? "bg-primary/5 border-primary/30" : "bg-green-500/5 border-green-500/30"}`}
     >
       <h5
-        className={`font-display font-semibold text-sm mb-3 ${color === "gold" ? "text-primary" : "text-green-400"}`}
+        className={` font-semibold text-sm mb-3 ${color === "gold" ? "text-primary" : "text-green-400"}`}
       >
         {title}
       </h5>
@@ -444,7 +444,7 @@ const PaidAdsSystem: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl  font-bold mb-4">
             <span className="text-gradient-gold">
               Paid Ads Performance System
             </span>
@@ -509,7 +509,7 @@ const PaidAdsSystem: React.FC = () => {
                     <Target className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-xl">
+                    <h3 className=" font-bold text-xl">
                       Conversion & Tracking Setup
                     </h3>
                     <p className="text-sm text-muted-foreground">
@@ -521,7 +521,7 @@ const PaidAdsSystem: React.FC = () => {
                 <div className="grid md:grid-cols-2 gap-8">
                   {/* Inputs */}
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-primary flex items-center gap-2">
+                    <h4 className=" font-semibold text-primary flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-primary" /> Your
                       Inputs
                     </h4>
@@ -625,7 +625,7 @@ const PaidAdsSystem: React.FC = () => {
 
                   {/* Outputs */}
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-accent flex items-center gap-2">
+                    <h4 className=" font-semibold text-accent flex items-center gap-2">
                       <FileOutput className="w-5 h-5 text-accent" /> Expected
                       Outputs
                     </h4>
@@ -671,7 +671,7 @@ const PaidAdsSystem: React.FC = () => {
                     <BarChart3 className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-xl">
+                    <h3 className=" font-bold text-xl">
                       Unified Performance Dashboard
                     </h3>
                     <p className="text-sm text-muted-foreground">
@@ -682,7 +682,7 @@ const PaidAdsSystem: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-primary">
+                    <h4 className=" font-semibold text-primary">
                       <CheckCircle2 className="w-5 h-5 text-primary" /> Your
                       Inputs
                     </h4>
@@ -735,7 +735,7 @@ const PaidAdsSystem: React.FC = () => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-accent">
+                    <h4 className=" font-semibold text-accent">
                       <FileOutput className="w-5 h-5 text-accent" /> Expected
                       Outputs
                     </h4>
@@ -787,7 +787,7 @@ const PaidAdsSystem: React.FC = () => {
                     <GitBranch className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-xl">
+                    <h3 className=" font-bold text-xl">
                       Attribution & Funnel Visibility
                     </h3>
                     <p className="text-sm text-muted-foreground">
@@ -798,7 +798,7 @@ const PaidAdsSystem: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-primary">
+                    <h4 className=" font-semibold text-primary">
                       <CheckCircle2 className="w-5 h-5 text-primary" /> Your
                       Inputs
                     </h4>
@@ -852,7 +852,7 @@ const PaidAdsSystem: React.FC = () => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-accent flex items-center gap-2">
+                    <h4 className=" font-semibold text-accent flex items-center gap-2">
                       <FileOutput className="w-5 h-5 text-accent" /> Expected
                       Outputs
                     </h4>
@@ -910,7 +910,7 @@ const PaidAdsSystem: React.FC = () => {
                     <Users className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-xl">
+                    <h3 className=" font-bold text-xl">
                       Meta Ads Audience & Copy Creation
                     </h3>
                     <p className="text-sm text-muted-foreground">
@@ -921,7 +921,7 @@ const PaidAdsSystem: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-primary flex items-center gap-2">
+                    <h4 className=" font-semibold text-primary flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-primary" /> Your
                       Inputs
                     </h4>
@@ -1010,7 +1010,7 @@ const PaidAdsSystem: React.FC = () => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-accent flex items-center gap-2">
+                    <h4 className=" font-semibold text-accent flex items-center gap-2">
                       <FileOutput className="w-5 h-5 text-accent" /> Generated
                       Copy Assets
                     </h4>
@@ -1068,7 +1068,7 @@ const PaidAdsSystem: React.FC = () => {
                     <Search className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-xl">
+                    <h3 className=" font-bold text-xl">
                       Google Ads Keyword & Copy Creation
                     </h3>
                     <p className="text-sm text-muted-foreground">
@@ -1079,7 +1079,7 @@ const PaidAdsSystem: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-primary flex items-center gap-2">
+                    <h4 className=" font-semibold text-primary flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-primary" /> Your
                       Inputs
                     </h4>
@@ -1159,7 +1159,7 @@ const PaidAdsSystem: React.FC = () => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-accent flex items-center gap-2">
+                    <h4 className=" font-semibold text-accent flex items-center gap-2">
                       <FileOutput className="w-5 h-5 text-accent" /> Generated
                       Ad Assets
                     </h4>
@@ -1217,7 +1217,7 @@ const PaidAdsSystem: React.FC = () => {
                     <Map className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-xl">
+                    <h3 className=" font-bold text-xl">
                       Audience & Keyword Mapping
                     </h3>
                     <p className="text-sm text-muted-foreground">
@@ -1228,7 +1228,7 @@ const PaidAdsSystem: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-primary flex items-center gap-2">
+                    <h4 className=" font-semibold text-primary flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-primary" /> Your
                       Inputs
                     </h4>
@@ -1289,7 +1289,7 @@ const PaidAdsSystem: React.FC = () => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-accent flex items-center gap-2">
+                    <h4 className=" font-semibold text-accent flex items-center gap-2">
                       <FileOutput className="w-5 h-5 text-accent" /> Mapping
                       Outputs
                     </h4>
@@ -1368,7 +1368,7 @@ const PaidAdsSystem: React.FC = () => {
                     <Activity className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-xl">
+                    <h3 className=" font-bold text-xl">
                       Real-Time Reporting & Optimization Signals
                     </h3>
                     <p className="text-sm text-muted-foreground">
@@ -1379,7 +1379,7 @@ const PaidAdsSystem: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-primary flex items-center gap-2">
+                    <h4 className=" font-semibold text-primary flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-primary" /> Your
                       Inputs
                     </h4>
@@ -1439,7 +1439,7 @@ const PaidAdsSystem: React.FC = () => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-accent flex items-center gap-2">
+                    <h4 className=" font-semibold text-accent flex items-center gap-2">
                       <FileOutput className="w-5 h-5 text-accent" />{" "}
                       Optimization Signals
                     </h4>
@@ -1528,7 +1528,7 @@ const PaidAdsSystem: React.FC = () => {
                     <Layers className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-xl">
+                    <h3 className=" font-bold text-xl">
                       Cross-Platform Creative Comparison
                     </h3>
                     <p className="text-sm text-muted-foreground">
@@ -1539,7 +1539,7 @@ const PaidAdsSystem: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-primary flex items-center gap-2">
+                    <h4 className=" font-semibold text-primary flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-primary" /> Your
                       Inputs
                     </h4>
@@ -1586,7 +1586,7 @@ const PaidAdsSystem: React.FC = () => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-accent flex items-center gap-2">
+                    <h4 className=" font-semibold text-accent flex items-center gap-2">
                       <FileOutput className="w-5 h-5 text-accent" /> Comparison
                       Outputs
                     </h4>
@@ -1647,7 +1647,7 @@ const PaidAdsSystem: React.FC = () => {
                     <Lightbulb className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-xl">
+                    <h3 className=" font-bold text-xl">
                       Actionable Optimization Recommendations
                     </h3>
                     <p className="text-sm text-muted-foreground">
@@ -1658,7 +1658,7 @@ const PaidAdsSystem: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-primary flex items-center gap-2">
+                    <h4 className=" font-semibold text-primary flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-primary" /> Your
                       Inputs
                     </h4>
@@ -1713,7 +1713,7 @@ const PaidAdsSystem: React.FC = () => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-accent flex items-center gap-2">
+                    <h4 className=" font-semibold text-accent flex items-center gap-2">
                       <FileOutput className="w-5 h-5 text-accent" />{" "}
                       Recommendations
                     </h4>
@@ -1778,9 +1778,7 @@ const PaidAdsSystem: React.FC = () => {
                     <CheckCircle2 className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-xl">
-                      Final System Summary
-                    </h3>
+                    <h3 className=" font-bold text-xl">Final System Summary</h3>
                     <p className="text-sm text-muted-foreground">
                       Your complete paid ads performance system
                     </p>
@@ -1789,7 +1787,7 @@ const PaidAdsSystem: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-primary flex items-center gap-2">
+                    <h4 className=" font-semibold text-primary flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-primary" /> Final
                       Inputs
                     </h4>
@@ -1846,7 +1844,7 @@ const PaidAdsSystem: React.FC = () => {
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-display font-semibold text-accent flex items-center gap-2">
+                    <h4 className=" font-semibold text-accent flex items-center gap-2">
                       <FileOutput className="w-5 h-5 text-accent" /> System
                       Outcome
                     </h4>
@@ -1864,7 +1862,7 @@ const PaidAdsSystem: React.FC = () => {
                     )}
 
                     <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl p-4 border border-primary/30">
-                      <h5 className="font-display font-semibold text-primary mb-2">
+                      <h5 className=" font-semibold text-primary mb-2">
                         Ready to Launch?
                       </h5>
                       <p className="text-sm text-muted-foreground mb-4">

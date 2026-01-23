@@ -44,7 +44,7 @@ export function ResultsScreen({
           animate={{ y: 0, opacity: 1 }}
           className="text-center"
         >
-          <h1 className="text-2xl font-serif font-bold text-foreground mb-2">
+          <h1 className="text-2xl  font-bold text-foreground mb-2">
             Your Marketing Score
           </h1>
           {businessName && (
@@ -88,9 +88,7 @@ export function ResultsScreen({
             {result.band === "CRITICAL" && (
               <AlertTriangle className="w-6 h-6 text-red-500" />
             )}
-            <span
-              className={`text-xl font-serif font-bold ${result.bandColor}`}
-            >
+            <span className={`text-xl  font-bold ${result.bandColor}`}>
               {result.band}
             </span>
           </div>

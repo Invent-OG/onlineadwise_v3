@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 inline-flex items-center gap-2">
             <Star className="w-4 h-4 fill-primary" /> Testimonials
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold mb-4">
             <span className="text-foreground">Client </span>
             <span className="">Success Stories</span>
           </h2>
@@ -74,7 +74,7 @@ const TestimonialsSection = () => {
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-display font-bold text-foreground">
+                  <p className=" font-bold text-foreground">
                     {testimonial.name}
                   </p>
                   <p className="text-sm text-muted-foreground">

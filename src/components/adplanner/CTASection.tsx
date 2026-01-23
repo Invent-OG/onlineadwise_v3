@@ -36,7 +36,7 @@ export const CTASection = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl  font-bold mb-6">
             Stop Guessing.
             <br />
             <span className="text-gradient-gold animate-glow">

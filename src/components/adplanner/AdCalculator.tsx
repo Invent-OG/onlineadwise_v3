@@ -183,7 +183,7 @@ export const AdCalculator = () => {
             <Calculator className="h-4 w-4 text-primary" />
             <span className="text-sm font-body text-primary">Free Tool</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl  font-bold mb-4">
             <span className="text-gradient-gold">Ad Performance</span>{" "}
             Calculator
           </h2>
@@ -202,7 +202,7 @@ export const AdCalculator = () => {
             viewport={{ once: true }}
             className="card-sci-fi p-8"
           >
-            <h3 className="text-xl font-display font-bold mb-6 flex items-center gap-2">
+            <h3 className="text-xl  font-bold mb-6 flex items-center gap-2">
               <Target className="h-5 w-5 text-primary" />
               Business Inputs
             </h3>
@@ -372,7 +372,7 @@ export const AdCalculator = () => {
             viewport={{ once: true }}
             className="card-sci-fi p-8"
           >
-            <h3 className="text-xl font-display font-bold mb-6 flex items-center gap-2">
+            <h3 className="text-xl  font-bold mb-6 flex items-center gap-2">
               <BarChart3 className="h-5 w-5 text-primary" />
               Performance Forecast
             </h3>
@@ -406,7 +406,7 @@ export const AdCalculator = () => {
                     {getProfitabilityIcon(results.profitability)}
                     <div>
                       <p
-                        className={`font-display font-bold ${getProfitabilityText(results.profitability).color}`}
+                        className={` font-bold ${getProfitabilityText(results.profitability).color}`}
                       >
                         {getProfitabilityText(results.profitability).text}
                       </p>
@@ -457,7 +457,7 @@ export const AdCalculator = () => {
                     <p className="text-xs text-muted-foreground font-body mb-1">
                       Expected ROAS
                     </p>
-                    <p className="text-2xl font-display font-bold text-gradient-gold">
+                    <p className="text-2xl  font-bold text-gradient-gold">
                       {results.estimatedROAS.min}x - {results.estimatedROAS.max}
                       x
                     </p>
@@ -466,7 +466,7 @@ export const AdCalculator = () => {
                     <p className="text-xs text-muted-foreground font-body mb-1">
                       Break-even CPA
                     </p>
-                    <p className="text-2xl font-display font-bold">
+                    <p className="text-2xl  font-bold">
                       ₹{results.breakEvenCPA.toLocaleString()}
                     </p>
                   </div>
@@ -512,6 +512,6 @@ const MetricCard = ({
       {icon}
       <span className="text-xs font-body text-muted-foreground">{label}</span>
     </div>
-    <p className="text-sm font-display font-semibold">{value}</p>
+    <p className="text-sm  font-semibold">{value}</p>
   </div>
 );

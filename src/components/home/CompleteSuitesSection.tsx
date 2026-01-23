@@ -77,7 +77,7 @@ const CompleteSuitesSection = () => {
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 flex items-center justify-center gap-2">
             <Star className="w-4 h-4 " /> Complete Packages
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold mb-4">
             <span className="text-foreground">NAREN Method™ </span>
             <span className="">Complete Suites</span>
           </h2>
@@ -121,7 +121,7 @@ const CompleteSuitesSection = () => {
                     <Icon className="w-7 h-7" />
                   </div>
 
-                  <h3 className="text-xl font-display font-bold text-foreground mb-4">
+                  <h3 className="text-xl  font-bold text-foreground mb-4">
                     {suite.name}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-8 leading-relaxed">
@@ -164,7 +164,7 @@ const CompleteSuitesSection = () => {
 
         {/* Niches We Specialize In */}
         <div className="text-center">
-          <h3 className="text-2xl font-display font-bold mb-8 flex items-center justify-center gap-2">
+          <h3 className="text-2xl  font-bold mb-8 flex items-center justify-center gap-2">
             <span className="text-foreground flex items-center gap-2">
               <Star className="w-6 h-6 text-primary " /> Niches We
             </span>

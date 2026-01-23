@@ -91,7 +91,7 @@ gtag('event', 'conversion', {'send_to': '${pixelId || "AW-XXXXXXXXX"}/XXXXX'});
             <Monitor className="h-4 w-4 text-primary" />
             <span className="text-sm font-body text-primary">Easy Setup</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl  font-bold mb-4">
             <span className="text-gradient-gold">Conversion Tracking</span>
             <br />
             Made Simple
@@ -187,7 +187,7 @@ gtag('event', 'conversion', {'send_to': '${pixelId || "AW-XXXXXXXXX"}/XXXXX'});
 
             {/* Tracking URL Generator */}
             <div className="mb-8 p-6 rounded-lg bg-muted/30 border border-border">
-              <h4 className="font-display font-bold mb-4 flex items-center gap-2">
+              <h4 className=" font-bold mb-4 flex items-center gap-2">
                 <ExternalLink className="h-5 w-5 text-primary" />
                 Link-Based Event Tracking (No-Code)
               </h4>

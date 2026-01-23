@@ -102,7 +102,7 @@ const NarenMethodSection = () => {
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 flex items-center justify-center gap-2">
             <Brain className="w-4 h-4" /> Our Signature Framework
           </span>
-          <h2 className="text-3xl font-serif md:text-4xl lg:text-5xl font-display font-bold mb-6">
+          <h2 className="text-3xl  md:text-4xl lg:text-5xl  font-bold mb-6">
             <span className="text-foreground">THE </span>
             <span className="">NAREN METHOD™</span>
           </h2>
@@ -117,7 +117,7 @@ const NarenMethodSection = () => {
           {["N", "A", "R", "E", "N"].map((letter, index) => (
             <div
               key={index}
-              className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-2xl md:text-3xl font-display font-bold text-primary-foreground glow-gold-sm hover:glow-gold transition-all duration-300 hover:scale-110"
+              className="w-12 h-12 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-2xl md:text-3xl  font-bold text-primary-foreground glow-gold-sm hover:glow-gold transition-all duration-300 hover:scale-110"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {letter}
@@ -142,12 +142,12 @@ const NarenMethodSection = () => {
                     {/* Left - Letter & Icon */}
                     <div className="flex items-center gap-4 lg:w-48 shrink-0">
                       <div
-                        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${stage.color} flex items-center justify-center text-3xl font-display font-bold text-white glow-gold-sm`}
+                        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${stage.color} flex items-center justify-center text-3xl  font-bold text-white glow-gold-sm`}
                       >
                         {stage.letter}
                       </div>
                       <div>
-                        <h3 className="text-xl font-display font-bold text-foreground">
+                        <h3 className="text-xl  font-bold text-foreground">
                           {stage.title}
                         </h3>
                         <p className="text-sm text-primary">{stage.subtitle}</p>
