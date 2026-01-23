@@ -95,7 +95,7 @@ const CaseStudySection = () => {
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
             <BookOpen className="w-4 h-4 inline mr-2" /> Case Study
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold mb-6">
             <span className="text-foreground">HVAC Company </span>
             <span className="">(USA)</span>
           </h2>
@@ -108,7 +108,7 @@ const CaseStudySection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Challenges */}
           <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 p-8 mb-8">
-            <h3 className="text-xl font-display font-bold text-foreground mb-6">
+            <h3 className="text-xl  font-bold text-foreground mb-6">
               Challenges
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
@@ -126,7 +126,7 @@ const CaseStudySection = () => {
 
           {/* NAREN Process */}
           <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 p-8 mb-8">
-            <h3 className="text-xl font-display font-bold text-foreground mb-6">
+            <h3 className="text-xl  font-bold text-foreground mb-6">
               Our Process (NAREN Method™ Implementation)
             </h3>
             <div className="grid md:grid-cols-5 gap-4">
@@ -156,7 +156,7 @@ const CaseStudySection = () => {
 
           {/* Results */}
           <div className="bg-gradient-to-br from-primary/10 to-card rounded-2xl border border-primary/30 p-8 glow-gold-sm">
-            <h3 className="text-xl font-display font-bold text-foreground mb-6 text-center">
+            <h3 className="text-xl  font-bold text-foreground mb-6 text-center">
               Results
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -167,7 +167,7 @@ const CaseStudySection = () => {
                     <div className="w-14 h-14 mx-auto mb-3 rounded-2xl bg-primary/20 flex items-center justify-center">
                       <result.subIcon className="w-8 h-8 text-primary" />
                     </div>
-                    <div className="text-3xl font-display font-bold  mb-1">
+                    <div className="text-3xl  font-bold  mb-1">
                       {result.value}
                     </div>
                     <p className="text-sm text-muted-foreground">

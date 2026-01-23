@@ -32,7 +32,7 @@ const AboutSection = () => {
             <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 flex items-center justify-center gap-2">
               <Target className="w-4 h-4" /> Who We Are
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold mb-6">
               <span className="text-foreground">More Than An Agency.</span>
               <br />
               <span className="">A Growth Architecture.</span>
@@ -96,10 +96,10 @@ const AboutSection = () => {
           {/* Mission Statement */}
           <div className="text-center">
             <div className="inline-block px-8 py-6 rounded-2xl border-2 border-primary/30 bg-primary/5 glow-gold-sm">
-              <p className="text-lg md:text-xl font-display font-semibold text-foreground">
+              <p className="text-lg md:text-xl  font-semibold text-foreground">
                 Our Mission:
               </p>
-              <p className="text-xl md:text-2xl font-display font-bold  mt-2">
+              <p className="text-xl md:text-2xl  font-bold  mt-2">
                 "Turn Your Marketing Into a Predictable Revenue Machine."
               </p>
             </div>

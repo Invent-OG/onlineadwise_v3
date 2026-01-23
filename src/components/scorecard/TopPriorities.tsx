@@ -18,7 +18,7 @@ export function TopPriorities({ priorities }: TopPrioritiesProps) {
         <span className="text-4xl mb-2 block flex justify-center">
           <PartyPopper className="w-10 h-10 text-success" />
         </span>
-        <h3 className="text-lg font-serif font-semibold text-success mb-2">
+        <h3 className="text-lg  font-semibold text-success mb-2">
           Excellent Marketing Foundation!
         </h3>
         <p className="text-sm text-muted-foreground">
@@ -42,7 +42,7 @@ export function TopPriorities({ priorities }: TopPrioritiesProps) {
 
   return (
     <div className="space-y-4">
-      <h3 className="text-lg font-serif font-semibold text-foreground flex items-center gap-2">
+      <h3 className="text-lg  font-semibold text-foreground flex items-center gap-2">
         <Target className="w-5 h-5 text-primary" />
         Top Priorities to Address
       </h3>

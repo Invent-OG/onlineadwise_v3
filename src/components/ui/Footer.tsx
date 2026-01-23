@@ -86,9 +86,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display font-bold text-foreground mb-4">
-              Quick Links
-            </h4>
+            <h4 className=" font-bold text-foreground mb-4">Quick Links</h4>
             <ul className="grid grid-cols-2 gap-2">
               {quickLinks.map((link) => (
                 <li key={link}>
@@ -105,9 +103,7 @@ const Footer = () => {
 
           {/* Niches We Serve */}
           <div>
-            <h4 className="font-display font-bold text-foreground mb-4">
-              Niches We Serve
-            </h4>
+            <h4 className=" font-bold text-foreground mb-4">Niches We Serve</h4>
             <div className="flex flex-wrap gap-x-4 gap-y-2">
               {niches.map(({ label, Icon }) => (
                 <span
@@ -138,9 +134,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display font-bold text-foreground mb-4">
-              Contact
-            </h4>
+            <h4 className=" font-bold text-foreground mb-4">Contact</h4>
             <div className="space-y-3">
               <a
                 href="mailto:info.onlineadwise@gmail.com"

@@ -44,7 +44,7 @@ const WhySection = () => {
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 inline-flex items-center gap-2">
             <Puzzle className="w-4 h-4" /> The Difference
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold mb-6">
             <span className="text-foreground">Why </span>
             <span className="">Online Adwise</span>
             <span className="text-foreground"> Works</span>
@@ -68,7 +68,7 @@ const WhySection = () => {
                   <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Icon className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-display font-bold text-foreground mb-1">
+                  <h3 className="text-xl  font-bold text-foreground mb-1">
                     {pillar.title}
                   </h3>
                   <p className="text-sm text-muted-foreground">

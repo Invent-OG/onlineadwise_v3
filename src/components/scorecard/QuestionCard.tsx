@@ -59,7 +59,7 @@ export function QuestionCard({
         </span>
       </div>
 
-      <h2 className="text-xl md:text-2xl font-serif font-semibold text-foreground mb-6 leading-tight">
+      <h2 className="text-xl md:text-2xl  font-semibold text-foreground mb-6 leading-tight">
         {question.question}
       </h2>
 

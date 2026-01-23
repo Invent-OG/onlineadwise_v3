@@ -182,9 +182,8 @@ export function AdService() {
             Multi-Platform Ad Services
           </h2>
           <p className="mt-4 max-w-sm mx-auto text-base text-neutral-400">
-            Digital Marketing Consultant • Paid Media Expert • Funnel Scaling Strategist
-
-
+            Digital Marketing Consultant • Paid Media Expert • Funnel Scaling
+            Strategist
           </p>
         </div>
 

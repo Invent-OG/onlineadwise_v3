@@ -69,7 +69,7 @@ const PackagesSection = () => {
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/30 bg-gold/10 text-gold text-xs font-bold tracking-widest uppercase">
             <Package className="w-3.5 h-3.5" /> Our Packages
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold mb-4">
             <span className="text-foreground">Consultation + Video + </span>
             <span className="">Ads Setup</span>
           </h2>
@@ -109,11 +109,11 @@ const PackagesSection = () => {
                   <pkg.icon className="w-7 h-7" />
                 </div>
 
-                <h3 className="text-xl font-display font-bold text-foreground mb-4">
+                <h3 className="text-xl  font-bold text-foreground mb-4">
                   {pkg.name}
                 </h3>
 
-                <div className="text-3xl font-display font-bold text-foreground mb-4">
+                <div className="text-3xl  font-bold text-foreground mb-4">
                   {pkg.price}
                 </div>
 

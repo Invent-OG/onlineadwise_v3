@@ -115,7 +115,7 @@ export const HeroSection = () => {
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
                 className="card-sci-fi p-4 md:p-6 hover-glow"
               >
-                <div className="text-2xl md:text-3xl font-display font-bold text-gradient-gold">
+                <div className="text-2xl md:text-3xl  font-bold text-gradient-gold">
                   {stat.value}
                 </div>
                 <div className="text-xs md:text-sm text-muted-foreground font-body mt-1">

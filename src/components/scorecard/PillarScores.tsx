@@ -23,7 +23,7 @@ export function PillarScores({ scores }: PillarScoresProps) {
 
   return (
     <div className="space-y-4">
-      <h3 className="text-lg font-serif font-semibold text-foreground flex items-center gap-2">
+      <h3 className="text-lg  font-semibold text-foreground flex items-center gap-2">
         📊 Scores by Pillar
       </h3>
 

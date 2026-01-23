@@ -39,7 +39,7 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
         </motion.div>
 
         {/* Title */}
-        <h1 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-3">
+        <h1 className="text-3xl md:text-4xl  font-bold text-foreground mb-3">
           Marketing <span className="text-gradient-gold">Scorecard</span>
         </h1>
 

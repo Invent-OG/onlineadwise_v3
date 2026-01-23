@@ -75,7 +75,7 @@ const VideoPacksSection = () => {
           <span className="text-primary text-sm font-semibold tracking-wider uppercase mb-4 block">
             🎥 Video Package Store
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl  font-bold mb-6">
             <span className="text-foreground">Explainer Video </span>
             <span className="">Packs</span>
           </h2>
@@ -104,7 +104,7 @@ const VideoPacksSection = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-display font-bold text-foreground mb-2">
+                  <h3 className="text-xl  font-bold text-foreground mb-2">
                     {type.title}
                   </h3>
                   <p className="text-muted-foreground mb-4">
@@ -119,7 +119,7 @@ const VideoPacksSection = () => {
 
         {/* All Videos Include */}
         <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 p-6 md:p-8 mb-16">
-          <h3 className="text-xl font-display font-bold text-foreground mb-6 text-center">
+          <h3 className="text-xl  font-bold text-foreground mb-6 text-center">
             All Videos Include:
           </h3>
           <div className="grid grid-cols-1 gap-4 md:flex md:flex-wrap md:justify-center">
@@ -137,7 +137,7 @@ const VideoPacksSection = () => {
 
         {/* Niche Packs */}
         <div className="mb-16">
-          <h3 className="text-2xl font-display font-bold text-center mb-8">
+          <h3 className="text-2xl  font-bold text-center mb-8">
             {/* <span className="text-foreground">🎯 </span> */}
             <span className="">20+ Local Business Niches</span>
           </h3>
@@ -159,7 +159,7 @@ const VideoPacksSection = () => {
 
         {/* What Each Niche Gets */}
         <div className="max-w-2xl mx-auto text-center">
-          <h3 className="text-xl font-display font-bold text-foreground mb-6">
+          <h3 className="text-xl  font-bold text-foreground mb-6">
             Each Niche Pack Includes:
           </h3>
           <div className="grid grid-cols-1 gap-3 text-left md:flex md:flex-wrap md:justify-center">

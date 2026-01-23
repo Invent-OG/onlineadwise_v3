@@ -69,7 +69,7 @@ export function ScoreGauge({ score, maxScore }: ScoreGaugeProps) {
       {/* Score display */}
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <motion.span
-          className="text-5xl font-serif font-bold text-gradient-gold"
+          className="text-5xl  font-bold text-gradient-gold"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
