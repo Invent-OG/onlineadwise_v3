@@ -29,7 +29,7 @@ const HeroSection = () => {
         <TrendingUp className="w-14 h-14 text-primary" />
       </div>
 
-      <div className="container-narrow relative z-10 text-center hero-padding">
+      <div className="container-narrow relative z-10 text-center ">
         <div className="max-w-5xl mx-auto">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8 slide-up">

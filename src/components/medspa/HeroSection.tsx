@@ -56,7 +56,7 @@ const HeroSection = () => {
         <TrendingUp className="w-10 h-10" />
       </motion.div>
 
-      <div className="container-wide relative z-10 hero-padding">
+      <div className="container-wide relative z-10 ">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <motion.div
