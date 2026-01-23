@@ -118,11 +118,11 @@ export function Scorecard() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="min-h-screen flex flex-col"
+            className="min-h-screen flex flex-col pt-20 md:pt-24"
           >
             {/* Progress */}
-            <div className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-border px-4 py-4">
-              <div className="max-w-md mx-auto">
+            <div className="w-full max-w-3xl mx-auto mb-2 flex justify-center">
+              <div className="w-48 md:w-64">
                 <ProgressBar
                   current={currentQuestion + 1}
                   total={totalQuestions}
@@ -131,7 +131,7 @@ export function Scorecard() {
             </div>
 
             {/* Question */}
-            <div className="flex-1 flex flex-col px-4 py-6">
+            <div className="flex-1 flex flex-col px-4 py-4">
               <div className="max-w-md mx-auto w-full flex-1 flex flex-col">
                 <AnimatePresence mode="wait">
                   <QuestionCard
@@ -148,7 +148,7 @@ export function Scorecard() {
             </div>
 
             {/* Navigation */}
-            <div className="sticky bottom-0 z-10 bg-background/95 backdrop-blur-sm border-t border-border px-4 py-4">
+            <div className="sticky bottom-0 z-10 bg-background/95 backdrop-blur-sm border-t border-border px-4 py-3">
               <div className="max-w-md mx-auto flex gap-3">
                 <Button
                   variant="outline"
